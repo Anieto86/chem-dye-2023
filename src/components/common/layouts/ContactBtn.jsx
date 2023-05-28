@@ -5,7 +5,7 @@ export const ContactBtn = ({ title }) => {
     <Button
       variant="contained"
       sx={{
-        backgroundColor: 'pink',
+        backgroundColor: '#ff6f80',
         color: 'white',
         marginBottom: 2,
         borderRadius: '10px',

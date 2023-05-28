@@ -2,10 +2,9 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-
-// import Icfrom '@mui/material/Ic;
 import { Outlet, NavLink } from 'react-router-dom';
 import { Grid } from '@mui/material';
+import logo from '../../../assets/Icons/02.CDLOGO_COLOUR.png';
 
 export function NavBar() {
   return (
@@ -14,7 +13,7 @@ export function NavBar() {
         position="static"
         sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}
       >
-        <Toolbar>
+        <Toolbar sx={{ p: 2 }}>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             <NavLink
               to={`/`}
@@ -26,10 +25,13 @@ export function NavBar() {
                 };
               }}
             >
-              icon
+              <img
+                src={logo}
+                alt="Image 1"
+                style={{ width: '9%', height: 'auto' }}
+              />
             </NavLink>
           </Typography>
-
           <NavLink
             to="/services"
             style={({ isActive, isPending }) => {
@@ -44,7 +46,6 @@ export function NavBar() {
           >
             Service
           </NavLink>
-
           <NavLink
             to={`/work`}
             style={({ isActive, isPending }) => {
@@ -59,7 +60,6 @@ export function NavBar() {
           >
             Work
           </NavLink>
-
           <NavLink
             to={`/about`}
             style={({ isActive, isPending }) => {
@@ -74,7 +74,6 @@ export function NavBar() {
           >
             About
           </NavLink>
-
           <NavLink
             to={`/blog`}
             style={({ isActive, isPending }) => {
@@ -89,7 +88,6 @@ export function NavBar() {
           >
             Blog
           </NavLink>
-
           <NavLink
             to={`/contact`}
             style={({ isActive, isPending }) => {
