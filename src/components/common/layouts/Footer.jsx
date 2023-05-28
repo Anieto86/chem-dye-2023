@@ -1,7 +1,8 @@
-import { Box, Button, Grid, IconButton, Typography } from '@mui/material';
+import { Box, Grid, IconButton, Typography } from '@mui/material';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import { ContactBtn } from './ContactBtn';
 
 export const Footer = () => {
   return (
@@ -14,16 +15,7 @@ export const Footer = () => {
         alignItems: 'center',
       }}
     >
-      <Button
-        variant="contained"
-        sx={{
-          backgroundColor: 'pink',
-          color: 'white',
-          marginBottom: 2,
-        }}
-      >
-        Contact Us
-      </Button>
+      <ContactBtn title="Contact Us" />
       <Box
         sx={{
           display: 'flex',

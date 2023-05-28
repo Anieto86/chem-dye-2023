@@ -1,5 +1,5 @@
 import Masonry from '@mui/lab/Masonry';
-import { Button, Grid, Box } from '@mui/material';
+import { Box, Button, Grid } from '@mui/material';
 import image1 from '../assets/img/1.jpg';
 import image10 from '../assets/img/10.jpg';
 import image11 from '../assets/img/11.jpg';
