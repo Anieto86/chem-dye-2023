@@ -12,7 +12,7 @@ export function NavBar() {
     <Box sx={{ flexGrow: 2 }}>
       <AppBar
         position="static"
-        sx={{ backgroundColor: 'red', boxShadow: 'none' }}
+        sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}
       >
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
@@ -61,7 +61,7 @@ export function NavBar() {
           </NavLink>
 
           <NavLink
-            to={`/`}
+            to={`/about`}
             style={({ isActive, isPending }) => {
               return {
                 border: isActive ? '1px solid #000000' : 'none',
@@ -76,7 +76,7 @@ export function NavBar() {
           </NavLink>
 
           <NavLink
-            to={`/`}
+            to={`/blog`}
             style={({ isActive, isPending }) => {
               return {
                 border: isActive ? '1px solid #000000' : 'none',
@@ -91,7 +91,7 @@ export function NavBar() {
           </NavLink>
 
           <NavLink
-            to={`/`}
+            to={`/contact`}
             style={({ isActive, isPending }) => {
               return {
                 border: isActive ? '1px solid #000000' : 'none',

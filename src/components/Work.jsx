@@ -1,8 +1,12 @@
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
 import Masonry from '@mui/lab/Masonry';
-import { styled } from '@mui/material/styles';
+import { Button, Grid, Box } from '@mui/material';
 import image1 from '../assets/img/1.jpg';
+import image10 from '../assets/img/10.jpg';
+import image11 from '../assets/img/11.jpg';
+import image12 from '../assets/img/12.jpg';
+import image13 from '../assets/img/13.jpg';
+import image14 from '../assets/img/14.jpg';
+import image15 from '../assets/img/15.jpg';
 import image2 from '../assets/img/2.jpg';
 import image3 from '../assets/img/3.jpg';
 import image4 from '../assets/img/4.jpg';
@@ -11,32 +15,15 @@ import image6 from '../assets/img/6.jpg';
 import image7 from '../assets/img/7.jpg';
 import image8 from '../assets/img/8.jpg';
 import image9 from '../assets/img/9.jpg';
-import image10 from '../assets/img/10.jpg';
-import image11 from '../assets/img/11.jpg';
-import image12 from '../assets/img/12.jpg';
-import image13 from '../assets/img/13.jpg';
-import image14 from '../assets/img/14.jpg';
-import image15 from '../assets/img/15.jpg';
-import { Button, Grid } from '@mui/material';
-
-const Label = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(0.5),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-  borderBottomLeftRadius: 0,
-  borderBottomRightRadius: 0,
-}));
 
 export function Work() {
   return (
-    <Box sx={{ width: 500, minHeight: 829 }}>
+    <Box sx={{ width: 1000, minHeight: 829 }}>
       <Grid item xs={16}>
-        <h2>
+        <h1>
           We provide solutions for the Healthcare, Pharma and Biotech
           Industries.
-        </h2>
+        </h1>
       </Grid>
       <Button
         variant="contained"
@@ -51,7 +38,7 @@ export function Work() {
       <Masonry columns={3} spacing={1}>
         {itemData.map((item, index) => (
           <div key={index}>
-            <Label>{index + 1}</Label>
+            {/* <Label>{index + 1}</Label> */}
             <img
               src={`${item.img}?w=162&auto=format`}
               srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}

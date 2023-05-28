@@ -64,7 +64,7 @@ export const Footer = () => {
       <Grid container spacing={2} columns={16} sx={{ p: 2 }}>
         <Grid item xs={10}>
           <Typography align="left">
-            Terms of use / Cookiee Polocy / Privacy Policy
+            Terms of use / Cookie Policy / Privacy Policy
           </Typography>
           <Grid item sx={{ my: 3 }}>
             <Typography align="left">
