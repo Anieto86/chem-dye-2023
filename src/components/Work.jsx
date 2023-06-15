@@ -38,7 +38,6 @@ export function Work() {
       <Masonry columns={3} spacing={1}>
         {itemData.map((item, index) => (
           <div key={index}>
-            {/* <Label>{index + 1}</Label> */}
             <img
               src={`${item.img}?w=162&auto=format`}
               srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}

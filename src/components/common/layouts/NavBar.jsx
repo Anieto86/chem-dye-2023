@@ -1,9 +1,5 @@
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
+import { Box, Toolbar, Typography, Grid, AppBar } from '@mui/material';
 import { Outlet, NavLink } from 'react-router-dom';
-import { Grid } from '@mui/material';
 import logo from '../../../assets/Icons/02.CDLOGO_COLOUR.png';
 
 export function NavBar() {

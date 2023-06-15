@@ -1,6 +1,6 @@
 import { createTypography } from './createTypography';
 import { createPalette } from './createPalette';
-import { createTheme } from '@mui/material';
+import { createTheme } from '@mui/material/styles';
 
 export const createDefaultTheme = () => {
   const typography = createTypography();

@@ -81,7 +81,7 @@ export const Services = () => {
             <Divider sx={{ backgroundColor: '#ff6f80' }} />
             <AccordionDetails>
               <Typography>
-                Our speciality is creating medical content for a wide variety of
+                Our specialty is creating medical content for a wide variety of
                 packages. As key stakeholders of the project, our number one
                 priority is to work closely with you to create your science
                 story
