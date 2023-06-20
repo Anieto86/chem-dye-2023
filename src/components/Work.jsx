@@ -1,5 +1,5 @@
 import Masonry from '@mui/lab/Masonry';
-import { Box, Button, Grid } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 import image1 from '../assets/img/1.jpg';
 import image10 from '../assets/img/10.jpg';
 import image11 from '../assets/img/11.jpg';
@@ -15,26 +15,22 @@ import image6 from '../assets/img/6.jpg';
 import image7 from '../assets/img/7.jpg';
 import image8 from '../assets/img/8.jpg';
 import image9 from '../assets/img/9.jpg';
+import { ContactBtn } from './common/layouts/ContactBtn';
 
 export function Work() {
   return (
-    <Box sx={{ width: 1000, minHeight: 829 }}>
+    <Box sx={{}}>
       <Grid item xs={16}>
-        <h1>
-          We provide solutions for the Healthcare, Pharma and Biotech
-          Industries.
-        </h1>
+        <Typography variant="h2" fontWeight={600}>
+          We provide solutions for the Healthcare,
+        </Typography>
+        <Typography variant="h2" fontWeight={600}>
+          Pharma and Biotech Industries.
+        </Typography>
       </Grid>
-      <Button
-        variant="contained"
-        sx={{
-          backgroundColor: 'pink',
-          color: 'white',
-          marginBottom: 2,
-        }}
-      >
-        Connect with us
-      </Button>
+      <Box sx={{ my: 4 }}>
+        <ContactBtn title="Connect with us" />
+      </Box>
       <Masonry columns={3} spacing={1}>
         {itemData.map((item, index) => (
           <div key={index}>

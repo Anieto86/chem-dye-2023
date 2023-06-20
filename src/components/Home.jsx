@@ -1,5 +1,6 @@
 import { Box, Grid, Typography } from '@mui/material';
 import backgroundImg from '../assets/img/01.BG-IMAGE.jpg';
+import { Outlet } from 'react-router-dom';
 
 export const Home = () => {
   return (
@@ -46,6 +47,9 @@ export const Home = () => {
         your vision to fruition and make a lasting impact in the world of
         science.
       </Typography>
+      <Grid item>
+        <Outlet />
+      </Grid>
     </Grid>
   );
 };

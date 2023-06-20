@@ -16,8 +16,8 @@ export const Companies = () => {
       spacing={2}
       // sx={{ p: 2 }}
     >
-      <Grid item sx={{ my: 7 }}>
-        <Typography>WHO WE'VE WORKED WITH?</Typography>
+      <Grid item sx={{ my: 8 }}>
+        <Typography variant="h4">WHO WE'VE WORKED WITH?</Typography>
       </Grid>
 
       <Grid

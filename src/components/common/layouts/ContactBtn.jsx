@@ -8,7 +8,8 @@ export const ContactBtn = ({ title }) => {
         backgroundColor: '#ff6f80',
         color: 'white',
         marginBottom: 2,
-        borderRadius: '10px',
+        borderRadius: '15px',
+        fontWeight: '600',
       }}
     >
       {title}

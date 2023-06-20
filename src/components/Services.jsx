@@ -22,16 +22,18 @@ export const Services = () => {
         spacing={2}
       >
         <Grid item xs={4}></Grid>
-
         <Grid item xs={7}>
+          <Typography variant="h4">OUR SERVICES</Typography>
+          <br />
           <Accordion sx={{ boxShadow: 'none', border: 'none' }}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography variant="h5">OUR SERVICES</Typography>
+              <Typography variant="h5">REPORTING AND PRESENTATION</Typography>
             </AccordionSummary>
+
             <Divider sx={{ backgroundColor: '#ff6f80' }} />
             <AccordionDetails>
               <Typography>
@@ -56,6 +58,7 @@ export const Services = () => {
             >
               <Typography variant="h5">SCIENCE COMMUNICATION</Typography>
             </AccordionSummary>
+
             <Divider sx={{ backgroundColor: '#ff6f80' }} />
             <AccordionDetails>
               <Typography>
@@ -104,7 +107,6 @@ export const Services = () => {
         </Grid>
         <Grid item xs={7}>
           <Typography variant="h5">WHY US?</Typography>
-          <Divider sx={{ backgroundColor: '#ff6f80' }} />
           <Typography>
             As scientists turned artists, we bring a unique blend of expertise
             and years of experience serving academia, biotech, and the health

@@ -1,6 +1,6 @@
 export const createTypography = () => {
   return {
-    fontFamily: "'Roboto', sans-serif",
+    fontFamily: "'Quicksand', sans-serif",
     fontSize: 14,
   };
 };

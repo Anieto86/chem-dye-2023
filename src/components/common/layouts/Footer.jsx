@@ -54,7 +54,7 @@ export const Footer = () => {
         sx={{
           width: '100%',
           height: 2,
-          backgroundColor: 'pink',
+          backgroundColor: '#ff6f80',
           marginTop: 2,
         }}
       ></Box>
