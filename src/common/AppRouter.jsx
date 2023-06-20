@@ -6,6 +6,7 @@ import { NavBar } from '../components/common/layouts/NavBar';
 import { ErrorPage } from './ErrorPage';
 import { About } from '../components/About';
 import { Blog } from '../components/Blog';
+import { Home } from '../components/Home';
 
 export const AppRouter = () => {
   return createBrowserRouter([
@@ -14,6 +15,7 @@ export const AppRouter = () => {
       element: (
         <>
           <NavBar />
+          <Home />
           <Footer />
         </>
       ),

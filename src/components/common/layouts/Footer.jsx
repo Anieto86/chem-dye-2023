@@ -8,6 +8,10 @@ export const Footer = () => {
   return (
     <Box
       sx={{
+        bottom: 0,
+        left: 0,
+        width: '100%',
+        zIndex: 999,
         backgroundColor: '#F6F7F9',
         padding: 2,
         display: 'flex',
@@ -45,6 +49,7 @@ export const Footer = () => {
           <TwitterIcon sx={{ fontSize: '1.5em' }} />
         </IconButton>
       </Box>
+
       <Box
         sx={{
           width: '100%',
@@ -53,6 +58,7 @@ export const Footer = () => {
           marginTop: 2,
         }}
       ></Box>
+
       <Grid container spacing={2} columns={16} sx={{ p: 2 }}>
         <Grid item xs={10}>
           <Typography align="left">
