@@ -6,7 +6,7 @@ import { NavBar } from '../components/common/layouts/NavBar';
 import { ErrorPage } from './ErrorPage';
 import { About } from '../components/About';
 import { Blog } from '../components/Blog';
-// import { Home } from '../components/Home';
+import Txtblog4 from '../components/common/Blogs/Txtblog4';
 
 export const AppRouter = () => {
   return createBrowserRouter([
@@ -36,6 +36,10 @@ export const AppRouter = () => {
         {
           path: '/Blog',
           element: <Blog />,
+        },
+        {
+          path: '/Blog/txt4',
+          element: <Txtblog4 />,
         },
       ],
     },
