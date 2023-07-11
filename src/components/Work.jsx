@@ -15,7 +15,7 @@ import image6 from '../assets/img/6.jpg';
 import image7 from '../assets/img/7.jpg';
 import image8 from '../assets/img/8.jpg';
 import image9 from '../assets/img/9.jpg';
-import { ContactBtn } from './ContactBtn';
+import { ContactBtn } from './common/ContactBtn';
 
 export function Work() {
   return (
