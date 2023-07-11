@@ -12,37 +12,30 @@ const listItems = [
 
 export const Txtblog1 = () => {
   return (
-    <Grid container spacing={4}>
-      <Grid
-        item
-        sx={{
-          display: 'flex',
-          justifyContent: 'flex-end',
-          direction: 'column',
-        }}
-      >
-        <Typography variant="h6">By Mariana Oksdath Mansilla</Typography>
-        <Typography variant="h6">3 min reading</Typography>
-      </Grid>
-      <Grid item xs={12}>
-        <Typography
-          variant="h4"
-          style={{
-            color: '#392767',
-          }}
-          gutterBottom
-        >
-          Embracing Transformation: A Journey from Comfort to the Unknown
-        </Typography>
-      </Grid>
+    <Grid>
       <Grid
         container
-        direction="row"
-        // justifyContent="center"
-        // alignItems="center"
-        spacing={4}
-        xs={10}
+        direction="column"
+        justifyContent="center"
+        alignItems="flex-end"
+        sx={{
+          p: 2,
+        }}
       >
+        <Grid item>
+          <Typography variant="h6">By Mariana Oksdath Mansilla</Typography>
+        </Grid>
+        <Grid item>
+          <Typography variant="h6">3 min reading</Typography>
+        </Grid>
+      </Grid>
+
+      <Grid container direction="row" spacing={4} sx={{ px: 9 }}>
+        <Grid item xs={12}>
+          <Typography variant="h4" sx={{ color: '#392767' }}>
+            Embracing Transformation: A Journey from Comfort to the Unknown
+          </Typography>
+        </Grid>
         <Grid item>
           <Typography variant="body1">
             Welcome to my newsletter!I'm Mariana, a scientific designer and
@@ -116,11 +109,13 @@ export const Txtblog1 = () => {
 
         <Grid item>
           <Typography variant="body1">
-            Remember, this is a long journey—don't rush the process. Take the
-            time to reflect and digest the information you gather. Plan
-            meticulously, design a strategy, and think in smaller steps. It's
-            easy to get caught up in grand dreams or ideas that could take a
-            lifetime to achieve, which can be demotivating. Setting achievable
+            Remember, this is a long journey—don't rush the process.{' '}
+            <span style={{ fontWeight: 600 }}>
+              Take the time to reflect and digest the information you gather.
+            </span>{' '}
+            Plan meticulously, design a strategy, and think in smaller steps.
+            It's easy to get caught up in grand dreams or ideas that could take
+            a lifetime to achieve, which can be demotivating. Setting achievable
             short-term goals and breaking them down into manageable tasks gives
             you a sense of progress as you check items off your list.
           </Typography>
@@ -132,7 +127,7 @@ export const Txtblog1 = () => {
           </Typography>
         </Grid>
       </Grid>
-      <Grid item xs={12}>
+      <Grid item xs={12} sx={{ p: 9 }}>
         <Typography variant="body1" component="div">
           <List>
             {listItems.map((item, index) => (

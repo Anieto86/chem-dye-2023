@@ -1,157 +1,155 @@
-import { Grid } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 
-export default function Txtblog4() {
+export const Txtblog4 = () => {
   return (
-    <>
-      <Grid>
-        <h6 style={{ textAlign: 'right' }}>By Mariana Oksdath Mansilla</h6>
-        <h6 style={{ textAlign: 'right' }}>2 min reading</h6>
-        <h2
-          style={{
-            textAlign: 'center',
-            color: '#392767',
-            fontFamily: 'Arial, Helvetica, sans-serif',
-          }}
-        >
-          Learn how to create a killing Graphical Abstract in only five steps{' '}
-        </h2>
-        <br />
-        <br />
-        <p>
-          First things first, congratulations! If you are thinking about your
-          graphical abstract, it means that you have already done the hardest
-          part. You have proved your hypothesis and got some exciting results
-          that are ready to be published, you rock.
-        </p>
-        <p>
-          After all that hard work, why even bother with this minor detail?
-          Well, a graphical abstract (GA) is not only a nice summary of your
-          results. You have to see it as an opportunity to teach other
-          scientists about these discoveries and engage the community with your
-          work's novelty. At the end of the day, when you're looking for
-          information, you spend a couple of minutes on each paper and even less
-          sometimes. So, it would be best to create graphics that speak for
-          themselves, selling your research in a few minutes.
-        </p>
-
-        <p
-          style={{
-            textAlign: 'center',
-            color: '#392767',
-            fontFamily: 'Arial, Helvetica, sans-serif',
-            fontWeight: 'bold',
-          }}
-        >
-          <em>
-            A winner GA is that one that everyone is going to use on their next
-            talk.
-          </em>
-        </p>
-        <p>
-          I hope that at this point, I have already convinced you about the
-          importance of paying attention to the graphical abstract because
-          I&rsquo;m about to give you some killers tips to make your next GA
-          shine
-        </p>
-
-        <strong
-          style={{
-            fontFamily: 'Arial, Helvetica, sans-serif',
-            fontSize: '20px',
-          }}
-        >
-          TIP 1 :{' '}
-          <span>Do not try to add all your scientific data in the GA</span>
-        </strong>
-        <p>
-          Make it simple, as if you have to explain your findings in a few
-          words. The GA has to have the whole story, almost the same as if you
-          read the conclusion.
-        </p>
-        <br />
-        <strong
-          style={{
-            fontFamily: 'Arial, Helvetica, sans-serif',
-            fontSize: '20px',
-          }}
-        >
-          TIP 2 : <span>Sketch your results</span>
-        </strong>
-
-        <p>
-          You can start using a piece of paper, thinking that you're explaining
-          your discoveries to a broad audience, people that aren't experts on
-          your topic.
-        </p>
-        <br />
-        <strong
-          style={{
-            fontFamily: 'Arial, Helvetica, sans-serif',
-            fontSize: '20px',
-          }}
-        >
-          TIP 3 : <span>Think in colours</span>{' '}
-        </strong>
-        <p>
-          <p>
-            Once you have a sketch that you are satisfied with, you need to
-            start thinking about the design and aesthetics.&nbsp; The colour
-            pallet is a big deal, but you don&rsquo;t have to do it alone.
-            Several tools could help you to choose your next perfect pallet such
-            as: coolors.co, design-seeds, and @ux.base on Instagram. Some blogs
-            that I like that talk specifically about colour and esthetics are in
-            &ldquo;Agent Majeure&rdquo; and &ldquo;Animate your Science&rdquo;.
-            It&rsquo;s always a good idea to visit them.
-          </p>
-        </p>
-        <br />
-        <strong
-          style={{
-            fontFamily: 'Arial, Helvetica, sans-serif',
-            fontSize: '20px',
-          }}
-        >
-          TIP 4 : <span>Create a digital illustration</span>{' '}
-        </strong>
-
-        <br />
-        <p>
-          Many scientists are still using PowerPoint for their illustrations,
-          and don't get me wrong, I love PowerPoint, but it&rsquo;s time to move
-          on. My advice is that if you enjoy making illustrations on digital
-          platforms, learn how to use Adobe Illustrator. Illustrator is a
-          vectorial software that's going to increase quality and velocity in
-          your drawings. Otherwise, you always have, a free software that does
-          almost everything for you, BioRender. In BioRender, you have many
-          pre-designed icons that you can combine to make a high-quality and
-          professional image. If you don&rsquo;t have the time, the ability, or
-          it&rsquo;s simply not your thing, you could always call a scientific
-          illustrator that will be more than happy to assist you in the process.
-        </p>
-        <br />
-
-        <strong
-          style={{
-            fontFamily: 'Arial, Helvetica, sans-serif',
-            fontSize: '20px',
-          }}
-        >
-          TIP 5 : <span>Aesthetics is important</span>{' '}
-        </strong>
-
-        <p>
-          <span>
-            A good GA should be clear, clean and accurate; the details matter
-            here. Use the same font in all the illustration, and you also can
-            change the size or properties to add some emphasis. Colours could
-            help to focus the viewer's attention on what is the main point. To
-            achieve a clean finish, leave white spaces, don&rsquo;t overload the
-            illustrations with unnecessary information. The design should be
-            functional, and it should provide the main points of your
-            discoveries effortlessly.
-          </span>
-        </p>
+    <Grid>
+      <Grid
+        container
+        direction="column"
+        justifyContent="center"
+        alignItems="flex-end"
+        sx={{
+          p: 2,
+        }}
+      >
+        <Grid item>
+          <Typography variant="h6">By Mariana Oksdath Mansilla</Typography>
+        </Grid>
+        <Grid item>
+          <Typography variant="h6">4 min reading</Typography>
+        </Grid>
       </Grid>
-    </>
+
+      <Grid container direction="row" spacing={4} sx={{ px: 9 }}>
+        <Grid item xs={12}>
+          <Typography variant="h4" sx={{ color: '#392767' }}>
+            Elevate Your Research and Captivate the Scientific Community with a
+            Stellar Graphical Abstract
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography variant="body1">
+            First and foremost, congratulations! The fact that you're
+            considering a graphical abstract signifies that you've already
+            conquered the most challenging part. You've validated your
+            hypothesis and obtained exciting results that are ready to be shared
+            with the world. You rock!
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography variant="body1">
+            But why should you bother with this seemingly minor detail? Well, a
+            graphical abstract (GA) is more than just a concise summary of your
+            findings. It's an opportunity to educate fellow scientists about
+            your discoveries and engage the community with the novelty of your
+            work. Researchers typically spend only a few minutes on each paper
+            when seeking information, sometimes even less. Therefore, creating
+            graphics that speak for themselves is crucial, effectively
+            showcasing your research in a matter of minutes.
+          </Typography>
+        </Grid>
+        <Grid item xs={12}>
+          <Typography variant="body1">
+            A winning GA is one that everyone will want to feature in their next
+            presentation.
+          </Typography>
+        </Grid>
+        <Grid item xs={12}>
+          <Typography variant="body1">
+            By now, I hope I've convinced you of the importance of giving due
+            attention to your graphical abstract. So, without further ado, let
+            me provide you with killer tips to make your next GA shine.
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography variant="h5" sx={{ fontWeight: 600 }}>
+            TIP 1: Keep it Simple, Focus on the Story
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography variant="body1">
+            Avoid the temptation to include all your scientific data in the GA.
+            Instead, strive for simplicity, as if you were explaining your
+            findings in a few words. The GA should encapsulate the essence of
+            your work, like reading the conclusion.
+          </Typography>
+        </Grid>
+        <Grid item xs={12}>
+          <Typography variant="h5" sx={{ fontWeight: 600 }}>
+            TIP 2: Sketch Your Results
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography variant="body1">
+            Begin by sketching your results on a piece of paper, envisioning
+            that you're explaining your discoveries to a broad audience who may
+            not be experts in your field.
+          </Typography>
+        </Grid>
+
+        <Grid item xs={12}>
+          <Typography variant="h5" sx={{ fontWeight: 600 }}>
+            TIP 3: Harness the Power of Colors
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography variant="body1">
+            Once you have a sketch that satisfies you, consider the design and
+            aesthetics. The colour palette plays a significant role, but you
+            don't have to tackle it alone. Several tools, such as coolors.co,
+            design-seeds, and @ux.base on Instagram can assist you in selecting
+            the perfect palette. I recommend visiting blogs like "Agent Majeure"
+            for further insights on colour and aesthetics.
+          </Typography>
+        </Grid>
+
+        <Grid item xs={12}>
+          <Typography variant="h5" sx={{ fontWeight: 600 }}>
+            TIP 4: Embrace Digital Illustration
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography variant="body1">
+            While many scientists still rely on PowerPoint for illustrations
+            (and there's nothing wrong with that), it's time to explore new
+            horizons. If you enjoy creating digital illustrations, consider
+            learning Adobe Illustrator, a vector-based software that enhances
+            the quality and efficiency of your drawings. Alternatively,
+            BioRender is free software that offers pre-designed icons, enabling
+            you to create high-quality and professional images. If you lack the
+            time and skills or simply prefer assistance, reach out to a
+            scientific illustrator who will happily support you throughout the
+            process.
+          </Typography>
+        </Grid>
+        <Grid item xs={12}>
+          <Typography variant="h5" sx={{ fontWeight: 600 }}>
+            TIP 5: Prioritize Aesthetics
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography variant="body1">
+            A remarkable GA should be clear, clean, and accurate, with attention
+            to detail. Maintain consistent font throughout the illustration, and
+            feel free to modify size or properties to add emphasis where
+            necessary. Colours can guide the viewer's attention to the main
+            points of interest. To achieve a polished finish, incorporate white
+            spaces and avoid overwhelming the illustration with unnecessary
+            information. The design should be functional, effortlessly conveying
+            the critical aspects of your discoveries. By following these five
+            steps, you'll master the art of creating impactful graphical
+            abstracts that captivate audiences and elevate the visibility of
+            your research.
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography variant="body1">
+            By following these five steps, you'll master the art of creating
+            impactful graphical abstracts that captivate audiences and elevate
+            the visibility of your research.
+          </Typography>
+        </Grid>
+      </Grid>
+    </Grid>
   );
-}
+};

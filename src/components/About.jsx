@@ -1,5 +1,5 @@
 import { Grid, Typography } from '@mui/material';
-import { ContactBtn } from '../components//common/layouts/ContactBtn';
+import { ContactBtn } from './ContactBtn';
 import aboutImg from '../assets/img/MyPicProfile_V2.png';
 
 export const About = () => {

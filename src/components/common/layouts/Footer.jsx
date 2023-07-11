@@ -2,7 +2,7 @@ import { Box, Grid, IconButton, Typography } from '@mui/material';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import { ContactBtn } from './ContactBtn';
+import { ContactBtn } from '../../ContactBtn';
 
 export const Footer = () => {
   return (

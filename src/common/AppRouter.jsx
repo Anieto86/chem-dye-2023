@@ -6,9 +6,12 @@ import { NavBar } from '../components/common/layouts/NavBar';
 import { ErrorPage } from './ErrorPage';
 import { About } from '../components/About';
 import { Blog } from '../components/Blog';
-import Txtblog4 from '../components/common/Blogs/Txtblog4';
-import { Txtblog1 } from '../components/common/Blogs/Txtblog1';
-// import { Home } from '@mui/icons-material';
+import {
+  Txtblog1,
+  Txtblog4,
+  Txtblog2,
+  Txtblog3,
+} from '../components/common/Blogs';
 
 export const AppRouter = () => {
   return createBrowserRouter([
@@ -39,13 +42,22 @@ export const AppRouter = () => {
           path: '/Blog',
           element: <Blog />,
         },
-        {
-          path: '/Blog/txt4',
-          element: <Txtblog4 />,
-        },
+
         {
           path: '/Blog/txt1',
           element: <Txtblog1 />,
+        },
+        {
+          path: '/Blog/txt2',
+          element: <Txtblog2 />,
+        },
+        {
+          path: '/Blog/txt3',
+          element: <Txtblog3 />,
+        },
+        {
+          path: '/Blog/txt4',
+          element: <Txtblog4 />,
         },
       ],
     },
