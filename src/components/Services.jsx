@@ -19,8 +19,32 @@ export const Services = () => {
         direction="row"
         justifyContent="center"
         alignItems="center"
-        spacing={2}
+        spacing={3}
       >
+        <Grid item sx={{ my: 5 }}>
+          <Typography
+            variant="body1"
+            color="initial"
+            sx={{ fontSize: 30, textAlign: 'center', m: 10 }}
+          >
+            We excel in crafting{' '}
+            <span style={{ fontWeight: '700' }}>
+              compelling scientific content
+            </span>{' '}
+            to communicate your research and discoveries effectively. As your
+            trusted partner,{' '}
+            <span style={{ fontWeight: '700' }}>
+              our top priority is collaborating closely
+            </span>{' '}
+            with you, ensuring we create visuals that beautifully illustrate
+            your science story. Together,{' '}
+            <span style={{ fontWeight: '700' }}>
+              let’s bring your vision to fruition and make a lasting impact in
+              the world of science.
+            </span>
+          </Typography>
+          <Divider sx={{ backgroundColor: '#ff6f80' }} />
+        </Grid>
         <Grid item xs={4}></Grid>
         <Grid item xs={7}>
           <Typography variant="h4">OUR SERVICES</Typography>
@@ -93,7 +117,7 @@ export const Services = () => {
           </Accordion>
         </Grid>
       </Grid>
-
+      <br />
       <br />
       <Grid
         container
@@ -115,7 +139,6 @@ export const Services = () => {
           </Typography>
         </Grid>
       </Grid>
-
       <Companies />
     </Grid>
   );

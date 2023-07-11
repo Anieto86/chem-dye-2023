@@ -6,7 +6,6 @@ export default function Txtblog4() {
       <Grid>
         <h6 style={{ textAlign: 'right' }}>By Mariana Oksdath Mansilla</h6>
         <h6 style={{ textAlign: 'right' }}>2 min reading</h6>
-
         <h2
           style={{
             textAlign: 'center',

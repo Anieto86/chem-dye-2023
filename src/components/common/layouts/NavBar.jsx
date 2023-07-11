@@ -11,7 +11,7 @@ export function NavBar() {
   const links = ['Service', 'Work', 'About', 'Blog', 'Contact'];
 
   return (
-    <Box sx={{ flexGrow: 2 }}>
+    <>
       <Box sx={{ position: 'relative', width: '100%' }}>
         <AppBar
           position="static"
@@ -21,6 +21,7 @@ export function NavBar() {
                   p: 2,
                   backgroundImage: `url(${backgroundImg})`,
                   backgroundSize: 'cover',
+                  backgroundRepeat: 'no-repeat',
                   backgroundPosition: 'center',
                   height: 1000,
                 }
@@ -33,6 +34,7 @@ export function NavBar() {
               direction="row"
               justifyContent="space-between"
               alignItems="flex-start"
+              wrap="nowrap"
             >
               <Grid item>
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
@@ -64,15 +66,16 @@ export function NavBar() {
                     <NavLink
                       key={i}
                       to={`/${link}`}
-                      style={({ isActive, isPending }) => {
+                      style={({ isActive }) => {
                         return {
                           border: isActive ? '1px solid #000000' : 'none',
                           borderRadius: '10px',
                           padding: 6,
                           textDecoration: 'none',
-                          color: isPending ? 'red' : 'black',
                           fontFamily: "'Quicksand', sans-serif",
                           fontSize: 20,
+                          color:
+                            location.pathname === '/' ? '#ffffff' : 'black',
                         };
                       }}
                     >
@@ -110,35 +113,11 @@ export function NavBar() {
           )}
         </AppBar>
       </Box>
-      {location.pathname === '/' && (
-        <Typography
-          variant="body1"
-          color="initial"
-          sx={{ fontSize: 30, textAlign: 'center', m: 20 }}
-        >
-          We excel in crafting{' '}
-          <span style={{ fontWeight: '700' }}>
-            compelling scientific content
-          </span>{' '}
-          to communicate your research and discoveries effectively. As your
-          trusted partner,{' '}
-          <span style={{ fontWeight: '700' }}>
-            our top priority is collaborating closely
-          </span>{' '}
-          with you, ensuring we create visuals that beautifully illustrate your
-          science story. Together,{' '}
-          <span style={{ fontWeight: '700' }}>
-            let’s bring your vision to fruition and make a lasting impact in the
-            world of science.
-          </span>
-        </Typography>
-      )}
-
       <Grid container direction="row" justifyContent="center" sx={{ p: 4 }}>
         <Grid item>
           <Outlet />
         </Grid>
       </Grid>
-    </Box>
+    </>
   );
 }

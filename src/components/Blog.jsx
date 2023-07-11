@@ -10,32 +10,32 @@ import Img4 from '../assets/imgBlog/Img4.jpg';
 
 const blogs = [
   {
-    title:
-      'Learn how to create a killing Graphical Abstract in only five steps ',
+    title: 'Embracing Transformation: A Journey from Comfort to the Unknown',
     img: img1,
     subTitle:
-      'A Graphical Abstract is the opportunity to boost your research, make your data shine',
+      "This post explores transitioning from a comfortable career to the unknown, highlighting career changes' increasing prevalence and benefits. It emphasises self-reflection, curiosity, connecting with resources and like-minded individuals, and embracing hard work. Understanding one's professional identity and seeking an aligned environment is crucial. The post underscores exploring new possibilities, leveraging unique skills, and prioritising self-care. Patience, reflection, goal-setting, and self-care are essential throughout the career transformation process.",
     link: 'txt1',
   },
   {
-    title:
-      'Are you a scientist? Learn how to master social networks with our tips',
+    title: 'Scientific Illustrators: Amplifying the Message',
     img: img2,
     subTitle:
-      'Social networks are the best link to close the gap between scientists and society',
+      'This post explores the role of scientific illustrators in science communication, highlighting their ability to translate complex concepts into captivating visuals. It emphasises diverse paths in the field and the importance of utilising their services. In-house scientific illustrators are recommended to enhance science communication.',
     link: 'txt2',
   },
+  // {
+  //   title: 'Scientific illustrators, making the message louder',
+  //   img: img3,
+  //   subTitle:
+  //     'Social networks are the best link to close the gap between scientists and society',
+  //   link: 'txt3',
+  // },
   {
-    title: 'Scientific illustrators, making the message louder',
-    img: img3,
-    subTitle:
-      'Scientific illustrators translate complex data into compelling scientific stories',
-    link: 'txt3',
-  },
-  {
-    title: 'Thinking outside the box',
+    title:
+      'Mastering the Art of Creating Impactful Graphical Abstracts in Five Simple Steps',
     img: Img4,
-    subTitle: 'Moving from the comfort zone to the unknown',
+    subTitle:
+      "Create impactful graphical abstracts in 5 steps: keep it simple, sketch results, use colours effectively, embrace digital illustration, and prioritise aesthetics. Elevate your research's visibility and captivate the scientific community.",
     link: 'txt4',
   },
 ];
@@ -79,12 +79,11 @@ export const Blog = () => {
                 />
               </Grid>
               <Grid item xs={9}>
-                <Typography variant="h6"> {x.title}</Typography>
-                <Typography variant="p">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt atque nam nisi ratione eveniet! Sapiente voluptate
-                  cum in, quod eaque totam ratione neque laborum blanditiis
-                  voluptates accusamus mollitia, beatae distinctio.
+                <Typography variant="h6" sx={{ fontWeight: 600 }} gutterBottom>
+                  {x.title}
+                </Typography>
+                <Typography variant="body1" gutterBottom>
+                  {x.subTitle}
                 </Typography>
                 <Grid item>
                   <Link to={`/Blog/${x.link}`}>

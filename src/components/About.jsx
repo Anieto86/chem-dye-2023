@@ -11,13 +11,13 @@ export const About = () => {
         justifyContent="space-evenly"
         alignItems="center"
       >
-        <Grid item xs={5}>
-          <Typography variant="h3" fontWeight={600}>
+        <Grid item xs={4}>
+          <Typography variant="h2" fontWeight={600}>
             Mariana Oksdath
             <br />
             <span style={{ color: '#DF367C' }}>visual science</span>
           </Typography>
-          <Typography variant="h3" fontWeight={600}>
+          <Typography variant="h2" fontWeight={600}>
             communicator
           </Typography>
         </Grid>
@@ -67,7 +67,7 @@ export const About = () => {
           captivating visuals that ignite curiosity, spark
         </Typography>
       </Grid>
-      <Grid item>
+      <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center' }}>
         <ContactBtn title="Connect with us" />
       </Grid>
     </Grid>

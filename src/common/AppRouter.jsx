@@ -7,6 +7,8 @@ import { ErrorPage } from './ErrorPage';
 import { About } from '../components/About';
 import { Blog } from '../components/Blog';
 import Txtblog4 from '../components/common/Blogs/Txtblog4';
+import { Txtblog1 } from '../components/common/Blogs/Txtblog1';
+// import { Home } from '@mui/icons-material';
 
 export const AppRouter = () => {
   return createBrowserRouter([
@@ -40,6 +42,10 @@ export const AppRouter = () => {
         {
           path: '/Blog/txt4',
           element: <Txtblog4 />,
+        },
+        {
+          path: '/Blog/txt1',
+          element: <Txtblog1 />,
         },
       ],
     },
