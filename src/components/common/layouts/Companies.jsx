@@ -8,67 +8,68 @@ import bioGenox from '../../../assets/Icons/03.F_BG.png';
 
 export const Companies = () => {
   return (
-    <Grid
-      container
-      direction="column"
-      justifyContent="center"
-      alignItems="center"
-      spacing={2}
-      // sx={{ p: 2 }}
-    >
+    <Grid container justifyContent="center" alignItems="center" spacing={2}>
       <Grid item sx={{ my: 8 }}>
-        <Typography variant="h4">WHO WE'VE WORKED WITH?</Typography>
+        <Typography variant="h4">{`WHO WE'VE WORKED WITH?`}</Typography>
       </Grid>
 
       <Grid
         container
         justifyContent="center"
         alignItems="center"
-        sx={{ marginLeft: '210px' }}
-        spacing={4}
+        spacing={2}
+        sx={{ mb: 3 }}
       >
-        <Grid item xs={5}>
+        <Grid item xs={3}>
           <img
             src={novaEye}
             alt="Image 1"
-            style={{ width: '30%', height: 'auto' }}
+            style={{ width: '20%', height: 'auto' }}
           />
         </Grid>
-
-        <Grid item xs={5}>
+        <Grid item xs={3}>
           <img
             src={unisa}
             alt="Image 2"
-            style={{ width: '30%', height: 'auto' }}
+            style={{ width: '20%', height: 'auto' }}
           />
         </Grid>
-        <Grid item xs={5}>
-          <img
-            src={greenPeace}
-            alt="Image 4"
-            style={{ width: '30%', height: 'auto' }}
-          />
-        </Grid>
-
-        <Grid item xs={5}>
-          <img
-            src={bioGenox}
-            alt="Image 6"
-            style={{ width: '30%', height: 'auto' }}
-          />
-        </Grid>
-        <Grid item xs={5}>
+        <Grid item xs={3}>
           <img
             src={businessAndScience}
             alt="Image 3"
-            style={{ width: '30%', height: 'auto' }}
+            style={{ width: '20%', height: 'auto' }}
           />
         </Grid>
-        <Grid item xs={5}>
+      </Grid>
+
+      <Grid
+        container
+        justifyContent="center"
+        alignItems="center"
+        direction="row"
+        sx={{}}
+        spacing={2}
+      >
+        <Grid item xs={3}>
+          <img
+            src={greenPeace}
+            alt="Image 4"
+            style={{ width: '20%', height: 'auto' }}
+          />
+        </Grid>
+        <Grid item xs={3}>
           <img
             src={corticalLab}
+            alt="Image 6"
+            style={{ width: '20%', height: 'auto' }}
+          />
+        </Grid>
+        <Grid item xs={3}>
+          <img
+            src={bioGenox}
             alt="Image 5"
-            style={{ width: '30%', height: 'auto' }}
+            style={{ width: '20%', height: 'auto' }}
           />
         </Grid>
       </Grid>

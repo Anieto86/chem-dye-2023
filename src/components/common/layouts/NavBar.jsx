@@ -3,6 +3,7 @@ import { Outlet, NavLink } from 'react-router-dom';
 import logo from '../../../assets/Icons/02.CDLOGO_COLOUR.png';
 import backgroundImg from '../../../assets/img/01.BG-IMAGE.jpg';
 import { useLocation } from 'react-router-dom';
+import { Services } from '../../Services';
 
 export function NavBar() {
   let location = useLocation();
@@ -53,7 +54,6 @@ export function NavBar() {
                       style={{
                         width: '12%',
                         height: 'auto',
-                        // filter: 'invert(100%) ',
                       }}
                     />
                   </NavLink>
@@ -112,6 +112,8 @@ export function NavBar() {
           )}
         </AppBar>
       </Box>
+
+      {location.pathname === '/' && <Services />}
       <Grid container direction="row" justifyContent="center" sx={{ p: 4 }}>
         <Grid item>
           <Outlet />

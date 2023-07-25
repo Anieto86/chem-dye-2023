@@ -1,19 +1,21 @@
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Divider,
   Grid,
   Typography,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-  Divider,
 } from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { Companies } from './common/layouts/companies';
 import servicesIcon from '../assets/Icons/00.SERVICES.png';
 import whyUs from '../assets/Icons/01.WHYUS.png';
+import { Companies } from './common/layouts/companies';
+import { ContactBtn } from './common/ContactBtn';
+import { Link } from 'react-router-dom';
 
 export const Services = () => {
   return (
-    <Grid>
+    <>
       <Grid
         container
         direction="row"
@@ -21,7 +23,7 @@ export const Services = () => {
         alignItems="center"
         spacing={3}
       >
-        <Grid item sx={{ my: 5 }}>
+        <Grid item sx={{ my: 5 }} xs={10}>
           <Typography
             variant="body1"
             color="initial"
@@ -69,7 +71,6 @@ export const Services = () => {
             </AccordionDetails>
           </Accordion>
         </Grid>
-
         <Grid item xs={4}>
           <img src={servicesIcon} alt="Image 1" />
         </Grid>
@@ -94,9 +95,8 @@ export const Services = () => {
             </AccordionDetails>
           </Accordion>
         </Grid>
-
         <Grid item xs={4}></Grid>
-        <Grid item xs={7}>
+        <Grid item xs={7} sx={{ mb: 2 }}>
           <Accordion sx={{ boxShadow: 'none', border: 'none' }}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
@@ -115,10 +115,14 @@ export const Services = () => {
               </Typography>
             </AccordionDetails>
           </Accordion>
+          <Grid item sx={{ mt: 5 }}>
+            <Link to={'/work'}>
+              <ContactBtn title="See our work" />
+            </Link>
+          </Grid>
         </Grid>
       </Grid>
-      <br />
-      <br />
+
       <Grid
         container
         direction="row"
@@ -139,7 +143,11 @@ export const Services = () => {
           </Typography>
         </Grid>
       </Grid>
-      <Companies />
-    </Grid>
+      <Grid container justifyContent="center" alignItems="center">
+        <Grid item xs={10}>
+          <Companies />
+        </Grid>
+      </Grid>
+    </>
   );
 };
