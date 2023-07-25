@@ -1,12 +1,12 @@
-import { Grid, Typography } from '@mui/material';
+import { Button, Grid, Typography } from '@mui/material';
 import { ContactBtn } from './ContactBtn';
-import { Button } from '@mui/material';
-import React from 'react';
 import { Link } from 'react-router-dom';
 import img1 from '../assets/imgBlog/Img1.jpg';
 import img2 from '../assets/imgBlog/Img2.png';
 import img3 from '../assets/imgBlog/Img3.png';
 import Img4 from '../assets/imgBlog/Img4.jpg';
+import { NewsletterSubscription } from './common/NewsletterSubscription';
+import { useState } from 'react';
 
 const blogs = [
   {
@@ -42,6 +42,26 @@ const blogs = [
 ];
 
 export const Blog = () => {
+  const [show, setShow] = useState(false);
+  // const [email, setEmail] = useState('');
+  // const [firstName, setFirstName] = useState('');
+  // const [lastName, setLastName] = useState('');
+
+  // const handleInputChange = (event) => {
+  //   const { name, value } = event.target;
+  //   if (name === 'EMAIL') {
+  //     setEmail(value);
+  //   } else if (name === 'FNAME') {
+  //     setFirstName(value);
+  //   } else if (name === 'LNAME') {
+  //     setLastName(value);
+  //   }
+  // };
+
+  const handleShow = () => {
+    setShow((prev) => !prev);
+  };
+
   return (
     <Grid
       container
@@ -59,7 +79,19 @@ export const Blog = () => {
         </Typography>
       </Grid>
       <Grid item xs={12} sx={{ m: 3 }}>
-        <ContactBtn title="Join Us" />
+        <ContactBtn title="Join Us" onClickShow={handleShow} />
+      </Grid>
+      <Grid container justifyContent="center" alignItems="center">
+        {show && (
+          <Grid item sx={{ m: 3, p: 3 }}>
+            <NewsletterSubscription
+            // email={email}
+            // firstName={firstName}
+            // lastName={lastName}
+            // onInputChange={handleInputChange}
+            />
+          </Grid>
+        )}
       </Grid>
       <Grid
         container
@@ -72,7 +104,7 @@ export const Blog = () => {
       >
         {blogs.map((x, i) => {
           return (
-            <React.Fragment key={i} s>
+            <Grid container spacing={6} key={i} sx={{ p: 3 }}>
               <Grid item xs={3}>
                 <img
                   src={x.img}
@@ -93,7 +125,7 @@ export const Blog = () => {
                   </Link>
                 </Grid>
               </Grid>
-            </React.Fragment>
+            </Grid>
           );
         })}
       </Grid>

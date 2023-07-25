@@ -3,6 +3,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import { ContactBtn } from '../ContactBtn';
+import { Link } from 'react-router-dom';
 
 export const Footer = () => {
   return (
@@ -19,7 +20,11 @@ export const Footer = () => {
         alignItems: 'center',
       }}
     >
-      <ContactBtn title="Contact Us" />
+      <Link
+        to={`https://us21.list-manage.com/contact-form?u=d18dcd67615ab44686e887477&form_id=614480122771aa21de77d4b637966f22`}
+      >
+        <ContactBtn title="Contact Us" />
+      </Link>
       <Box
         sx={{
           display: 'flex',

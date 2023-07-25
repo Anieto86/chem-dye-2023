@@ -130,7 +130,7 @@ export const Services = () => {
           <img src={whyUs} alt="Image 2" />
         </Grid>
         <Grid item xs={7}>
-          <Typography variant="h5">WHY US?</Typography>
+          <Typography variant="h4">WHY US?</Typography>
           <Typography>
             As scientists turned artists, we bring a unique blend of expertise
             and years of experience serving academia, biotech, and the health

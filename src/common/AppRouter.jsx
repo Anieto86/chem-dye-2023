@@ -1,17 +1,18 @@
 import { createBrowserRouter } from 'react-router-dom';
+import { About } from '../components/About';
+import { Blog } from '../components/Blog';
+import { Contact } from '../components/Contact';
 import { Services } from '../components/Services';
 import { Work } from '../components/Work';
+import {
+  Txtblog1,
+  Txtblog2,
+  Txtblog3,
+  Txtblog4,
+} from '../components/common/Blogs';
 import { Footer } from '../components/common/layouts/Footer';
 import { NavBar } from '../components/common/layouts/NavBar';
 import { ErrorPage } from './ErrorPage';
-import { About } from '../components/About';
-import { Blog } from '../components/Blog';
-import {
-  Txtblog1,
-  Txtblog4,
-  Txtblog2,
-  Txtblog3,
-} from '../components/common/Blogs';
 
 export const AppRouter = () => {
   return createBrowserRouter([
@@ -42,7 +43,10 @@ export const AppRouter = () => {
           path: '/Blog',
           element: <Blog />,
         },
-
+        {
+          path: '/Contact',
+          element: <Contact />,
+        },
         {
           path: '/Blog/txt1',
           element: <Txtblog1 />,

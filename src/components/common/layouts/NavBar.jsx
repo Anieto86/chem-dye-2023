@@ -6,7 +6,6 @@ import { useLocation } from 'react-router-dom';
 
 export function NavBar() {
   let location = useLocation();
-  console.log(location.pathname === '/');
 
   const links = ['Service', 'Work', 'About', 'Blog', 'Contact'];
 
