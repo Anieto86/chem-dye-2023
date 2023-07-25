@@ -63,56 +63,49 @@ export const Blog = () => {
   };
 
   return (
-    <Grid
-      container
-      direction="row"
-      justifyContent="flex-start"
-      alignItems="center"
-    >
-      <Grid item xs={12} sx={{ m: 3 }}>
-        <Typography variant="h3" fontWeight={600}>
-          Join Our <span style={{ color: '#DF367C' }}>Newsletter </span>for
-          Expert Tips
-          <br />
-          and Inspiring Insights in Scientific <br />
-          <span style={{ color: '#DF367C' }}>Visualization and Design</span>
-        </Typography>
-      </Grid>
-      <Grid item xs={12} sx={{ m: 3 }}>
-        <ContactBtn title="Join Us" onClickShow={handleShow} />
-      </Grid>
-      <Grid container justifyContent="center" alignItems="center">
-        {show && (
-          <Grid item sx={{ m: 3, p: 3 }}>
-            <NewsletterSubscription
-            // email={email}
-            // firstName={firstName}
-            // lastName={lastName}
-            // onInputChange={handleInputChange}
-            />
+    <>
+      <Grid container>
+        <Grid item xs={10} sx={{ m: 5, fontSize: 60 }}>
+          <Typography variant="h3" fontWeight={600}>
+            Join Our <span style={{ color: '#DF367C' }}>Newsletter </span>for
+            Expert Tips
+            <br />
+            and Inspiring Insights in Scientific <br />
+            <span style={{ color: '#DF367C' }}>Visualization and Design</span>
+          </Typography>
+          <Grid item xs={9.5} sx={{ mb: 10 }}>
+            <ContactBtn title="Join Us" onClickShow={handleShow} />
           </Grid>
-        )}
+        </Grid>
+
+        <Grid container justifyContent="center" alignItems="center">
+          {show && (
+            <Grid item sx={{ m: 3, p: 3 }}>
+              <NewsletterSubscription />
+            </Grid>
+          )}
+        </Grid>
       </Grid>
       <Grid
         container
         direction="row"
-        justifyContent="flex-start"
+        justifyContent="space-evenly"
         alignItems="center"
         wrap="wrap"
-        sx={{ p: 3 }}
+        sx={{ p: 5 }}
         spacing={5}
       >
         {blogs.map((x, i) => {
           return (
-            <Grid container spacing={6} key={i} sx={{ p: 3 }}>
-              <Grid item xs={3}>
+            <Grid container spacing={6} key={i} sx={{ p: 3, ml: 5 }}>
+              <Grid item xs={4}>
                 <img
                   src={x.img}
                   alt="Image 1"
                   style={{ width: '80%', height: 'auto' }}
                 />
               </Grid>
-              <Grid item xs={9}>
+              <Grid item xs={7}>
                 <Typography variant="h6" sx={{ fontWeight: 600 }} gutterBottom>
                   {x.title}
                 </Typography>
@@ -129,6 +122,6 @@ export const Blog = () => {
           );
         })}
       </Grid>
-    </Grid>
+    </>
   );
 };

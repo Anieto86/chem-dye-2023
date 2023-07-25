@@ -19,39 +19,41 @@ import { ContactBtn } from './common/ContactBtn';
 
 export function Work() {
   return (
-    <Box sx={{}}>
-      <Grid item xs={16}>
+    <Grid container justifyContent="center">
+      <Grid item xs={12}>
         <Typography variant="h2" fontWeight={600}>
           We provide solutions for the Healthcare,
         </Typography>
         <Typography variant="h2" fontWeight={600}>
           Pharma and Biotech Industries.
         </Typography>
+        <Grid item sx={{ my: 4 }}>
+          <ContactBtn title="Connect with us" />
+        </Grid>
       </Grid>
-      <Box sx={{ my: 4 }}>
-        <ContactBtn title="Connect with us" />
-      </Box>
-      <Masonry columns={3} spacing={1}>
-        {itemData.map((item, index) => (
-          <div key={index}>
-            <img
-              src={`${item.img}?w=162&auto=format`}
-              srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
-              alt={item.title}
-              loading="lazy"
-              style={{
-                borderBottomLeftRadius: 4,
-                borderBottomRightRadius: 4,
-                display: 'block',
-                width: '100%',
-                height: 'auto',
-                maxWidth: '100%',
-              }}
-            />
-          </div>
-        ))}
-      </Masonry>
-    </Box>
+      <Grid container xs={10}>
+        <Masonry columns={3} spacing={3}>
+          {itemData.map((item, index) => (
+            <Grid key={index}>
+              <img
+                src={`${item.img}?w=162&auto=format`}
+                srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
+                alt={item.title}
+                loading="lazy"
+                style={{
+                  borderBottomLeftRadius: 4,
+                  borderBottomRightRadius: 4,
+                  display: 'block',
+                  width: '100%',
+                  height: 'auto',
+                  maxWidth: '100%',
+                }}
+              />
+            </Grid>
+          ))}
+        </Masonry>
+      </Grid>
+    </Grid>
   );
 }
 

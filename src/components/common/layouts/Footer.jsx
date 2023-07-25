@@ -34,6 +34,7 @@ export const Footer = () => {
         <IconButton
           sx={{
             color: 'black',
+            fontSize: 50,
           }}
         >
           <InstagramIcon sx={{ fontSize: '1.5em' }} />
@@ -42,6 +43,7 @@ export const Footer = () => {
           sx={{
             color: 'black',
             mx: 2,
+            fontSize: 50,
           }}
         >
           <LinkedInIcon sx={{ fontSize: '1.5em' }} />
@@ -49,6 +51,7 @@ export const Footer = () => {
         <IconButton
           sx={{
             color: 'black',
+            fontSize: 50,
           }}
         >
           <TwitterIcon sx={{ fontSize: '1.5em' }} />
@@ -66,19 +69,23 @@ export const Footer = () => {
 
       <Grid container spacing={2} columns={16} sx={{ p: 2 }}>
         <Grid item xs={10}>
-          <Typography align="left">
+          <Typography align="left" sx={{ fontSize: 25 }}>
             Terms of use / Cookie Policy / Privacy Policy
           </Typography>
           <Grid item sx={{ my: 3 }}>
-            <Typography align="left">
+            <Typography align="left" sx={{ fontSize: 25 }}>
               ChemDye Scientific Illustrations
             </Typography>
-            <Typography align="left">ABN 45 841 581 765</Typography>
-            <Typography align="left">Adelaide - Australia</Typography>
+            <Typography align="left" sx={{ fontSize: 25 }}>
+              ABN 45 841 581 765
+            </Typography>
+            <Typography align="left" sx={{ fontSize: 25 }}>
+              Adelaide - Australia
+            </Typography>
           </Grid>
         </Grid>
         <Grid item xs={6}>
-          <Typography align="right">
+          <Typography align="right" sx={{ fontSize: 25, p: 2 }}>
             Unauthorized Reproduction Prohibited: Any replication, utilization,
             or incorporation of materials including images, diagrams, sounds, or
             text from this website in electronic or printed publications without

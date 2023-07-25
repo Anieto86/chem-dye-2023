@@ -18,27 +18,48 @@ export const Companies = () => {
         justifyContent="center"
         alignItems="center"
         spacing={2}
-        sx={{ mb: 3 }}
+        sx={{ mb: 10 }}
       >
-        <Grid item xs={3}>
+        <Grid
+          item
+          xs={3}
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+          }}
+        >
           <img
             src={novaEye}
             alt="Image 1"
-            style={{ width: '20%', height: 'auto' }}
+            style={{ width: '40%', height: 'auto' }}
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid
+          item
+          xs={3}
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+          }}
+        >
           <img
             src={unisa}
             alt="Image 2"
-            style={{ width: '20%', height: 'auto' }}
+            style={{ width: '40%', height: 'auto' }}
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid
+          item
+          xs={3}
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+          }}
+        >
           <img
             src={businessAndScience}
             alt="Image 3"
-            style={{ width: '20%', height: 'auto' }}
+            style={{ width: '40%', height: 'auto' }}
           />
         </Grid>
       </Grid>
@@ -51,25 +72,46 @@ export const Companies = () => {
         sx={{}}
         spacing={2}
       >
-        <Grid item xs={3}>
+        <Grid
+          item
+          xs={3}
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+          }}
+        >
           <img
             src={greenPeace}
             alt="Image 4"
-            style={{ width: '20%', height: 'auto' }}
+            style={{ width: '40%', height: 'auto' }}
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid
+          item
+          xs={3}
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+          }}
+        >
           <img
             src={corticalLab}
             alt="Image 6"
-            style={{ width: '20%', height: 'auto' }}
+            style={{ width: '40%', height: 'auto' }}
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid
+          item
+          xs={3}
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+          }}
+        >
           <img
             src={bioGenox}
             alt="Image 5"
-            style={{ width: '20%', height: 'auto' }}
+            style={{ width: '40%', height: 'auto' }}
           />
         </Grid>
       </Grid>

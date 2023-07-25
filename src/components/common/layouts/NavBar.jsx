@@ -52,7 +52,7 @@ export function NavBar() {
                       src={logo}
                       alt="Image 1"
                       style={{
-                        width: '12%',
+                        width: '20%',
                         height: 'auto',
                       }}
                     />

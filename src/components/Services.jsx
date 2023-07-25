@@ -22,12 +22,13 @@ export const Services = () => {
         justifyContent="center"
         alignItems="center"
         spacing={3}
+        sx={{ mb: 10 }}
       >
-        <Grid item sx={{ my: 5 }} xs={10}>
+        <Grid item sx={{ my: 5, p: 4 }} xs={10}>
           <Typography
             variant="body1"
             color="initial"
-            sx={{ fontSize: 30, textAlign: 'center', m: 10 }}
+            sx={{ fontSize: 40, textAlign: 'center', m: 10 }}
           >
             We excel in crafting{' '}
             <span style={{ fontWeight: '700' }}>
@@ -45,12 +46,14 @@ export const Services = () => {
               the world of science.
             </span>
           </Typography>
+
           <Divider sx={{ backgroundColor: '#ff6f80' }} />
         </Grid>
-        <Grid item xs={4}></Grid>
-        <Grid item xs={7}>
-          <Typography variant="h4">OUR SERVICES</Typography>
-          <br />
+        <Grid item xs={4} sx={{ bgcolor: 'red' }}></Grid>
+        <Grid item xs={5}>
+          <Typography variant="h4" sx={{ ml: 2, mb: 4 }}>
+            OUR SERVICES
+          </Typography>
           <Accordion sx={{ boxShadow: 'none', border: 'none' }}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
@@ -62,7 +65,7 @@ export const Services = () => {
 
             <Divider sx={{ backgroundColor: '#ff6f80' }} />
             <AccordionDetails>
-              <Typography>
+              <Typography sx={{ fontSize: 30 }}>
                 Our speciality is creating medical content for a wide variety of
                 packages. As key stakeholders of the project, our number one
                 priority is to work closely with you to create your science
@@ -72,9 +75,9 @@ export const Services = () => {
           </Accordion>
         </Grid>
         <Grid item xs={4}>
-          <img src={servicesIcon} alt="Image 1" />
+          <img src={servicesIcon} alt="Image 1" style={{ width: '80%' }} />
         </Grid>
-        <Grid item xs={7}>
+        <Grid item xs={5}>
           <Accordion sx={{ boxShadow: 'none', border: 'none' }}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
@@ -86,7 +89,7 @@ export const Services = () => {
 
             <Divider sx={{ backgroundColor: '#ff6f80' }} />
             <AccordionDetails>
-              <Typography>
+              <Typography sx={{ fontSize: 30 }}>
                 Our speciality is creating medical content for a wide variety of
                 packages. As key stakeholders of the project, our number one
                 priority is to work closely with you to create your science
@@ -95,8 +98,8 @@ export const Services = () => {
             </AccordionDetails>
           </Accordion>
         </Grid>
-        <Grid item xs={4}></Grid>
-        <Grid item xs={7} sx={{ mb: 2 }}>
+        <Grid item xs={4} sx={{ bgcolor: 'red' }}></Grid>
+        <Grid item xs={5} sx={{}}>
           <Accordion sx={{ boxShadow: 'none', border: 'none' }}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
@@ -107,7 +110,7 @@ export const Services = () => {
             </AccordionSummary>
             <Divider sx={{ backgroundColor: '#ff6f80' }} />
             <AccordionDetails>
-              <Typography>
+              <Typography sx={{ fontSize: 30 }}>
                 Our specialty is creating medical content for a wide variety of
                 packages. As key stakeholders of the project, our number one
                 priority is to work closely with you to create your science
@@ -131,11 +134,11 @@ export const Services = () => {
         spacing={2}
       >
         <Grid item xs={4}>
-          <img src={whyUs} alt="Image 2" />
+          <img src={whyUs} alt="Image 2" style={{ width: '80%' }} />
         </Grid>
-        <Grid item xs={7}>
+        <Grid item xs={5}>
           <Typography variant="h4">WHY US?</Typography>
-          <Typography>
+          <Typography sx={{ fontSize: 40 }}>
             As scientists turned artists, we bring a unique blend of expertise
             and years of experience serving academia, biotech, and the health
             industry. Collaborating closely with you, we apply critical thinking
