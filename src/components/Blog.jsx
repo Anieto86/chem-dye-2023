@@ -43,20 +43,6 @@ const blogs = [
 
 export const Blog = () => {
   const [show, setShow] = useState(false);
-  // const [email, setEmail] = useState('');
-  // const [firstName, setFirstName] = useState('');
-  // const [lastName, setLastName] = useState('');
-
-  // const handleInputChange = (event) => {
-  //   const { name, value } = event.target;
-  //   if (name === 'EMAIL') {
-  //     setEmail(value);
-  //   } else if (name === 'FNAME') {
-  //     setFirstName(value);
-  //   } else if (name === 'LNAME') {
-  //     setLastName(value);
-  //   }
-  // };
 
   const handleShow = () => {
     setShow((prev) => !prev);
@@ -64,8 +50,8 @@ export const Blog = () => {
 
   return (
     <>
-      <Grid container>
-        <Grid item xs={10} sx={{ m: 5, fontSize: 60 }}>
+      <Grid container justifyContent="center">
+        <Grid item xs={10} sx={{ fontSize: 60 }}>
           <Typography variant="h3" fontWeight={600}>
             Join Our <span style={{ color: '#DF367C' }}>Newsletter </span>for
             Expert Tips
@@ -106,10 +92,14 @@ export const Blog = () => {
                 />
               </Grid>
               <Grid item xs={7}>
-                <Typography variant="h6" sx={{ fontWeight: 600 }} gutterBottom>
+                <Typography
+                  variant="h6"
+                  sx={{ fontWeight: 600, fontSize: 30 }}
+                  gutterBottom
+                >
                   {x.title}
                 </Typography>
-                <Typography variant="body1" gutterBottom>
+                <Typography variant="body1" gutterBottom sx={{ fontSize: 20 }}>
                   {x.subTitle}
                 </Typography>
                 <Grid item>

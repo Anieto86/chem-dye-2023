@@ -31,31 +31,40 @@ export const Footer = () => {
           justifyContent: 'center',
         }}
       >
-        <IconButton
-          sx={{
-            color: 'black',
-            fontSize: 50,
-          }}
+        <Link to={`https://www.instagram.com/chemdye_si/?hl=es`}>
+          <IconButton
+            sx={{
+              color: 'black',
+              fontSize: 50,
+            }}
+          >
+            <InstagramIcon sx={{ fontSize: '1.5em' }} />
+          </IconButton>
+        </Link>
+        <Link to={`https://www.linkedin.com/in/mariana-oksdath-mansilla`}>
+          <IconButton
+            sx={{
+              color: 'black',
+              mx: 2,
+              fontSize: 50,
+            }}
+          >
+            <LinkedInIcon sx={{ fontSize: '1.5em' }} />
+          </IconButton>
+        </Link>
+
+        <Link
+          to={`https://twitter.com/i/flow/login?redirect_after_login=%2FMari_SciArt`}
         >
-          <InstagramIcon sx={{ fontSize: '1.5em' }} />
-        </IconButton>
-        <IconButton
-          sx={{
-            color: 'black',
-            mx: 2,
-            fontSize: 50,
-          }}
-        >
-          <LinkedInIcon sx={{ fontSize: '1.5em' }} />
-        </IconButton>
-        <IconButton
-          sx={{
-            color: 'black',
-            fontSize: 50,
-          }}
-        >
-          <TwitterIcon sx={{ fontSize: '1.5em' }} />
-        </IconButton>
+          <IconButton
+            sx={{
+              color: 'black',
+              fontSize: 50,
+            }}
+          >
+            <TwitterIcon sx={{ fontSize: '1.5em' }} />
+          </IconButton>
+        </Link>
       </Box>
 
       <Box
@@ -69,23 +78,23 @@ export const Footer = () => {
 
       <Grid container spacing={2} columns={16} sx={{ p: 2 }}>
         <Grid item xs={10}>
-          <Typography align="left" sx={{ fontSize: 25 }}>
+          <Typography align="left" sx={{ fontSize: 20 }}>
             Terms of use / Cookie Policy / Privacy Policy
           </Typography>
           <Grid item sx={{ my: 3 }}>
-            <Typography align="left" sx={{ fontSize: 25 }}>
+            <Typography align="left" sx={{ fontSize: 20 }}>
               ChemDye Scientific Illustrations
             </Typography>
-            <Typography align="left" sx={{ fontSize: 25 }}>
+            <Typography align="left" sx={{ fontSize: 20 }}>
               ABN 45 841 581 765
             </Typography>
-            <Typography align="left" sx={{ fontSize: 25 }}>
+            <Typography align="left" sx={{ fontSize: 20 }}>
               Adelaide - Australia
             </Typography>
           </Grid>
         </Grid>
         <Grid item xs={6}>
-          <Typography align="right" sx={{ fontSize: 25, p: 2 }}>
+          <Typography align="right" sx={{ fontSize: 20, p: 2 }}>
             Unauthorized Reproduction Prohibited: Any replication, utilization,
             or incorporation of materials including images, diagrams, sounds, or
             text from this website in electronic or printed publications without

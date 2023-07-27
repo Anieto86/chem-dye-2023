@@ -1,23 +1,46 @@
-import { useState } from 'react';
+import { Grid, TextField, TextareaAutosize } from '@mui/material';
+import { useEffect, useState } from 'react';
 
 export const Contact = () => {
   const [email, setEmail] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
+  const [msgBox, setMsgBox] = useState('');
+
+  useEffect(() => {
+    // Obtener los valores almacenados en LocalStorage al cargar el componente
+    const storedEmail = localStorage.getItem('newsletterEmail') || '';
+    const storedFirstName = localStorage.getItem('newsletterFirstName') || '';
+    const storedLastName = localStorage.getItem('newsletterLastName') || '';
+    const storedMsgBox = localStorage.getItem('newsletterMsgBox') || '';
+
+    // Establecer los estados locales con los valores de LocalStorage
+    setEmail(storedEmail);
+    setFirstName(storedFirstName);
+    setLastName(storedLastName);
+    setMsgBox(storedMsgBox);
+  }, []);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
+    // Actualizar los estados locales y guardar los valores en LocalStorage cada vez que cambien
     if (name === 'EMAIL') {
       setEmail(value);
+      localStorage.setItem('newsletterEmail', value);
     } else if (name === 'FNAME') {
       setFirstName(value);
+      localStorage.setItem('newsletterFirstName', value);
     } else if (name === 'LNAME') {
       setLastName(value);
+      localStorage.setItem('newsletterLastName', value);
+    } else if (name === 'MBox') {
+      setMsgBox(value);
+      localStorage.setItem('newsletterMsgBox', value);
     }
   };
 
   return (
-    <div id="mc_embed_shell">
+    <Grid id="mc_embed_shell">
       <link
         href="//cdn-images.mailchimp.com/embedcode/classic-061523.css"
         rel="stylesheet"
@@ -30,48 +53,48 @@ export const Contact = () => {
           We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
         `}
       </style>
-      <div id="mc_embed_signup">
+      <Grid id="mc_embed_signup">
         <form
-          action="https://us21.list-manage.com/contact-form?u=d18dcd67615ab44686e887477&form_id=614480122771aa21de77d4b637966f22"
+          action="https://chemdyeillustrations.us21.list-manage.com/subscribe/post?u=d18dcd67615ab44686e887477&amp;id=be15be90da&amp;f_id=001e59e1f0"
           method="post"
           id="mc-embedded-subscribe-form"
           name="mc-embedded-subscribe-form"
           className="validate"
           target="_blank"
         >
-          <div id="mc_embed_signup_scroll">
+          <Grid id="mc_embed_signup_scroll">
             <h2>Subscribe to Our Newsletter</h2>
-            <div className="indicates-required">
+            <Grid className="indicates-required">
               <span className="asterisk">*</span> indicates required
-            </div>
-            <div className="mc-field-group">
+            </Grid>
+            <Grid className="mc-field-group">
               <label htmlFor="mce-EMAIL">
                 Email Address <span className="asterisk">*</span>
               </label>
-              <input
+              <TextField
                 type="email"
                 name="EMAIL"
                 className="required email"
                 id="mce-EMAIL"
-                required=""
+                required={!email}
                 value={email}
                 onChange={handleInputChange}
               />
-            </div>
-            <div className="mc-field-group">
+            </Grid>
+            <Grid className="mc-field-group">
               <label htmlFor="mce-FNAME">First Name </label>
-              <input
+              <TextField
                 type="text"
                 name="FNAME"
-                className=" text"
+                className="text"
                 id="mce-FNAME"
                 value={firstName}
                 onChange={handleInputChange}
               />
-            </div>
-            <div className="mc-field-group">
+            </Grid>
+            <Grid className="mc-field-group">
               <label htmlFor="mce-LNAME">Last Name </label>
-              <input
+              <TextField
                 type="text"
                 name="LNAME"
                 className=" text"
@@ -79,39 +102,57 @@ export const Contact = () => {
                 value={lastName}
                 onChange={handleInputChange}
               />
-            </div>
-            <div id="mce-responses" className="clear foot">
-              <div
+            </Grid>
+            <Grid className="mc-field-group">
+              <label htmlFor="mce-LNAME">Message us</label>
+              <TextareaAutosize
+                type="text"
+                name="MBox"
+                className="text"
+                id="mce-MBox"
+                minRows={10}
+                value={msgBox}
+                onChange={handleInputChange}
+              />
+            </Grid>
+            <Grid id="mce-responses" className="clear foot">
+              <Grid
                 className="response"
                 id="mce-error-response"
                 style={{ display: 'none' }}
-              ></div>
-              <div
+              ></Grid>
+              <Grid
                 className="response"
                 id="mce-success-response"
                 style={{ display: 'none' }}
-              ></div>
-            </div>
-            <div
+              ></Grid>
+            </Grid>
+            <Grid
               aria-hidden="true"
               style={{ position: 'absolute', left: '-5000px' }}
             >
-              {/* real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
               <input
                 type="text"
                 name="b_d18dcd67615ab44686e887477_be15be90da"
                 tabIndex="-1"
                 value=""
+                onChange={handleInputChange}
               />
-            </div>
-            <div className="optionalParent">
-              <div className="clear foot">
+            </Grid>
+            <Grid className="optionalParent">
+              <Grid className="clear foot">
                 <input
                   type="submit"
                   name="subscribe"
                   id="mc-embedded-subscribe"
                   className="button"
                   value="Subscribe"
+                  style={{
+                    backgroundColor: '#DF367C',
+                    marginBottom: 2,
+                    borderRadius: '15px',
+                    fontWeight: '600',
+                  }}
                 />
                 <p className="brandingLogo" style={{ margin: '0px auto' }}>
                   <a
@@ -124,11 +165,11 @@ export const Contact = () => {
                     />
                   </a>
                 </p>
-              </div>
-            </div>
-          </div>
+              </Grid>
+            </Grid>
+          </Grid>
         </form>
-      </div>
+      </Grid>
       <script
         type="text/javascript"
         src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
@@ -154,6 +195,6 @@ export const Contact = () => {
           var $mcj = jQuery.noConflict(true);
         `}
       </script>
-    </div>
+    </Grid>
   );
 };

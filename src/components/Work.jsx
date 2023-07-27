@@ -1,5 +1,5 @@
 import Masonry from '@mui/lab/Masonry';
-import { Box, Grid, Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import image1 from '../assets/img/1.jpg';
 import image10 from '../assets/img/10.jpg';
 import image11 from '../assets/img/11.jpg';
@@ -20,7 +20,7 @@ import { ContactBtn } from './common/ContactBtn';
 export function Work() {
   return (
     <Grid container justifyContent="center">
-      <Grid item xs={12}>
+      <Grid item xs={10}>
         <Typography variant="h2" fontWeight={600}>
           We provide solutions for the Healthcare,
         </Typography>
@@ -31,8 +31,8 @@ export function Work() {
           <ContactBtn title="Connect with us" />
         </Grid>
       </Grid>
-      <Grid container xs={10}>
-        <Masonry columns={3} spacing={3}>
+      <Grid item xs={10}>
+        <Masonry columns={4} spacing={3}>
           {itemData.map((item, index) => (
             <Grid key={index}>
               <img

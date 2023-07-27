@@ -1,18 +1,38 @@
 import { Grid, TextField } from '@mui/material';
-// import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-export const NewsletterSubscription = (
-  {
-    // // eslint-disable-next-line react/prop-types
-    // email,
-    // // eslint-disable-next-line react/prop-types
-    // firstName,
-    // // eslint-disable-next-line react/prop-types
-    // lastName,
-    // // eslint-disable-next-line react/prop-types
-    // onInputChange,
-  }
-) => {
+export const NewsletterSubscription = () => {
+  const [email, setEmail] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+
+  useEffect(() => {
+    // Obtener los valores almacenados en LocalStorage al cargar el componente
+    const storedEmail = localStorage.getItem('newsletterEmail') || '';
+    const storedFirstName = localStorage.getItem('newsletterFirstName') || '';
+    const storedLastName = localStorage.getItem('newsletterLastName') || '';
+
+    // Establecer los estados locales con los valores de LocalStorage
+    setEmail(storedEmail);
+    setFirstName(storedFirstName);
+    setLastName(storedLastName);
+  }, []);
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    // Actualizar los estados locales y guardar los valores en LocalStorage cada vez que cambien
+    if (name === 'EMAIL') {
+      setEmail(value);
+      localStorage.setItem('newsletterEmail', value);
+    } else if (name === 'FNAME') {
+      setFirstName(value);
+      localStorage.setItem('newsletterFirstName', value);
+    } else if (name === 'LNAME') {
+      setLastName(value);
+      localStorage.setItem('newsletterLastName', value);
+    }
+  };
+
   return (
     <Grid id="mc_embed_shell">
       <link
@@ -50,9 +70,9 @@ export const NewsletterSubscription = (
                 name="EMAIL"
                 className="required email"
                 id="mce-EMAIL"
-                required=""
-                // value={email || ''}
-                // onChange={onInputChange}
+                required={!email}
+                value={email}
+                onChange={handleInputChange}
               />
             </Grid>
             <Grid className="mc-field-group">
@@ -60,10 +80,10 @@ export const NewsletterSubscription = (
               <TextField
                 type="text"
                 name="FNAME"
-                className=" text"
+                className="text"
                 id="mce-FNAME"
-                // value={firstName || ''}
-                // onChange={onInputChange}
+                value={firstName}
+                onChange={handleInputChange}
               />
             </Grid>
             <Grid className="mc-field-group">
@@ -73,8 +93,8 @@ export const NewsletterSubscription = (
                 name="LNAME"
                 className=" text"
                 id="mce-LNAME"
-                // value={lastName || ''}
-                // onChange={onInputChange}
+                value={lastName}
+                onChange={handleInputChange}
               />
             </Grid>
             <Grid id="mce-responses" className="clear foot">
@@ -93,12 +113,12 @@ export const NewsletterSubscription = (
               aria-hidden="true"
               style={{ position: 'absolute', left: '-5000px' }}
             >
-              {/* real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
               <input
                 type="text"
                 name="b_d18dcd67615ab44686e887477_be15be90da"
                 tabIndex="-1"
                 value=""
+                onChange={handleInputChange}
               />
             </Grid>
             <Grid className="optionalParent">
