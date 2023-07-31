@@ -7,6 +7,7 @@ import image12 from '../assets/img/12.jpg';
 import image13 from '../assets/img/13.jpg';
 import image14 from '../assets/img/14.jpg';
 import image15 from '../assets/img/15.jpg';
+import image16 from '../assets/img/16.jpg';
 import image2 from '../assets/img/2.jpg';
 import image3 from '../assets/img/3.jpg';
 import image4 from '../assets/img/4.jpg';
@@ -16,46 +17,6 @@ import image7 from '../assets/img/7.jpg';
 import image8 from '../assets/img/8.jpg';
 import image9 from '../assets/img/9.jpg';
 import { ContactBtn } from './common/ContactBtn';
-
-export function Work() {
-  return (
-    <Grid container justifyContent="center">
-      <Grid item xs={10}>
-        <Typography variant="h2" fontWeight={600}>
-          We provide solutions for the Healthcare,
-        </Typography>
-        <Typography variant="h2" fontWeight={600}>
-          Pharma and Biotech Industries.
-        </Typography>
-        <Grid item sx={{ my: 4 }}>
-          <ContactBtn title="Connect with us" />
-        </Grid>
-      </Grid>
-      <Grid item xs={10}>
-        <Masonry columns={4} spacing={3}>
-          {itemData.map((item, index) => (
-            <Grid key={index}>
-              <img
-                src={`${item.img}?w=162&auto=format`}
-                srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
-                alt={item.title}
-                loading="lazy"
-                style={{
-                  borderBottomLeftRadius: 4,
-                  borderBottomRightRadius: 4,
-                  display: 'block',
-                  width: '100%',
-                  height: 'auto',
-                  maxWidth: '100%',
-                }}
-              />
-            </Grid>
-          ))}
-        </Masonry>
-      </Grid>
-    </Grid>
-  );
-}
 
 const itemData = [
   {
@@ -118,4 +79,48 @@ const itemData = [
     img: image15,
     // title: 'Tomato basil',
   },
+  {
+    img: image16,
+    // title: 'Tomato basil',
+  },
 ];
+
+export function Work() {
+  return (
+    <Grid container justifyContent="center">
+      <Grid item xs={10}>
+        <Typography variant="h2" fontWeight={600}>
+          We provide solutions for the Healthcare,
+        </Typography>
+        <Typography variant="h2" fontWeight={600}>
+          Pharma and Biotech Industries.
+        </Typography>
+        <Grid item sx={{ my: 4 }}>
+          <ContactBtn title="Connect with us" />
+        </Grid>
+      </Grid>
+      <Grid item xs={10}>
+        <Masonry columns={4} spacing={3}>
+          {itemData.map((item, index) => (
+            <Grid key={index}>
+              <img
+                src={`${item.img}?w=162&auto=format`}
+                srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
+                alt={item.title}
+                loading="lazy"
+                style={{
+                  borderBottomLeftRadius: 4,
+                  borderBottomRightRadius: 4,
+                  display: 'block',
+                  width: '100%',
+                  height: 'auto',
+                  maxWidth: '100%',
+                }}
+              />
+            </Grid>
+          ))}
+        </Masonry>
+      </Grid>
+    </Grid>
+  );
+}

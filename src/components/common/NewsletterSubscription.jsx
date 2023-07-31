@@ -180,3 +180,74 @@ export const NewsletterSubscription = () => {
     </Grid>
   );
 };
+
+// import React from 'react';
+// import {
+//   Button,
+//   Typography,
+//   TextField,
+//   Box,
+//   Container,
+//   Link,
+// } from '@mui/material';
+
+// const NewsletterSubscription = () => {
+//   return (
+//     <Container maxWidth="sm">
+//       <Box p={2} bgcolor="#fff" textAlign="center">
+//         <Typography variant="h5" component="h2">
+//           Subscribe to Our Newsletter
+//         </Typography>
+//         <Typography variant="body2" gutterBottom>
+//           <span style={{ color: 'red' }}>*</span> indicates required
+//         </Typography>
+//         <form
+//           action="https://chemdyeillustrations.us21.list-manage.com/subscribe/post?u=d18dcd67615ab44686e887477&amp;id=be15be90da&amp;f_id=001e59e1f0"
+//           method="post"
+//           target="_blank"
+//         >
+//           <div>
+//             <TextField
+//               type="email"
+//               name="EMAIL"
+//               label="Email Address"
+//               required
+//               fullWidth
+//             />
+//           </div>
+//           <div>
+//             <TextField type="text" name="FNAME" label="First Name" fullWidth />
+//           </div>
+//           <div>
+//             <TextField type="text" name="LNAME" label="Last Name" fullWidth />
+//           </div>
+//           <div hidden>
+//             <input type="hidden" name="tags" value="2819910" />
+//           </div>
+//           <div>
+//             <Button type="submit" variant="contained" color="primary">
+//               Subscribe
+//             </Button>
+//             <Typography
+//               variant="body2"
+//               className="brandingLogo"
+//               style={{ margin: '0px auto' }}
+//             >
+//               <Link
+//                 href="http://eepurl.com/iqfyLs"
+//                 title="Mailchimp - email marketing made easy and fun"
+//               >
+//                 <img
+//                   src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"
+//                   alt="referral badge"
+//                 />
+//               </Link>
+//             </Typography>
+//           </div>
+//         </form>
+//       </Box>
+//     </Container>
+//   );
+// };
+
+// export default NewsletterSubscription;

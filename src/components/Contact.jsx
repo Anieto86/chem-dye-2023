@@ -63,7 +63,7 @@ export const Contact = () => {
           target="_blank"
         >
           <Grid id="mc_embed_signup_scroll">
-            <h2>Subscribe to Our Newsletter</h2>
+            <h2>Contact Us</h2>
             <Grid className="indicates-required">
               <span className="asterisk">*</span> indicates required
             </Grid>
