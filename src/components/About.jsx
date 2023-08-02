@@ -1,6 +1,7 @@
 import { Grid, Typography } from '@mui/material';
 import { ContactBtn } from './common/ContactBtn';
 import aboutImg from '../assets/img/MyPicProfile_V2.png';
+import { Link } from 'react-router-dom';
 
 export const About = () => {
   return (
@@ -26,7 +27,12 @@ export const About = () => {
             communicator
           </Typography>
           <Grid item xs={9.5}>
-            <ContactBtn title="Connect with us" />
+            <Link
+              target="_blank"
+              to={`https://us21.list-manage.com/contact-form?u=d18dcd67615ab44686e887477&form_id=614480122771aa21de77d4b637966f22`}
+            >
+              <ContactBtn title="Connect with us" />
+            </Link>
           </Grid>
         </Grid>
         <Grid item xs={4}>
@@ -43,6 +49,7 @@ export const About = () => {
         spacing={4}
         justifyContent="space-evenly"
         alignItems="center"
+        sx={{ mb: 30 }}
       >
         <Grid item xs={10}>
           <Typography sx={{ fontSize: 30 }}>

@@ -3,17 +3,36 @@ import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import { ContactBtn } from './common/ContactBtn';
 import { Link } from 'react-router-dom';
+import { Box } from '@mui/system';
 
 // import { MailchimpFormContainer } from '../components/common/MailchimpFormContainer';
 // <MailchimpFormContainer />
 
 const contactInfo = [
   {
-    icon: <EmailIcon sx={{ color: '#DF367C', fontSize: 60 }} />,
+    icon: (
+      <EmailIcon
+        sx={{
+          color: '#DF367C',
+          fontSize: 60,
+          display: 'flex',
+          alignItems: 'center',
+        }}
+      />
+    ),
     text: 'chemdy@gmail.com',
   },
   {
-    icon: <LocalPhoneIcon sx={{ color: '#DF367C', fontSize: 60 }} />,
+    icon: (
+      <LocalPhoneIcon
+        sx={{
+          color: '#DF367C',
+          fontSize: 60,
+          display: 'flex',
+          alignItems: 'center',
+        }}
+      />
+    ),
     text: '2222222222222',
   },
 ];
@@ -21,6 +40,20 @@ const contactInfo = [
 export const Contact = () => {
   return (
     <Grid container justifyContent="center" alignItems="center" spacing={6}>
+      <Grid item>
+        <Box
+          sx={{
+            backgroundColor: '#DF367C',
+            color: 'white',
+            padding: '20px',
+            borderRadius: '10px',
+            height: 500,
+            width: 500,
+          }}
+        >
+          Este es un Box con color personalizado.
+        </Box>
+      </Grid>
       {contactInfo.map((contact) => (
         <Grid
           item
@@ -39,6 +72,7 @@ export const Contact = () => {
       ))}
       <Grid item>
         <Link
+          target="_blank"
           to={`https://us21.list-manage.com/contact-form?u=d18dcd67615ab44686e887477&form_id=614480122771aa21de77d4b637966f22`}
         >
           <ContactBtn title="Email us" fSize={30} />

@@ -7,7 +7,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 export const Footer = () => {
   let location = useLocation();
-  console.log(location);
+
   return (
     <Box
       sx={{
@@ -24,6 +24,7 @@ export const Footer = () => {
     >
       {location.pathname !== '/Contact' && (
         <Link
+          target="_blank"
           to={`https://us21.list-manage.com/contact-form?u=d18dcd67615ab44686e887477&form_id=614480122771aa21de77d4b637966f22`}
         >
           <ContactBtn title="Contact Us" />
@@ -39,7 +40,7 @@ export const Footer = () => {
           <IconButton
             sx={{
               color: 'black',
-              fontSize: 50,
+              fontSize: 30,
             }}
           >
             <InstagramIcon sx={{ fontSize: '1.5em' }} />
@@ -50,7 +51,7 @@ export const Footer = () => {
             sx={{
               color: 'black',
               mx: 2,
-              fontSize: 50,
+              fontSize: 30,
             }}
           >
             <LinkedInIcon sx={{ fontSize: '1.5em' }} />
@@ -63,7 +64,7 @@ export const Footer = () => {
           <IconButton
             sx={{
               color: 'black',
-              fontSize: 50,
+              fontSize: 30,
             }}
           >
             <TwitterIcon sx={{ fontSize: '1.5em' }} />
@@ -82,23 +83,26 @@ export const Footer = () => {
 
       <Grid container spacing={2} columns={16} sx={{ p: 2 }}>
         <Grid item xs={10}>
-          <Typography align="left" sx={{ fontSize: 20 }}>
+          <Typography align="left" sx={{ fontSize: 15 }}>
             Terms of use / Cookie Policy / Privacy Policy
           </Typography>
           <Grid item sx={{ my: 3 }}>
-            <Typography align="left" sx={{ fontSize: 20 }}>
+            <Typography align="left" sx={{ fontSize: 15 }}>
               ChemDye Scientific Illustrations
             </Typography>
-            <Typography align="left" sx={{ fontSize: 20 }}>
+            <Typography align="left" sx={{ fontSize: 15 }}>
               ABN 45 841 581 765
             </Typography>
-            <Typography align="left" sx={{ fontSize: 20 }}>
+            <Typography align="left" sx={{ fontSize: 15 }}>
               Adelaide - Australia
             </Typography>
           </Grid>
         </Grid>
         <Grid item xs={6}>
-          <Typography align="right" sx={{ fontSize: 20, p: 2 }}>
+          <Typography
+            align="right"
+            sx={{ fontSize: 15, p: 2, lineHeight: '1.2' }}
+          >
             Unauthorized Reproduction Prohibited: Any replication, utilization,
             or incorporation of materials including images, diagrams, sounds, or
             text from this website in electronic or printed publications without

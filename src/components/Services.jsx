@@ -49,9 +49,9 @@ export const Services = () => {
 
           <Divider sx={{ backgroundColor: '#ff6f80' }} />
         </Grid>
-        <Grid item xs={4} sx={{ bgcolor: 'red' }}></Grid>
+        <Grid item xs={4}></Grid>
         <Grid item xs={5}>
-          <Typography variant="h4" sx={{ ml: 2, mb: 4 }}>
+          <Typography variant="h4" sx={{ ml: 2, mb: 4, fontWeight: 800 }}>
             OUR SERVICES
           </Typography>
           <Accordion sx={{ boxShadow: 'none', border: 'none' }}>
@@ -65,7 +65,7 @@ export const Services = () => {
 
             <Divider sx={{ backgroundColor: '#ff6f80' }} />
             <AccordionDetails>
-              <Typography sx={{ fontSize: 30 }}>
+              <Typography sx={{ fontSize: 25, lineHeight: '1.2' }}>
                 Our speciality is creating medical content for a wide variety of
                 packages. As key stakeholders of the project, our number one
                 priority is to work closely with you to create your science
@@ -89,7 +89,7 @@ export const Services = () => {
 
             <Divider sx={{ backgroundColor: '#ff6f80' }} />
             <AccordionDetails>
-              <Typography sx={{ fontSize: 30 }}>
+              <Typography sx={{ fontSize: 25, lineHeight: '1.2' }}>
                 Our speciality is creating medical content for a wide variety of
                 packages. As key stakeholders of the project, our number one
                 priority is to work closely with you to create your science
@@ -98,7 +98,7 @@ export const Services = () => {
             </AccordionDetails>
           </Accordion>
         </Grid>
-        <Grid item xs={4} sx={{ bgcolor: 'red' }}></Grid>
+        <Grid item xs={4}></Grid>
         <Grid item xs={5} sx={{}}>
           <Accordion sx={{ boxShadow: 'none', border: 'none' }}>
             <AccordionSummary
@@ -110,7 +110,7 @@ export const Services = () => {
             </AccordionSummary>
             <Divider sx={{ backgroundColor: '#ff6f80' }} />
             <AccordionDetails>
-              <Typography sx={{ fontSize: 30 }}>
+              <Typography sx={{ fontSize: 25, lineHeight: '1.2' }}>
                 Our specialty is creating medical content for a wide variety of
                 packages. As key stakeholders of the project, our number one
                 priority is to work closely with you to create your science
@@ -137,8 +137,10 @@ export const Services = () => {
           <img src={whyUs} alt="Image 2" style={{ width: '80%' }} />
         </Grid>
         <Grid item xs={5}>
-          <Typography variant="h4">WHY US?</Typography>
-          <Typography sx={{ fontSize: 40 }}>
+          <Typography variant="h4" sx={{ fontWeight: 800, mb: 3 }}>
+            WHY US?
+          </Typography>
+          <Typography sx={{ fontSize: 30, lineHeight: '1.2' }}>
             As scientists turned artists, we bring a unique blend of expertise
             and years of experience serving academia, biotech, and the health
             industry. Collaborating closely with you, we apply critical thinking

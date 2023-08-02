@@ -1,5 +1,7 @@
 import Masonry from '@mui/lab/Masonry';
 import { Grid, Typography } from '@mui/material';
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import image1 from '../assets/img/1.jpg';
 import image10 from '../assets/img/10.jpg';
 import image11 from '../assets/img/11.jpg';
@@ -86,8 +88,12 @@ const itemData = [
 ];
 
 export function Work() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <Grid container justifyContent="center">
+    <Grid container justifyContent="center" spacing={3}>
       <Grid item xs={10}>
         <Typography variant="h2" fontWeight={600}>
           We provide solutions for the Healthcare,
@@ -95,14 +101,27 @@ export function Work() {
         <Typography variant="h2" fontWeight={600}>
           Pharma and Biotech Industries.
         </Typography>
-        <Grid item sx={{ my: 4 }}>
-          <ContactBtn title="Connect with us" />
+        <Grid item sx={{ my: 8 }}>
+          <Link
+            target="_blank"
+            to={`https://us21.list-manage.com/contact-form?u=d18dcd67615ab44686e887477&form_id=614480122771aa21de77d4b637966f22`}
+          >
+            <ContactBtn title="Connect with us" />
+          </Link>
         </Grid>
       </Grid>
       <Grid item xs={10}>
         <Masonry columns={4} spacing={3}>
           {itemData.map((item, index) => (
-            <Grid key={index}>
+            <Grid
+              key={index}
+              sx={{
+                transition: 'transform 0.2s ease-in-out',
+                '&:hover': {
+                  transform: 'scale(1.5)',
+                },
+              }}
+            >
               <img
                 src={`${item.img}?w=162&auto=format`}
                 srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
