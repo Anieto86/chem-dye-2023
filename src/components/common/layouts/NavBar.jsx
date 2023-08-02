@@ -114,17 +114,14 @@ export function NavBar() {
           </Typography>
         )}
       </AppBar>
-
       {location.pathname === '/' && <Services />}
       <Grid
-        container
-        direction="row"
-        justifyContent="center"
+        // container
+        // direction="row"
+        // justifyContent="center"
         sx={{ pt: '150px' }}
       >
-        <Grid item>
-          <Outlet />
-        </Grid>
+        <Outlet />
       </Grid>
     </>
   );

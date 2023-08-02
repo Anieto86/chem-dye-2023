@@ -1,5 +1,5 @@
 import { Button, Grid, Typography } from '@mui/material';
-import { ContactBtn } from './ContactBtn';
+import { ContactBtn } from '../components/common/ContactBtn';
 import { Link } from 'react-router-dom';
 import img1 from '../assets/imgBlog/Img1.jpg';
 import img2 from '../assets/imgBlog/Img2.png';

@@ -1,10 +1,11 @@
 import { Button } from '@mui/material';
 
 // eslint-disable-next-line react/prop-types
-export const ContactBtn = ({ title, fSize = 20 }) => {
+export const ContactBtn = ({ title, fSize = 20, onClickShow }) => {
   return (
     <Button
       variant="contained"
+      onClick={onClickShow}
       sx={{
         backgroundColor: '#DF367C',
         color: 'white',
