@@ -2,7 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import { About } from '../components/About';
 import { Blog } from '../components/Blog';
 import { Contact } from '../components/Contact';
-import { Services } from '../components/Services';
+import { Home } from '../components/Home';
 import { Work } from '../components/Work';
 import {
   Txtblog1,
@@ -13,6 +13,7 @@ import {
 import { Footer } from '../components/common/layouts/Footer';
 import { NavBar } from '../components/common/layouts/NavBar';
 import { ErrorPage } from './ErrorPage';
+import { Service } from '../components/Service';
 
 export const AppRouter = () => {
   return createBrowserRouter([
@@ -21,15 +22,19 @@ export const AppRouter = () => {
       element: (
         <>
           <NavBar />
-          {/* <Home /> */}
+          {/* <Home />, */}
           <Footer />
         </>
       ),
       errorElement: <ErrorPage />,
       children: [
         {
+          path: '/',
+          element: <Home />,
+        },
+        {
           path: '/Service',
-          element: <Services />,
+          element: <Service />,
         },
         {
           path: '/Work',
