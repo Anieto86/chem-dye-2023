@@ -1,4 +1,4 @@
-import { Grid, Typography } from '@mui/material';
+import { Divider, Grid, Typography } from '@mui/material';
 import { ContactBtn } from './common/ContactBtn';
 import aboutImg from '../assets/img/MyPicProfile_V2.png';
 import { Link } from 'react-router-dom';
@@ -26,15 +26,8 @@ export const About = () => {
           >
             communicator
           </Typography>
-          <Grid item xs={9.5}>
-            <Link
-              target="_blank"
-              to={`https://us21.list-manage.com/contact-form?u=d18dcd67615ab44686e887477&form_id=614480122771aa21de77d4b637966f22`}
-            >
-              <ContactBtn title="Connect with us" />
-            </Link>
-          </Grid>
         </Grid>
+
         <Grid item xs={4}>
           <img
             src={aboutImg}
@@ -51,7 +44,44 @@ export const About = () => {
         alignItems="center"
         sx={{ mb: 30 }}
       >
+        <Grid item xs={8}>
+          <Typography
+            variant="body1"
+            fontWeight={600}
+            sx={{ fontSize: 40, textAlign: 'center' }}
+          >
+            Welcome to
+            <span style={{ color: '#DF367C' }}>
+              {' '}
+              ChemDye Scientific Illustrations,{' '}
+            </span>
+            a studio dedicated to{' '}
+            <span style={{ color: '#DF367C' }}>
+              {' '}
+              visual science communication,{' '}
+            </span>
+            where art and science merge seamlessly.
+          </Typography>
+        </Grid>
         <Grid item xs={10}>
+          <Divider
+            sx={{
+              my: 9,
+              backgroundColor: '#ff6f80',
+            }}
+          />
+        </Grid>
+
+        <Grid item xs={10}>
+          <Divider
+            sx={{
+              my: 9,
+              backgroundColor: '#ff6f80',
+            }}
+          />
+        </Grid>
+
+        {/* <Grid item xs={10}>
           <Typography sx={{ fontSize: 30 }}>
             Welcome to ChemDye Scientific Illustrations, a studio dedicated to
             visual science communication, where art and science merge
@@ -87,6 +117,14 @@ export const About = () => {
             is communicated. Together, we can bring science to life through
             captivating visuals that ignite curiosity, spark
           </Typography>
+        </Grid> */}
+        <Grid item xs={9.5}>
+          <Link
+            target="_blank"
+            to={`https://us21.list-manage.com/contact-form?u=d18dcd67615ab44686e887477&form_id=614480122771aa21de77d4b637966f22`}
+          >
+            <ContactBtn title="Connect with us" />
+          </Link>
         </Grid>
       </Grid>
     </>

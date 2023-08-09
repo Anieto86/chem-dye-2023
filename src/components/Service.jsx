@@ -1,9 +1,9 @@
-import { Box, Divider, Grid, Typography } from '@mui/material';
+import { Divider, Grid, Typography } from '@mui/material';
 import img1 from '../assets/Icons/01-WORKSHOP-service.png';
 import img2 from '../assets/Icons/02-GUIDANCE-service.png';
 import img3 from '../assets/Icons/03-Illustrations-service.png';
 import { ContactBtn } from './common/ContactBtn';
-import React from 'react';
+
 import { Link } from 'react-router-dom';
 
 export const Service = () => {
@@ -62,7 +62,7 @@ export const Service = () => {
                   sx={{
                     my: 5,
                     backgroundColor: '#ff6f80',
-                    width: 400,
+                    width: 300,
                   }}
                 />
               </Grid>

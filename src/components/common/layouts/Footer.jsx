@@ -20,9 +20,10 @@ export const Footer = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        mt: 20,
       }}
     >
-      {location.pathname !== '/Contact' && (
+      {location.pathname === '/' && (
         <Link
           target="_blank"
           to={`https://us21.list-manage.com/contact-form?u=d18dcd67615ab44686e887477&form_id=614480122771aa21de77d4b637966f22`}
