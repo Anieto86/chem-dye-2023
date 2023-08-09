@@ -88,32 +88,36 @@ export function NavBar() {
           </Grid>
         </Toolbar>
         {location.pathname === '/' && (
-          <Typography
-            variant="body1"
-            color="initial"
-            sx={{
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              textAlign: 'center',
-              color: 'white',
-              fontSize: 40,
-              fontWeight: 'bold',
-              maxWidth: '80%',
-            }}
+          <Grid
+            container
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+            sx={{ mt: 30 }}
           >
-            Transforming Complex Science into Compelling
-            <span style={{ color: '#ff6f80' }}>
-              {' '}
-              Visual Experiences: Scientific Illustration, Animation, and 3D
-              Solutions{' '}
-            </span>
-            for the Healthcare, Pharma, and Biotech Industries
-          </Typography>
+            <Grid item xs={8}>
+              <Typography
+                variant="body1"
+                color="initial"
+                sx={{
+                  textAlign: 'center',
+                  color: 'white',
+                  fontSize: 40,
+                  fontWeight: 'bold',
+                }}
+              >
+                Transforming Complex Science into Compelling
+                <span style={{ color: '#ff6f80' }}>
+                  {' '}
+                  Visual Experiences: Scientific Illustration, Animation, and 3D
+                  Solutions{' '}
+                </span>
+                for the Healthcare, Pharma, and Biotech Industries
+              </Typography>
+            </Grid>
+          </Grid>
         )}
       </AppBar>
-      {/* {location.pathname === '/' && <Home />} */}
       <Grid sx={{ pt: '150px' }}>
         <Outlet />
       </Grid>

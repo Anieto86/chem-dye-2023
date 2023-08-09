@@ -52,14 +52,14 @@ export const Blog = () => {
     <>
       <Grid container justifyContent="center">
         <Grid item xs={10} sx={{ fontSize: 60 }}>
-          <Typography variant="h3" fontWeight={600}>
+          <Typography variant="h2" fontWeight={600}>
             Join Our <span style={{ color: '#DF367C' }}>Newsletter </span>for
             Expert Tips
             <br />
             and Inspiring Insights in Scientific <br />
             <span style={{ color: '#DF367C' }}>Visualization and Design</span>
           </Typography>
-          <Grid item xs={9.5} sx={{ mb: 10 }}>
+          <Grid item xs={9.5} sx={{ my: 10 }}>
             <ContactBtn title="Join Us" onClickShow={handleShow} />
           </Grid>
         </Grid>

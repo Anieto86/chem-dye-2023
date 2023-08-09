@@ -23,18 +23,21 @@ export const Footer = () => {
         mt: 20,
       }}
     >
-      {location.pathname === '/' && (
-        <Link
-          target="_blank"
-          to={`https://us21.list-manage.com/contact-form?u=d18dcd67615ab44686e887477&form_id=614480122771aa21de77d4b637966f22`}
-        >
-          <ContactBtn title="Contact Us" />
-        </Link>
-      )}
+      <Box sx={{ mt: 10 }}>
+        {location.pathname === '/' && (
+          <Link
+            target="_blank"
+            to={`https://us21.list-manage.com/contact-form?u=d18dcd67615ab44686e887477&form_id=614480122771aa21de77d4b637966f22`}
+          >
+            <ContactBtn title="Contact Us" />
+          </Link>
+        )}
+      </Box>
       <Box
         sx={{
           display: 'flex',
           justifyContent: 'center',
+          mt: 5,
         }}
       >
         <Link to={`https://www.instagram.com/chemdye_si/?hl=es`}>

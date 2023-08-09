@@ -11,10 +11,10 @@ export const About = () => {
         direction="row"
         justifyContent="space-evenly"
         alignItems="center"
-        sx={{ mb: 10 }}
+        sx={{ mb: 10, mt: -15 }}
       >
         <Grid item xs={4}>
-          <Typography variant="h2" fontWeight={600} sx={{ fontSize: 60 }}>
+          <Typography variant="h2" fontWeight={600}>
             Mariana Oksdath
             <br />
             <span style={{ color: '#DF367C' }}>visual science</span>
@@ -27,7 +27,6 @@ export const About = () => {
             communicator
           </Typography>
         </Grid>
-
         <Grid item xs={4}>
           <img
             src={aboutImg}
@@ -73,23 +72,12 @@ export const About = () => {
         </Grid>
 
         <Grid item xs={10}>
-          <Divider
-            sx={{
-              my: 9,
-              backgroundColor: '#ff6f80',
-            }}
-          />
-        </Grid>
-
-        {/* <Grid item xs={10}>
           <Typography sx={{ fontSize: 30 }}>
-            Welcome to ChemDye Scientific Illustrations, a studio dedicated to
-            visual science communication, where art and science merge
-            seamlessly. I’m Mariana Oksdath, the creator behind ChemDye. With
-            over a decade of experience as a researcher in academia and the
-            privilege of working with prestigious names like Greenpeace in
-            design, I have found my passion in creating visuals that
-            revolutionise how we perceive science.
+            I’m <span style={{ fontWeight: 600 }}> Mariana Oksdath</span>, the
+            creator behind ChemDye. With over a decade of experience as a
+            researcher in academia and the privilege of working with prestigious
+            names like Greenpeace in design, I have found my passion in creating
+            visuals that revolutionise how we perceive science.
           </Typography>
         </Grid>
         <Grid item xs={10}>
@@ -103,22 +91,39 @@ export const About = () => {
           </Typography>
         </Grid>
         <Grid item xs={10}>
-          <Typography sx={{ fontSize: 30 }}>
-            Collaborating with scientists who have captivating stories to tell
-            is my true calling. I excel at conceptualising ideas and
-            transforming them into memorable images that leave a lasting impact.
-            Colours, typography, design, light, and shadows constantly occupy my
-            thoughts, as I believe I was born to fulfil this artistic role.
+          <Divider
+            sx={{
+              my: 9,
+              backgroundColor: '#ff6f80',
+            }}
+          />
+        </Grid>
+        <Grid item xs={8}>
+          <Typography
+            variant="body1"
+            fontWeight={600}
+            sx={{ fontSize: 40, textAlign: 'center' }}
+          >
+            Join me at ChemDye as we embark on a journey to
+            <span style={{ color: '#DF367C' }}>
+              {' '}
+              reshape how science is communicated.{' '}
+            </span>
+            Together, we can bring science to life through captivating visuals
+            that ignite curiosity, spark imagination, and
+            <span style={{ color: '#DF367C' }}>
+              {' '}
+              inspire a deeper understanding of the world around us.
+            </span>
           </Typography>
         </Grid>
-        <Grid item xs={10}>
-          <Typography sx={{ fontSize: 30 }}>
-            Join me at ChemDye as we embark on a journey to reshape how science
-            is communicated. Together, we can bring science to life through
-            captivating visuals that ignite curiosity, spark
-          </Typography>
-        </Grid> */}
-        <Grid item xs={9.5}>
+        <Grid
+          item
+          xs={12}
+          display="flex"
+          justifyContent="center"
+          sx={{ m: 10 }}
+        >
           <Link
             target="_blank"
             to={`https://us21.list-manage.com/contact-form?u=d18dcd67615ab44686e887477&form_id=614480122771aa21de77d4b637966f22`}

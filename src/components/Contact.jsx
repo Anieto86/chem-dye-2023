@@ -40,16 +40,22 @@ const contactInfo = [
 
 export const Contact = () => {
   return (
-    <Grid container justifyContent="center" spacing={6}>
-      <Grid item display="flex" justifyContent="center" xs={12}>
+    <Grid container justifyContent="center" spacing={4}>
+      <Grid
+        item
+        display="flex"
+        justifyContent="center"
+        xs={12}
+        sx={{ mt: -20 }}
+      >
         <img
           src={contactImg}
           alt="Image 1"
-          style={{ width: '50%', height: 'auto' }}
+          style={{ width: '40%', height: 'auto' }}
         />
       </Grid>
       <Grid item>
-        <Typography variant="h2" sx={{ fontSize: 40 }}>
+        <Typography variant="h2" sx={{ fontSize: 35 }}>
           ChemDye Scientific Illustrations
         </Typography>
       </Grid>
@@ -65,18 +71,21 @@ export const Contact = () => {
         >
           <Grid item>{contact.icon}</Grid>
           <Grid item>
-            <Typography variant="h2" sx={{ fontSize: 40 }}>
+            <Typography
+              variant="h2"
+              sx={{ fontSize: 35, lineHeight: '0.7rem' }}
+            >
               {contact.text}
             </Typography>
           </Grid>
         </Grid>
       ))}
-      <Grid item>
+      <Grid item sx={{ my: 10 }}>
         <Link
           target="_blank"
           to={`https://us21.list-manage.com/contact-form?u=d18dcd67615ab44686e887477&form_id=614480122771aa21de77d4b637966f22`}
         >
-          <ContactBtn title="Email us" fSize={30} />
+          <ContactBtn title="Email us" fSize={25} />
         </Link>
       </Grid>
     </Grid>

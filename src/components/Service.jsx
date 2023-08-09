@@ -32,12 +32,12 @@ export const Service = () => {
     <Grid container justifyContent="center">
       <Grid item xs={10}>
         <Grid item xs={10} sx={{ fontSize: 60 }}>
-          <Typography variant="h3" fontWeight={600}>
+          <Typography variant="h2" fontWeight={600}>
             We are translators, storytellers
             <br />
             and educators. <br />
           </Typography>
-          <Grid item xs={9.5} sx={{ mb: 10 }}>
+          <Grid item xs={9.5} sx={{ my: 10 }}>
             <ContactBtn title="Connect with us" />
           </Grid>
         </Grid>
