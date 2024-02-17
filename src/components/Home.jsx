@@ -1,11 +1,12 @@
-import { Divider, Grid, Typography } from '@mui/material';
-import servicesIcon from '../assets/Icons/00.SERVICES.png';
-import whyUs from '../assets/Icons/01.WHYUS.png';
+import { Box, Grid, Typography } from '@mui/material';
+// import servicesIcon from '../assets/Icons/00.SERVICES.png';
+// import whyUs from '../assets/Icons/01.WHYUS.png';
 import { Companies } from './common/layouts/companies';
 import { ContactBtn } from './common/ContactBtn';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export const Home = () => {
+  let location = useLocation();
   return (
     <>
       <Grid
@@ -13,97 +14,105 @@ export const Home = () => {
         direction="row"
         justifyContent="center"
         alignItems="center"
-        sx={{ mb: 10 }}
+        spacing={5}
+        sx={{ border: 'blue solid', mb: 5 }}
       >
-        <Grid item sx={{ my: 5, p: 4 }} xs={10}>
-          <Typography
-            variant="body1"
-            color="initial"
-            sx={{ fontSize: 40, textAlign: 'center', m: 10 }}
-          >
-            We excel in crafting{' '}
-            <span style={{ fontWeight: '700' }}>
-              compelling scientific content
-            </span>{' '}
-            to communicate your research and discoveries effectively. As your
-            trusted partner,{' '}
-            <span style={{ fontWeight: '700' }}>
-              our top priority is collaborating closely
-            </span>{' '}
-            with you, ensuring we create visuals that beautifully illustrate
-            your science story. Together,{' '}
-            <span style={{ fontWeight: '700' }}>
-              let’s bring your vision to fruition and make a lasting impact in
-              the world of science.
-            </span>
+        <Grid item xs={12}>
+          <Typography variant="h2" sx={{ textAlign: 'center', m: 10 }}>
+            Who we are and what we love to do
           </Typography>
-
-          <Divider sx={{ backgroundColor: '#ff6f80' }} />
         </Grid>
-        <Grid item xs={4}></Grid>
-        <Grid item xs={5}>
-          <Typography variant="h4" sx={{ mb: 4, fontWeight: 800 }}>
-            OUR SERVICES
-          </Typography>
-          <Typography variant="h5">REPORTING AND PRESENTATION</Typography>
-          <Divider sx={{ backgroundColor: '#ff6f80', my: 2 }} />
+
+        <Grid item xs={3}>
           <Typography sx={{ fontSize: 25, lineHeight: '1.2' }}>
-            <span style={{ fontWeight: 600 }}> Presentations | </span>
-            Engaging and professional slideshows tailored for scientific
-            conferences, seminars, and lectures. <br />
-            <span style={{ fontWeight: 600 }}>Posters |</span> Vibrant and
-            visually appealing posters for conferences, academic events, and
-            research presentations.
-            <br />
-            <span style={{ fontWeight: 600 }}>
-              Graphic Designed Reports |
-            </span>{' '}
-            Custom-designed reports with visually appealing layouts, graphics,
-            and illustrations.
+            We are a multidisciplinary team of{' '}
+            <Typography sx={{ color: ' #DF367B', fontSize: 25 }}>
+              {' '}
+              scientists, graphic designers and artists.
+            </Typography>
+            Our main goal is to generate{' '}
+            <Typography sx={{ color: ' #DF367B', fontSize: 25 }}>
+              captivating scientific content and, together, bring your vision to
+              life,
+            </Typography>
+            leaving a lasting mark in the world of science.
+          </Typography>
+          <Link to={'/work'}>
+            <ContactBtn title="See our work" />
+          </Link>
+        </Grid>
+        <Grid item>
+          <Box sx={{ bgcolor: '#cfe8fc', width: 408, height: 299 }} />
+          {/* <img src={servicesIcon} alt="Image 1" style={{ width: '80%' }} /> */}
+        </Grid>
+      </Grid>
+      <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+        spacing={5}
+        sx={{ border: 'green solid', mb: 5 }}
+      >
+        <Grid item xs={12}>
+          <Typography variant="h2" sx={{ textAlign: 'center', m: 10 }}>
+            How can we help you?
           </Typography>
         </Grid>
-        <Grid item xs={4}>
-          <img src={servicesIcon} alt="Image 1" style={{ width: '80%' }} />
+
+        <Grid item>
+          <Box sx={{ bgcolor: 'red', width: 408, height: 299 }} />
+          {/* <img src={servicesIcon} alt="Image 1" style={{ width: '80%' }} /> */}
         </Grid>
-        <Grid item xs={5}>
-          <Typography variant="h5">SCIENCE COMMUNICATION</Typography>
-
-          <Divider sx={{ backgroundColor: '#ff6f80', my: 2 }} />
-
+        <Grid item xs={3}>
           <Typography sx={{ fontSize: 25, lineHeight: '1.2' }}>
-            <span style={{ fontWeight: 600 }}>Infographics |</span> Eye-catching
-            and informative visual representations of scientific data, and
-            statistics. <br />
-            <span style={{ fontWeight: 600 }}> Visual Abstracts | </span>
-            Visually appealing summaries of scientific studies. <br />
-            <span style={{ fontWeight: 600 }}> Branded Content |</span>
-            Design services that effectively showcase your organisation’s
-            identity and message. <br />
-            <span style={{ fontWeight: 600 }}>Social Media Content | </span>
-            Compelling visuals optimised for social media platforms to promote
-            scientific research. <br />
-            <span style={{ fontWeight: 600 }}> Educational Materia |</span>{' '}
-            Visually appealing resources like diagrams, charts, and
-            illustrations.
+            We are a multidisciplinary team of{' '}
+            <Typography sx={{ color: ' #DF367B', fontSize: 25 }}>
+              {' '}
+              scientists, graphic designers and artists.
+            </Typography>
+            Our main goal is to generate{' '}
+            <Typography sx={{ color: ' #DF367B', fontSize: 25 }}>
+              captivating scientific content and, together, bring your vision to
+              life,
+            </Typography>
+            leaving a lasting mark in the world of science.
+          </Typography>
+          <Link to={'/work'}>
+            <ContactBtn title="See our work" />
+          </Link>
+        </Grid>
+      </Grid>
+      <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+        spacing={5}
+        sx={{ border: 'pink solid' }}
+      >
+        <Grid item xs={12}>
+          <Typography variant="h2" sx={{ textAlign: 'center', m: 10 }}>
+            Our process, expertise and reliability
           </Typography>
         </Grid>
-        <Grid item xs={4}></Grid>
-        <Grid item xs={5} sx={{}}>
-          <Typography variant="h5">MEDICAL CONTENT</Typography>
-
-          <Divider sx={{ backgroundColor: '#ff6f80', my: 2 }} />
-
+        <Grid item xs={6} sx={{ textAlign: 'center' }}>
           <Typography sx={{ fontSize: 25, lineHeight: '1.2' }}>
-            <span style={{ fontWeight: 600 }}> Medical Manuals |</span> Clear
-            and informative manuals for medical procedures, protocols, and
-            guidelines. Custom anatomical medical illustrations
+            As scientists turned artists, we bring a unique blend of experience
+            and years of service in{' '}
+            <Typography type="span" sx={{ color: ' #DF367B', fontSize: 25 }}>
+              academia, biotechnology
+            </Typography>{' '}
+            and the{' '}
+            <Typography type="span" sx={{ color: ' #DF367B', fontSize: 25 }}>
+              health industry
+            </Typography>
+            . Collaborating closely with you, we apply critical thinking and
+            creativity to address your communication challenges.
           </Typography>
-
-          <Grid item sx={{ mt: 5 }}>
-            <Link to={'/work'}>
-              <ContactBtn title="See our work" />
-            </Link>
-          </Grid>
+          <Link to={'/work'} sx={{ mt: 5 }}>
+            <ContactBtn title="Check out our work" />
+          </Link>
         </Grid>
       </Grid>
 
@@ -112,32 +121,32 @@ export const Home = () => {
         direction="row"
         justifyContent="center"
         alignItems="center"
-        spacing={2}
-        sx={{ mt: 40 }}
-      >
-        <Grid item xs={4}>
-          <img src={whyUs} alt="Image 2" style={{ width: '80%' }} />
-        </Grid>
-        <Grid item xs={5}>
-          <Typography variant="h4" sx={{ fontWeight: 800, mb: 3 }}>
-            WHY US?
-          </Typography>
-          <Typography sx={{ fontSize: 30, lineHeight: '1.2' }}>
-            As scientists turned artists, we bring a unique blend of expertise
-            and years of experience serving academia, biotech, and the health
-            industry. Collaborating closely with you, we apply critical thinking
-            and creativity to tackle your communication challenges.
-          </Typography>
-        </Grid>
-      </Grid>
-      <Grid
-        container
-        justifyContent="center"
-        alignItems="center"
-        sx={{ mt: 40 }}
       >
         <Grid item xs={10}>
           <Companies />
+        </Grid>
+        <Grid
+          container
+          justifyContent="center"
+          alignItems="center"
+          sx={{ mt: 20 }}
+        >
+          <Grid item xs={4}>
+            <Typography variant="h3" sx={{ textAlign: 'center' }}>
+              Your science, our art: a partnership for success
+            </Typography>
+          </Grid>
+
+          <Grid item xs={12} sx={{ textAlign: 'center', mt: 5 }}>
+            {location.pathname === '/' && (
+              <Link
+                target="_blank"
+                to={`https://us21.list-manage.com/contact-form?u=d18dcd67615ab44686e887477&form_id=614480122771aa21de77d4b637966f22`}
+              >
+                <ContactBtn title="Les's talk" />
+              </Link>
+            )}
+          </Grid>
         </Grid>
       </Grid>
     </>

@@ -10,10 +10,9 @@ export const Companies = () => {
   return (
     <Grid container justifyContent="center" alignItems="center" spacing={2}>
       <Grid item sx={{ my: 8 }}>
-        <Typography
-          variant="h4"
-          sx={{ fontWeight: 800, mb: 3 }}
-        >{`WHO WE'VE WORKED WITH?`}</Typography>
+        <Typography variant="h2">
+          Some of the clients we have worked with
+        </Typography>
       </Grid>
 
       <Grid

@@ -95,7 +95,7 @@ export function NavBar() {
             alignItems="center"
             sx={{ mt: 30 }}
           >
-            <Grid item xs={8}>
+            <Grid item xs={6}>
               <Typography
                 variant="body1"
                 color="initial"
@@ -106,13 +106,10 @@ export function NavBar() {
                   fontWeight: 'bold',
                 }}
               >
-                Transforming Complex Science into Compelling
-                <span style={{ color: '#ff6f80' }}>
-                  {' '}
-                  Visual Experiences: Scientific Illustration, Animation, and 3D
-                  Solutions{' '}
-                </span>
-                for the Healthcare, Pharma, and Biotech Industries
+                At ChemDye, we specialise in the art of transforming
+                <span style={{ color: '#FACD2D' }}> complex science </span>
+                into compelling
+                <span style={{ color: '#FACD2D' }}> visual experiences </span>
               </Typography>
             </Grid>
           </Grid>

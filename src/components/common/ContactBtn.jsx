@@ -11,7 +11,6 @@ export const ContactBtn = ({ title, fSize = 20, onClickShow }) => {
         color: 'white',
         marginBottom: 2,
         borderRadius: '15px',
-        fontWeight: '600',
         fontSize: fSize,
       }}
     >
