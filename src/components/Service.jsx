@@ -5,6 +5,7 @@ import img3 from '../assets/Icons/03-Illustrations-service.png';
 import { ContactBtn } from './common/ContactBtn';
 
 import { Link } from 'react-router-dom';
+import { RoadMap } from './RoadMap';
 
 export const Service = () => {
   const services = [
@@ -104,8 +105,16 @@ export const Service = () => {
             target="_blank"
             to={`https://us21.list-manage.com/contact-form?u=d18dcd67615ab44686e887477&form_id=614480122771aa21de77d4b637966f22`}
           >
-            <ContactBtn title="Request a quote" />
+            <ContactBtn title="Budget your work" />
           </Link>
+        </Grid>
+        <Grid item xs={12}>
+          <Typography variant="h2" sx={{ textAlign: 'center', m: 10 }}>
+            How is it to work with us?
+          </Typography>
+        </Grid>
+        <Grid item sx={{ outline: 'red solid 1px' }}>
+          <RoadMap />
         </Grid>
       </Grid>
     </Grid>
