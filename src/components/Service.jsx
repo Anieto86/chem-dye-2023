@@ -24,13 +24,13 @@ export const Service = () => {
     {
       title: 'SCIENTIFIC | MEDICAL ILLUSTRATIONS',
       img: img3,
-      text: `Presentations${'\n'}
-      Posters${'\n'}
-      Graphic designed reports\n
-      Infographics\n
-      Graphical and video abstracts\n
-      Educational material\n
-      Medical manuals\n
+      text: `Presentations
+      Posters
+      Graphic designed reports
+      Infographics
+      Graphical and video abstracts
+      Educational material
+      Medical manuals
       Custom anatomical medical illustrations`,
 
       footNote: 'Communicate with impact',
@@ -80,9 +80,7 @@ export const Service = () => {
                   </Grid>
                 </Grid>
                 <Grid item display="flex" justifyContent="center"></Grid>
-                <Typography variant="body1" wrap>
-                  {service.text}
-                </Typography>
+                <Typography variant="body1">{service.text}</Typography>
                 <Divider
                   sx={{
                     height: 1,

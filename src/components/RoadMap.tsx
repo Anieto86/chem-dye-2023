@@ -1,20 +1,29 @@
-import { Height } from '@mui/icons-material';
-import { Box, Grid, LinearProgress, Typography } from '@mui/material';
-import React, { useEffect, useRef } from 'react';
+import * as React from 'react';
+import {
+  TimelineDot,
+  TimelineContent,
+  TimelineConnector,
+  TimelineSeparator,
+  TimelineItem,
+  Timeline,
+} from '@mui/lab';
 
-export const RoadMap = () => {
-  const [progress, setProgress] = React.useState(0);
+import { Avatar, Box, Grid, Typography } from '@mui/material';
+import { deepOrange } from '@mui/material/colors';
+import { motion, useAnimation } from 'framer-motion';
 
-  useEffect(() => {
-    const container = document.getElementById('roadMapContainer');
+const AnimatedTimelineItem = ({ children }) => {
+  const controls = useAnimation();
 
+  React.useEffect(() => {
     const handleScroll = () => {
-      if (container) {
-        const contentHeight = container?.scrollHeight; // alto del
-        const scrollTop = window.scrollY - contentHeight;
-        const progressValue = (scrollTop / contentHeight) * 100;
-
-        setProgress(progressValue);
+      const scrollPosition = window.scrollY;
+      const timelineElement = document.getElementById('timeline');
+      if (timelineElement) {
+        const timelinePosition = timelineElement.getBoundingClientRect().top;
+        if (scrollPosition > timelinePosition - window.innerHeight / 2) {
+          controls.start({ opacity: 1, y: 0 });
+        }
       }
     };
 
@@ -23,82 +32,89 @@ export const RoadMap = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [controls]);
 
   return (
-    <Grid
-      container
-      justifyContent="center"
-      alignItems="center"
-      p={4}
-      id="roadMap"
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={controls}
+      transition={{ duration: 0.8 }}
     >
-      <Grid item xs={4}>
-        <Box textAlign="center">
-          <Box sx={{ bgcolor: '#cfe8fc', width: 408, height: 299 }} />
-          <Typography variant="h6">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque odio
-            libero quia at corporis, deleniti minus repudiandae dicta similique
-            unde dolores magnam voluptas hic tempore adipisci corrupti
-            cupiditate sapiente. Enim.a
-          </Typography>
-        </Box>
-      </Grid>
-      <Grid item xs={4}>
-        {/* <Box
+      {children}
+    </motion.div>
+  );
+};
 
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            outline: 'red solid 1px',
-            height: '200vh',
-          }}
-        > */}
-        <Box
-          id="roadMapContainer"
-          sx={{
-            width: '100%',
-            transform: 'rotate(90deg)',
-          }}
-        >
-          <LinearProgress variant="determinate" value={progress} />
-        </Box>
-        {/* </Box> */}
-      </Grid>
-      <Grid item xs={4}>
-        <Grid
-          container
-          direction="column"
-          justifyContent="center"
-          alignItems="center"
-        >
-          <Grid item textAlign="center">
-            <Box sx={{ bgcolor: '#0c87eb', width: 408, height: 299 }} />
-            <Typography variant="h6">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque
-              odio libero quia at corporis, deleniti minus repudiandae dicta
-              similique unde dolores magnam voluptas hic tempore adipisci
-              corrupti cupiditate sapiente. Enim.aAAAA
+export const RoadMap = () => {
+  return (
+    <Timeline position="alternate" id="timeline">
+      <AnimatedTimelineItem>
+        <TimelineItem>
+          <TimelineSeparator>
+            <TimelineDot sx={{ bgcolor: deepOrange[500] }}>
+              <Avatar sx={{ bgcolor: deepOrange[500] }}>1</Avatar>
+            </TimelineDot>
+
+            <TimelineConnector />
+          </TimelineSeparator>
+
+          <TimelineContent sx={{ py: '12px', px: 2 }}>
+            <Box sx={{ bgcolor: '#cfe8fc', width: 408, height: 299 }} />
+            <Typography variant="h6" component="span">
+              Initial contact
             </Typography>
-          </Grid>
-          <Grid
-            item
-            textAlign="center"
-            sx={{
-              height: '30vh',
-            }}
-          ></Grid>
-          <Grid item textAlign="center">
-            <Box sx={{ bgcolor: '#7cb639', width: 408, height: 299 }} />
-            <Typography variant="h6">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque
-              odio libero quia at corporis, deleniti minus repudiandae dicta
-              similique unde dolores magnam voluptas hic tempore adipisci
-              corrupti cupiditate sapiente. Enim.a
+            <Typography>
+              Send us an email and tell us about your project! You can start by
+              telling us who you are or which company you work for. Also,
+              include all the details you consider important about the project
+              you would like to work on together.
             </Typography>
-          </Grid>
-        </Grid>
-      </Grid>
-    </Grid>
+          </TimelineContent>
+        </TimelineItem>
+        <TimelineItem>
+          <TimelineSeparator>
+            <TimelineDot sx={{ bgcolor: deepOrange[500] }}>
+              <Avatar sx={{ bgcolor: deepOrange[500] }}>2</Avatar>
+            </TimelineDot>
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent sx={{ py: '12px', px: 2 }}>
+            <Grid container display={'flex'} justifyContent={'right'}>
+              <Box sx={{ bgcolor: '#0877d3', width: 408, height: 299 }} />
+            </Grid>
+            <Typography variant="h6" component="span">
+              Let's get into details
+            </Typography>
+            <Typography>
+              At this stage, we will meet to get on the same page and assess the
+              project's needs in depth. We will team up to create ideas that
+              suit your needs. After our initial conversation, you will receive
+              a project proposal.
+            </Typography>
+          </TimelineContent>
+        </TimelineItem>
+        <TimelineItem>
+          <TimelineSeparator>
+            <TimelineDot sx={{ bgcolor: deepOrange[500] }}>
+              <Avatar sx={{ bgcolor: deepOrange[500] }}>3</Avatar>
+            </TimelineDot>
+          </TimelineSeparator>
+
+          <TimelineContent sx={{ py: '12px', px: 2 }}>
+            <Box sx={{ bgcolor: '#cfe8fc', width: 408, height: 299 }} />
+            <Typography variant="h6" component="span">
+              Let's get to work
+            </Typography>
+            <Typography>
+              After collecting all the information, we'll put together an
+              initial draft for your review. Your input is crucial in refining
+              it until it perfectly aligns with your research needs. We agree on
+              the number of revisions upfront, ensuring you always have a clear
+              expectation of what to anticipate from us.
+            </Typography>
+          </TimelineContent>
+        </TimelineItem>
+      </AnimatedTimelineItem>
+    </Timeline>
   );
 };
