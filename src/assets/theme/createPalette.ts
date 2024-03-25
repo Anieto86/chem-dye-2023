@@ -7,7 +7,7 @@ export const createPalette = () => {
       contrastText: '#ffffff',
     },
     secondary: {
-      main: '#f50057',
+      main: '#DF367B',
       light: '#ff4081',
       dark: '#c51162',
       contrastText: '#ffffff',

@@ -7,7 +7,7 @@ import { useLocation } from 'react-router-dom';
 export function NavBar() {
   let location = useLocation();
 
-  const links = ['Service', 'Work', 'About', 'Blog', 'Contact'];
+  const links = ['Service', 'Work', 'About', 'Blog', 'Crew', 'Contact'];
 
   return (
     <>
@@ -24,7 +24,7 @@ export function NavBar() {
               }
             : {
                 backgroundColor: 'white',
-                boxShadow: 'blur',
+                boxShadow: 'none',
                 position: 'fixed',
                 zIndex: '1',
               }
@@ -70,13 +70,14 @@ export function NavBar() {
                     to={`/${link}`}
                     style={({ isActive }) => {
                       return {
-                        border: isActive ? '1px solid #000000' : 'none',
-                        borderRadius: '10px',
-                        padding: 6,
+                        borderRadius: '20px',
+                        padding: 10,
+                        margin: '0 20px',
                         textDecoration: 'none',
                         fontFamily: "'Quicksand', sans-serif",
                         fontSize: 20,
-                        color: location.pathname === '/' ? '#ffffff' : 'black',
+                        backgroundColor: isActive ? 'black' : 'white',
+                        color: isActive ? 'white' : 'black',
                       };
                     }}
                   >

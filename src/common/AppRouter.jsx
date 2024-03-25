@@ -14,6 +14,7 @@ import { Footer } from '../components/common/layouts/Footer';
 import { NavBar } from '../components/common/layouts/NavBar';
 import { ErrorPage } from './ErrorPage';
 import { Service } from '../components/Service';
+import { Crew } from '../components/Crew';
 
 export const AppRouter = () => {
   return createBrowserRouter([
@@ -43,6 +44,10 @@ export const AppRouter = () => {
         {
           path: '/About',
           element: <About />,
+        },
+        {
+          path: '/Crew',
+          element: <Crew />,
         },
         {
           path: '/Blog',

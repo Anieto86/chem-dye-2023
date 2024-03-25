@@ -95,11 +95,12 @@ export function Work() {
   return (
     <Grid container justifyContent="center" spacing={3}>
       <Grid item xs={10}>
-        <Typography variant="h2" fontWeight={600}>
-          We provide solutions for the Healthcare,
+        <Typography variant="h2" mb="20px">
+          Our journey into creativity
         </Typography>
-        <Typography variant="h2" fontWeight={600}>
-          Pharma and Biotech Industries.
+        <Typography variant="h5">
+          ChemDye collaborates with scientists across diverse disciplines,
+          driving innovation through creative solutions.
         </Typography>
         <Grid item sx={{ my: 8 }}>
           <Link
