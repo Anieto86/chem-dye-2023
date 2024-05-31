@@ -11,6 +11,7 @@ import {
 import { Avatar, Box, Grid, Typography } from '@mui/material';
 import { deepOrange } from '@mui/material/colors';
 import { motion, useAnimation } from 'framer-motion';
+import initialContact from '../assets/img/initial-contact.jpg';
 
 const AnimatedTimelineItem = ({ children }) => {
   const controls = useAnimation();
@@ -59,7 +60,12 @@ export const RoadMap = () => {
           </TimelineSeparator>
 
           <TimelineContent sx={{ py: '12px', px: 2 }}>
-            <Box sx={{ bgcolor: '#cfe8fc', width: 408, height: 299 }} />
+            <img
+              srcSet={`${initialContact}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+              src={initialContact}
+              alt="initial-contact"
+              loading="lazy"
+            />
             <Typography variant="h6" component="span">
               Initial contact
             </Typography>
