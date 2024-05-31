@@ -1,20 +1,11 @@
-import { Box, Grid, IconButton, Typography } from '@mui/material';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import XIcon from '@mui/icons-material/X';
-import { Link } from 'react-router-dom';
+import { Box, Grid, Typography } from '@mui/material';
 import logo from '../../../assets/img/ColourLogo.png';
+import { LinkIcons } from '../LinkIcons';
 
 export const Footer = () => {
   return (
     <Grid container padding={6}>
-      <Grid
-        container
-        direction="row"
-        alignItems="center"
-        xs={4}
-        sx={{ border: '1px solid green' }}
-      >
+      <Grid container direction="row" alignItems="center" xs={4}>
         <Grid item>
           <img src={logo} alt="Logo footer" />
         </Grid>{' '}
@@ -29,46 +20,13 @@ export const Footer = () => {
         direction="row"
         justifyContent="flex-end"
         alignItems="center"
-        sx={{ border: '1px solid green' }}
       >
         <Grid item>
-          <Link to={`https://www.instagram.com/chemdye_si/?hl=es`}>
-            <IconButton
-              sx={{
-                color: '#DF367B',
-                background: 'rgb(226, 139, 174)',
-              }}
-            >
-              <InstagramIcon />
-            </IconButton>
-          </Link>
-          <Link to={`https://www.linkedin.com/in/mariana-oksdath-mansilla`}>
-            <IconButton
-              sx={{
-                color: '#DF367B',
-                background: 'rgb(226, 139, 174)',
-              }}
-            >
-              <LinkedInIcon />
-            </IconButton>
-          </Link>
-
-          <Link
-            to={`https://twitter.com/i/flow/login?redirect_after_login=%2FMari_SciArt`}
-          >
-            <IconButton
-              sx={{
-                color: '#DF367B',
-                background: 'rgb(226, 139, 174)',
-              }}
-            >
-              <XIcon />
-            </IconButton>
-          </Link>
+          <LinkIcons />
         </Grid>
       </Grid>
 
-      <Grid container sx={{ border: '1px solid blue' }} s>
+      <Grid container s>
         <Grid item xs={5} mb={3}>
           <Typography>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam at
@@ -84,7 +42,6 @@ export const Footer = () => {
         justifyContent="space-between"
         alignItems="center"
         columns
-        sx={{ border: '1px solid blue' }}
       >
         <Grid item>
           <Typography variant="h5">About ChemDye studio</Typography>
