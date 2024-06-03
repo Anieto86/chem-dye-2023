@@ -60,10 +60,10 @@ export const RoadMap = () => {
 
           <TimelineContent sx={{ py: '12px', px: 2 }}>
             <Box sx={{ bgcolor: '#cfe8fc', width: 408, height: 299 }} />
-            <Typography variant="h6" component="span">
+            <Typography variant="h4" textAlign="center">
               Initial contact
             </Typography>
-            <Typography>
+            <Typography textAlign="center">
               Send us an email and tell us about your project! You can start by
               telling us who you are or which company you work for. Also,
               include all the details you consider important about the project

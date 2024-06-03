@@ -1,102 +1,111 @@
-import { Box, Grid, Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 // import servicesIcon from '../assets/Icons/00.SERVICES.png';
 // import whyUs from '../assets/Icons/01.WHYUS.png';
 import { Companies } from './common/layouts/companies';
 import { ContactBtn } from './common/ContactBtn';
 import { Link, useLocation } from 'react-router-dom';
+import backgroundImg from '../../src/assets/img/background-home.png';
 
 export const Home = () => {
   let location = useLocation();
   return (
     <>
       <Grid
-        container
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-        spacing={5}
-        sx={{ border: 'blue solid', mb: 5 }}
+        sx={{
+          backgroundImage: `url(${backgroundImg})`,
+          backgroundSize: 'contain',
+          // backgroundSize: '50%',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
       >
-        <Grid item xs={12}>
-          <Typography variant="h2" sx={{ textAlign: 'center', m: 10 }}>
-            Who we are and what we love to do
-          </Typography>
+        <Grid container columns={12}>
+          <Grid item xs={6}>
+            <Typography
+              variant="h2"
+              sx={{ textAlign: 'right', fontWeight: 500, mb: 10 }}
+            >
+              Our Passion & Identity
+            </Typography>
+          </Grid>
+          <Grid item xs={6}></Grid>
+
+          <Grid item xs={6} sx={{ textAlign: 'right' }}>
+            <Typography sx={{ fontSize: 25, lineHeight: '1.2' }}>
+              We are a multidisciplinary team of{' '}
+              <Typography sx={{ color: ' #DF367B', fontSize: 25 }}>
+                {' '}
+                scientists, graphic designers and artists.
+              </Typography>
+              Our main goal is to generate{' '}
+              <Typography sx={{ color: ' #DF367B', fontSize: 25 }}>
+                captivating scientific content and, together, bring your vision
+                to life,
+              </Typography>
+              leaving a lasting mark in the world of science.
+            </Typography>
+            <Grid item sx={{ mt: 5 }}>
+              <Link to={'/work'}>
+                <ContactBtn title="Discovery our crew" />
+              </Link>
+            </Grid>
+          </Grid>
+          <Grid item xs={6}></Grid>
         </Grid>
 
-        <Grid item xs={3}>
-          <Typography sx={{ fontSize: 25, lineHeight: '1.2' }}>
-            We are a multidisciplinary team of{' '}
-            <Typography sx={{ color: ' #DF367B', fontSize: 25 }}>
-              {' '}
-              scientists, graphic designers and artists.
+        <Grid container sx={{ height: '30vh' }}></Grid>
+
+        <Grid container columns={12}>
+          <Grid item xs={6}></Grid>
+          <Grid item xs={6}>
+            <Typography
+              variant="h2"
+              sx={{ textAlign: 'left', fontWeight: 500, mb: 10 }}
+            >
+              How can we help you?
             </Typography>
-            Our main goal is to generate{' '}
-            <Typography sx={{ color: ' #DF367B', fontSize: 25 }}>
-              captivating scientific content and, together, bring your vision to
-              life,
+          </Grid>
+
+          <Grid item xs={6}></Grid>
+          <Grid item xs={6} sx={{ textAlign: 'left' }}>
+            <Typography sx={{ fontSize: 25, lineHeight: '1.2' }}>
+              We are a multidisciplinary team of{' '}
+              <Typography sx={{ color: ' #DF367B', fontSize: 25 }}>
+                {' '}
+                scientists, graphic designers and artists.
+              </Typography>
+              Our main goal is to generate{' '}
+              <Typography sx={{ color: ' #DF367B', fontSize: 25 }}>
+                captivating scientific content and, together, bring your vision
+                to life,
+              </Typography>
+              leaving a lasting mark in the world of science.
             </Typography>
-            leaving a lasting mark in the world of science.
-          </Typography>
-          <Link to={'/work'}>
-            <ContactBtn title="See our work" />
-          </Link>
-        </Grid>
-        <Grid item>
-          <Box sx={{ bgcolor: '#cfe8fc', width: 408, height: 299 }} />
-          {/* <img src={servicesIcon} alt="Image 1" style={{ width: '80%' }} /> */}
+            <Grid item sx={{ my: 5 }}>
+              <Link to={'/work'}>
+                <ContactBtn title="Uncover our solution" />
+              </Link>
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
+
       <Grid
         container
         direction="row"
         justifyContent="center"
         alignItems="center"
-        spacing={5}
-        sx={{ border: 'green solid', mb: 5 }}
+        sx={{ border: 'pink solid', my: 10 }}
       >
         <Grid item xs={12}>
-          <Typography variant="h2" sx={{ textAlign: 'center', m: 10 }}>
-            How can we help you?
-          </Typography>
-        </Grid>
-
-        <Grid item>
-          <Box sx={{ bgcolor: 'red', width: 408, height: 299 }} />
-          {/* <img src={servicesIcon} alt="Image 1" style={{ width: '80%' }} /> */}
-        </Grid>
-        <Grid item xs={3}>
-          <Typography sx={{ fontSize: 25, lineHeight: '1.2' }}>
-            We are a multidisciplinary team of{' '}
-            <Typography sx={{ color: ' #DF367B', fontSize: 25 }}>
-              {' '}
-              scientists, graphic designers and artists.
-            </Typography>
-            Our main goal is to generate{' '}
-            <Typography sx={{ color: ' #DF367B', fontSize: 25 }}>
-              captivating scientific content and, together, bring your vision to
-              life,
-            </Typography>
-            leaving a lasting mark in the world of science.
-          </Typography>
-          <Link to={'/work'}>
-            <ContactBtn title="See our work" />
-          </Link>
-        </Grid>
-      </Grid>
-      <Grid
-        container
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-        spacing={5}
-        sx={{ border: 'pink solid' }}
-      >
-        <Grid item xs={12}>
-          <Typography variant="h2" sx={{ textAlign: 'center', m: 10 }}>
+          <Typography
+            variant="h2"
+            sx={{ textAlign: 'center', fontWeight: 500, my: 10 }}
+          >
             Our process, expertise and reliability
           </Typography>
         </Grid>
-        <Grid item xs={6} sx={{ textAlign: 'center' }}>
+        <Grid item sx={{ textAlign: 'center' }}>
           <Typography sx={{ fontSize: 25, lineHeight: '1.2' }}>
             As scientists turned artists, we bring a unique blend of experience
             and years of service in{' '}
@@ -107,12 +116,14 @@ export const Home = () => {
             <Typography type="span" sx={{ color: ' #DF367B', fontSize: 25 }}>
               health industry
             </Typography>
-            . Collaborating closely with you, we apply critical thinking and
+            Collaborating closely with you, we apply critical thinking and
             creativity to address your communication challenges.
           </Typography>
-          <Link to={'/work'} sx={{ mt: 5 }}>
-            <ContactBtn title="Check out our work" />
-          </Link>
+          <Grid item sx={{ my: 5 }}>
+            <Link to={'/work'}>
+              <ContactBtn title="Check out our work" />
+            </Link>
+          </Grid>
         </Grid>
       </Grid>
 

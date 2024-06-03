@@ -10,8 +10,9 @@ export const ContactBtn = ({ title, fSize = 20, onClickShow }) => {
         backgroundColor: '#DF367C',
         color: 'white',
         marginBottom: 2,
-        borderRadius: '15px',
+        borderRadius: '50px',
         fontSize: fSize,
+        p: 2,
       }}
     >
       {title}

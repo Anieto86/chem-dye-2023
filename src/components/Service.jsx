@@ -1,7 +1,8 @@
-import { Box, Divider, Grid, Typography } from '@mui/material';
+import { Card, Grid, Typography } from '@mui/material';
 import img1 from '../assets/Icons/01-WORKSHOP-service.png';
 import img2 from '../assets/Icons/02-GUIDANCE-service.png';
 import img3 from '../assets/Icons/03-Illustrations-service.png';
+import img4 from '../assets/Icons/04_Workshop 1.png';
 import { ContactBtn } from './common/ContactBtn';
 
 import { Link } from 'react-router-dom';
@@ -10,30 +11,38 @@ import { RoadMap } from './RoadMap';
 export const Service = () => {
   const services = [
     {
-      title: 'WORKSHOPS',
+      title: 'Graphic Design',
       img: img1,
-      text: "This post explores transitioning from a comfortable career to the unknown, highlighting career changes' increasing prevalence and benefits. It emphasises self-reflection, curiosity, connecting with resources and like-minded individuals, and embracing hard work. Understanding one's professional identity and seeking an aligned environment is crucial. The post underscores exploring new possibilities, leveraging unique skills, and prioritising self-care. Patience, reflection, goal-setting, and self-care are essential throughout the career transformation process.",
-      footNote: 'Learn about scientific illustrations',
+      text: [
+        'Reports Logos',
+        'Social media graphics',
+        'Educational material',
+        'Print designs',
+      ],
     },
     {
-      title: 'SCIENTIFIC DESIGN CONSULTANT',
+      title: 'Scientific Illustrations',
       img: img2,
-      text: 'This post explores the role of scientific illustrators in science communication, highlighting their ability to translate complex concepts into captivating visuals. It emphasises diverse paths in the field and the importance of utilising their services. In-house scientific illustrators are recommended to enhance science communication.',
-      footNote: 'We got you',
+      text: [
+        'Figures for journals',
+        'Graphical abstracts',
+        'Posters',
+        'Infographics',
+        'Presentations',
+        ' Medical illustrations',
+      ],
     },
     {
-      title: 'SCIENTIFIC | MEDICAL ILLUSTRATIONS',
+      title: 'Animation',
       img: img3,
-      text: `Presentations
-      Posters
-      Graphic designed reports
-      Infographics
-      Graphical and video abstracts
-      Educational material
-      Medical manuals
-      Custom anatomical medical illustrations`,
-
-      footNote: 'Communicate with impact',
+      text: ['Video abstracts', ' 3D Animation', '3D Illustrations'],
+    },
+    {
+      title: 'Workshop',
+      img: img4,
+      text: [
+        'Join our workshops to master the art of scientific illustration, whether you’re a student or a scientist. Learn to translate ideas from conception to reality in a collaborative and imaginative environment',
+      ],
     },
   ];
 
@@ -41,11 +50,9 @@ export const Service = () => {
     <Grid container justifyContent="center">
       <Grid item xs={10}>
         <Grid item xs={10} sx={{ fontSize: 60 }}>
-          <Typography variant="h2">
-            We are translators, storytellers
-            <br />
-            and educators. <br />
-          </Typography>{' '}
+          <Typography variant="h2" sx={{ my: 2 }}>
+            We are translators, storytellers and educators.
+          </Typography>
           <Typography>
             Transforming complexity into clear narratives.
           </Typography>
@@ -53,50 +60,47 @@ export const Service = () => {
             <ContactBtn title="Connect with us" />
           </Grid>
         </Grid>
-        <Grid container columns={15}>
-          {services.map((service, i) => (
-            <Grid item xs={5} sx={{ p: 1 }} key={i}>
-              <Box
-                sx={{
-                  p: 3,
-                  bgcolor: '#EAEBED',
-                  borderRadius: 4,
-                  minHeight: 600,
-                }}
-              >
-                <Grid container>
-                  <Grid item xs={9}>
-                    <Typography variant="h6">{service.title}</Typography>
-                  </Grid>
-                  <Grid item xs={3}>
-                    <img
-                      src={service.img}
-                      alt={service.title}
-                      style={{
-                        width: 70,
-                        height: 'auto',
-                      }}
-                    />
-                  </Grid>
-                </Grid>
-                <Grid item display="flex" justifyContent="center"></Grid>
-                <Typography variant="body1">{service.text}</Typography>
-                <Divider
+        <Grid container columns={12} sx={{ p: 4 }}>
+          {services.map((service, i) => {
+            const { title, img, text } = service;
+            return (
+              <Grid item xs={6} sx={{ p: 1 }} key={i}>
+                <Card
                   sx={{
-                    height: 1,
-                    backgroundColor: '#000000',
-                    marginTop: 2,
+                    p: 3,
+                    borderRadius: 8,
+                    minHeight: 400,
                   }}
-                />
-                <Typography
-                  textAlign={'right'}
-                  sx={{ p: 2, fontWeight: 'bold' }}
                 >
-                  {service.footNote}
-                </Typography>
-              </Box>
-            </Grid>
-          ))}
+                  <Grid container>
+                    <Grid item xs={12}>
+                      <img
+                        src={img}
+                        alt={title}
+                        style={{
+                          width: 100,
+                          height: 'auto',
+                        }}
+                      />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Typography variant="h5" sx={{ fontWeight: 600 }}>
+                        {title}
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                  <Grid item display="flex" justifyContent="center"></Grid>
+                  <Typography variant="body1">
+                    {text.map((x) => (
+                      <Typography variant="h6" key={x}>
+                        {x}
+                      </Typography>
+                    ))}
+                  </Typography>
+                </Card>
+              </Grid>
+            );
+          })}
         </Grid>
         <Grid item display="flex" justifyContent="center" sx={{ my: 20 }}>
           <Link

@@ -5,6 +5,17 @@ import businessAndScience from '../../../assets/Icons/03.C_B&B.png';
 import greenPeace from '../../../assets/Icons/03.D_GP.png';
 import corticalLab from '../../../assets/Icons/03.E_CL.png';
 import bioGenox from '../../../assets/Icons/03.F_BG.png';
+import aero from '../../../assets/Icons/AERO.png';
+
+const companiesLogos = [
+  aero,
+  novaEye,
+  unisa,
+  businessAndScience,
+  greenPeace,
+  corticalLab,
+  bioGenox,
+];
 
 export const Companies = () => {
   return (
@@ -18,104 +29,31 @@ export const Companies = () => {
       <Grid
         container
         justifyContent="center"
-        alignItems="center"
+        alignItems="baseline"
         spacing={2}
         sx={{ mb: 10 }}
       >
-        <Grid
-          item
-          xs={3}
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-          }}
-        >
-          <img
-            src={novaEye}
-            alt="Image 1"
-            style={{ width: '40%', height: 'auto' }}
-          />
-        </Grid>
-        <Grid
-          item
-          xs={3}
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-          }}
-        >
-          <img
-            src={unisa}
-            alt="Image 2"
-            style={{ width: '40%', height: 'auto' }}
-          />
-        </Grid>
-        <Grid
-          item
-          xs={3}
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-          }}
-        >
-          <img
-            src={businessAndScience}
-            alt="Image 3"
-            style={{ width: '40%', height: 'auto' }}
-          />
-        </Grid>
-      </Grid>
+        {companiesLogos.map((logo, i) => {
+          return (
+            <Grid
+              key={i}
+              item
+              xs={4}
+              sx={{
+                display: 'flex',
+                justifyContent: 'center',
 
-      <Grid
-        container
-        justifyContent="center"
-        alignItems="center"
-        direction="row"
-        sx={{}}
-        spacing={2}
-      >
-        <Grid
-          item
-          xs={3}
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-          }}
-        >
-          <img
-            src={greenPeace}
-            alt="Image 4"
-            style={{ width: '40%', height: 'auto' }}
-          />
-        </Grid>
-        <Grid
-          item
-          xs={3}
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-          }}
-        >
-          <img
-            src={corticalLab}
-            alt="Image 6"
-            style={{ width: '40%', height: 'auto' }}
-          />
-        </Grid>
-        <Grid
-          item
-          xs={3}
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-          }}
-        >
-          <img
-            src={bioGenox}
-            alt="Image 5"
-            style={{ width: '40%', height: 'auto' }}
-          />
-        </Grid>
+                border: 'solid red',
+              }}
+            >
+              <img
+                src={logo}
+                alt={`company${logo}`}
+                style={{ width: '40%', height: '40%' }}
+              />
+            </Grid>
+          );
+        })}
       </Grid>
     </Grid>
   );

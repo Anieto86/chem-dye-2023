@@ -24,7 +24,7 @@ export function NavBar() {
               }
             : {
                 backgroundColor: 'white',
-                boxShadow: 'blur',
+                boxShadow: 'none',
                 position: 'fixed',
                 zIndex: '1',
               }
@@ -55,14 +55,16 @@ export function NavBar() {
                     src={logo}
                     alt="Image 1"
                     style={{
-                      width: '10%',
                       height: 'auto',
                     }}
                   />
                 </NavLink>
               </Typography>
             </Grid>
-            <Grid item>
+            <Grid
+              item
+              sx={{ border: '1px solid black', p: 3, borderRadius: 10 }}
+            >
               {links.map((link, i) => {
                 return (
                   <NavLink
@@ -71,12 +73,14 @@ export function NavBar() {
                     style={({ isActive }) => {
                       return {
                         border: isActive ? '1px solid #000000' : 'none',
+                        backgroundColor: !isActive ? 'transparent' : '#000000',
                         borderRadius: '10px',
-                        padding: 6,
+                        padding: 8,
+                        margin: 20,
                         textDecoration: 'none',
                         fontFamily: "'Quicksand', sans-serif",
-                        fontSize: 20,
-                        color: location.pathname === '/' ? '#ffffff' : 'black',
+                        fontSize: 25,
+                        color: isActive ? '#ffffff' : '#000000',
                       };
                     }}
                   >
