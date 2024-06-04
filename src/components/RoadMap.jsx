@@ -12,6 +12,7 @@ import { Avatar, Box, Grid, Typography } from '@mui/material';
 import { deepOrange } from '@mui/material/colors';
 import { motion, useAnimation } from 'framer-motion';
 
+// eslint-disable-next-line react/prop-types
 const AnimatedTimelineItem = ({ children }) => {
   const controls = useAnimation();
 

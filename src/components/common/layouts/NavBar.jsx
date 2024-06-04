@@ -7,7 +7,7 @@ import { useLocation } from 'react-router-dom';
 export function NavBar() {
   let location = useLocation();
 
-  const links = ['Service', 'Work', 'About', 'Blog', 'Contact'];
+  const links = ['Service', 'Work', 'About', 'Crew', 'Blog', 'Contact'];
 
   return (
     <>
