@@ -9,6 +9,8 @@ import {
   IconButton,
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
+import { useForm } from 'react-hook-form';
+import { ContactBtn } from './ContactBtn';
 
 const key = import.meta.env.VITE_API_KEY;
 const templateID = import.meta.env.VITE_TEMPLATE_ID;
@@ -16,6 +18,15 @@ const serviceID = import.meta.env.VITE_SERVICE_ID;
 
 export const CustomForm = () => {
   const [open, setOpen] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isValid },
+  } = useForm({
+    defaultValue: { user_name: '', user_email: '' },
+    mode: 'onChange',
+  });
 
   const handleClick = () => {
     setOpen(true);
@@ -29,6 +40,11 @@ export const CustomForm = () => {
     setOpen(false);
   };
   const form = useRef();
+  // console.log(form.current.user_name);
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -41,6 +57,7 @@ export const CustomForm = () => {
       }
     );
   };
+
   const action = (
     <>
       <Button color="secondary" size="small" onClick={handleClose}></Button>
@@ -60,22 +77,40 @@ export const CustomForm = () => {
       <Typography variant="h4" gutterBottom>
         Contact Us
       </Typography>
-      <form ref={form} onSubmit={sendEmail}>
+      <form ref={form} onSubmit={(handleSubmit(onSubmit), sendEmail)}>
         <TextField
+          {...register('user_name', {
+            required: 'El campo no puede estar vacío',
+            minLength: {
+              value: 5,
+              message: 'El campo debe tener al menos 5 caracteres',
+            },
+          })}
           type="text"
           fullWidth
           margin="normal"
           label="Your Name"
           name="user_name"
           required
+          error={!!errors.user_name}
+          helperText={errors.user_name ? errors.user_name.message : ''}
         />
         <TextField
+          {...register('user_email', {
+            required: 'El campo es obligatorio',
+            pattern: {
+              value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+              message: 'El formato del email no es válido',
+            },
+          })}
           fullWidth
           margin="normal"
           label="Your Email"
           name="user_email"
           type="email"
           required
+          error={!!errors.user_email}
+          helperText={errors.user_email ? errors.user_email.message : ''}
         />
         <TextField
           type="text"
@@ -94,14 +129,15 @@ export const CustomForm = () => {
           rows={4}
           required
         />
-        <Button
+        <ContactBtn
           type="submit"
           variant="contained"
           color="primary"
-          onClick={handleClick}
-        >
-          Send Message
-        </Button>
+          onClickShow={handleClick}
+          disabled={!isValid}
+          title="Let's get Started"
+        />
+
         <Snackbar
           open={open}
           autoHideDuration={4000}

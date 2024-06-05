@@ -1,7 +1,7 @@
 import { Button } from '@mui/material';
 
 // eslint-disable-next-line react/prop-types
-export const ContactBtn = ({ title, fSize = 20, onClickShow }) => {
+export const ContactBtn = ({ title, fSize = 20, onClickShow, ...props }) => {
   return (
     <Button
       variant="contained"
@@ -14,6 +14,7 @@ export const ContactBtn = ({ title, fSize = 20, onClickShow }) => {
         fontSize: fSize,
         p: 2,
       }}
+      {...props}
     >
       {title}
     </Button>
