@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { Navigate, createBrowserRouter } from 'react-router-dom';
 import { About } from '../components/About';
 import { Blog } from '../components/Blog';
 import { Contact } from '../components/Contact';
@@ -23,7 +23,6 @@ export const AppRouter = () => {
       element: (
         <>
           <NavBar />
-          {/* <Home />, */}
           <Footer />
         </>
       ),
@@ -31,46 +30,50 @@ export const AppRouter = () => {
       children: [
         {
           path: '/',
+          element: <Navigate to="/home" />,
+        },
+        {
+          path: '/home',
           element: <Home />,
         },
         {
-          path: '/Service',
+          path: '/service',
           element: <Service />,
         },
         {
-          path: '/Work',
+          path: '/work',
           element: <Work />,
         },
         {
-          path: '/Crew',
+          path: '/crew',
           element: <Crew />,
         },
         {
-          path: '/About',
+          path: '/about',
           element: <About />,
         },
         {
-          path: '/Blog',
+          path: '/blog',
           element: <Blog />,
         },
         {
-          path: '/Contact',
+          path: '/contact',
           element: <Contact />,
         },
         {
-          path: '/Blog/txt1',
+          path: '/blog/txt1',
           element: <Txtblog1 />,
         },
         {
-          path: '/Blog/txt2',
+          path: '/blog/txt2',
           element: <Txtblog2 />,
         },
         {
-          path: '/Blog/txt3',
+          path: '/blog/txt3',
           element: <Txtblog3 />,
         },
         {
-          path: '/Blog/txt4',
+          path: '/blog/txt4',
           element: <Txtblog4 />,
         },
       ],

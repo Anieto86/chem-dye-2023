@@ -7,14 +7,14 @@ import { useLocation } from 'react-router-dom';
 export function NavBar() {
   let location = useLocation();
 
-  const links = ['Service', 'Work', 'About', 'Crew', 'Blog', 'Contact'];
+  const links = ['Home', 'Service', 'Work', 'About', 'Crew', 'Blog', 'Contact'];
 
   return (
     <>
       <AppBar
         position="static"
         sx={
-          location.pathname === '/'
+          location.pathname === '/home'
             ? {
                 backgroundImage: `url(${backgroundImg})`,
                 backgroundSize: 'cover',
@@ -40,43 +40,33 @@ export function NavBar() {
             sx={{ mx: 15, p: 1 }}
           >
             <Grid item>
-              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                <NavLink
-                  to={`/`}
-                  style={({ isPending }) => {
-                    return {
-                      padding: 6,
-                      textDecoration: 'none',
-                      color: isPending ? 'red' : 'black',
-                    };
+              <NavLink to={`/`}>
+                <img
+                  src={logo}
+                  alt="Image 1"
+                  style={{
+                    height: 'auto',
                   }}
-                >
-                  <img
-                    src={logo}
-                    alt="Image 1"
-                    style={{
-                      height: 'auto',
-                    }}
-                  />
-                </NavLink>
-              </Typography>
+                />
+              </NavLink>
             </Grid>
             <Grid
               item
-              sx={{ border: '1px solid black', p: 3, borderRadius: 10 }}
+              sx={{ border: '1px solid black', p: 4, borderRadius: 10 }}
             >
               {links.map((link, i) => {
                 return (
                   <NavLink
                     key={i}
-                    to={`/${link}`}
+                    to={`/${link.toLowerCase()}`}
                     style={({ isActive }) => {
                       return {
                         border: isActive ? '1px solid #000000' : 'none',
                         backgroundColor: !isActive ? 'transparent' : '#000000',
-                        borderRadius: '10px',
-                        padding: 8,
+
+                        padding: 10,
                         margin: 20,
+                        borderRadius: 25,
                         textDecoration: 'none',
                         fontFamily: "'Quicksand', sans-serif",
                         fontSize: 25,
@@ -91,7 +81,7 @@ export function NavBar() {
             </Grid>
           </Grid>
         </Toolbar>
-        {location.pathname === '/' && (
+        {location.pathname === '/home' && (
           <Grid
             container
             direction="row"
@@ -101,7 +91,7 @@ export function NavBar() {
           >
             <Grid item xs={6}>
               <Typography
-                variant="body1"
+                variant="h1"
                 color="initial"
                 sx={{
                   textAlign: 'center',

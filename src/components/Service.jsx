@@ -1,4 +1,4 @@
-import { Card, Grid, Typography } from '@mui/material';
+import { Card, CardMedia, Grid, Typography } from '@mui/material';
 import img1 from '../assets/Icons/01-WORKSHOP-service.png';
 import img2 from '../assets/Icons/02-GUIDANCE-service.png';
 import img3 from '../assets/Icons/03-Illustrations-service.png';
@@ -49,16 +49,14 @@ export const Service = () => {
   return (
     <Grid container justifyContent="center">
       <Grid item xs={10}>
-        <Grid item xs={10} sx={{ fontSize: 60 }}>
-          <Typography variant="h2" sx={{ my: 2 }}>
-            We are translators, storytellers and educators.
-          </Typography>
-          <Typography>
-            Transforming complexity into clear narratives.
-          </Typography>
-          <Grid item xs={9.5} sx={{ my: 10 }}>
-            <ContactBtn title="Connect with us" />
-          </Grid>
+        <Typography variant="h1" sx={{ my: 2 }}>
+          We are translators, storytellers and educators.
+        </Typography>
+        <Typography variant="h4">
+          Transforming complexity into clear narratives.
+        </Typography>
+        <Grid item xs={9.5} sx={{ my: 10 }}>
+          <ContactBtn title="Connect with us" />
         </Grid>
         <Grid container columns={12} sx={{ p: 4 }}>
           {services.map((service, i) => {
@@ -102,6 +100,17 @@ export const Service = () => {
             );
           })}
         </Grid>
+        <Grid item>
+          <Card>
+            {' '}
+            <CardMedia
+              component="video"
+              // src={videoUrl}
+              controls
+              sx={{ height: 0, paddingTop: '56.25%' }} // 16:9 aspect ratio
+            />
+          </Card>
+        </Grid>
         <Grid item display="flex" justifyContent="center" sx={{ my: 20 }}>
           <Link
             target="_blank"
@@ -110,12 +119,8 @@ export const Service = () => {
             <ContactBtn title="Budget your work" />
           </Link>
         </Grid>
-        <Grid item xs={12}>
-          <Typography variant="h2" sx={{ textAlign: 'center', m: 10 }}>
-            How is it to work with us?
-          </Typography>
-        </Grid>
-        <Grid item sx={{ outline: 'red solid 1px' }}>
+
+        <Grid item>
           <RoadMap />
         </Grid>
       </Grid>

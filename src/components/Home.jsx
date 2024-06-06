@@ -21,24 +21,21 @@ export const Home = () => {
       >
         <Grid container columns={12}>
           <Grid item xs={6}>
-            <Typography
-              variant="h2"
-              sx={{ textAlign: 'right', fontWeight: 500, mb: 10 }}
-            >
+            <Typography variant="h1" sx={{ textAlign: 'right', mb: 10 }}>
               Our Passion & Identity
             </Typography>
           </Grid>
           <Grid item xs={6}></Grid>
 
           <Grid item xs={6} sx={{ textAlign: 'right' }}>
-            <Typography sx={{ fontSize: 25, lineHeight: '1.2' }}>
+            <Typography variant="h5" sx={{ lineHeight: '1.2' }}>
               We are a multidisciplinary team of{' '}
-              <Typography sx={{ color: ' #DF367B', fontSize: 25 }}>
+              <Typography variant="h5" sx={{ color: ' #DF367B' }}>
                 {' '}
                 scientists, graphic designers and artists.
               </Typography>
               Our main goal is to generate{' '}
-              <Typography sx={{ color: ' #DF367B', fontSize: 25 }}>
+              <Typography variant="h5" sx={{ color: ' #DF367B' }}>
                 captivating scientific content and, together, bring your vision
                 to life,
               </Typography>
@@ -58,24 +55,21 @@ export const Home = () => {
         <Grid container columns={12}>
           <Grid item xs={6}></Grid>
           <Grid item xs={6}>
-            <Typography
-              variant="h2"
-              sx={{ textAlign: 'left', fontWeight: 500, mb: 10 }}
-            >
+            <Typography variant="h1" sx={{ textAlign: 'left', mb: 10 }}>
               How can we help you?
             </Typography>
           </Grid>
 
           <Grid item xs={6}></Grid>
           <Grid item xs={6} sx={{ textAlign: 'left' }}>
-            <Typography sx={{ fontSize: 25, lineHeight: '1.2' }}>
+            <Typography variant="h5" sx={{ lineHeight: '1.2' }}>
               We are a multidisciplinary team of{' '}
-              <Typography sx={{ color: ' #DF367B', fontSize: 25 }}>
+              <Typography variant="h5" sx={{ color: ' #DF367B' }}>
                 {' '}
                 scientists, graphic designers and artists.
               </Typography>
               Our main goal is to generate{' '}
-              <Typography sx={{ color: ' #DF367B', fontSize: 25 }}>
+              <Typography variant="h5" sx={{ color: ' #DF367B' }}>
                 captivating scientific content and, together, bring your vision
                 to life,
               </Typography>
@@ -95,25 +89,22 @@ export const Home = () => {
         direction="row"
         justifyContent="center"
         alignItems="center"
-        sx={{ border: 'pink solid', my: 10 }}
+        sx={{ my: 10 }}
       >
         <Grid item xs={12}>
-          <Typography
-            variant="h2"
-            sx={{ textAlign: 'center', fontWeight: 500, my: 10 }}
-          >
+          <Typography variant="h1" sx={{ textAlign: 'center', my: 10 }}>
             Our process, expertise and reliability
           </Typography>
         </Grid>
         <Grid item sx={{ textAlign: 'center' }}>
-          <Typography sx={{ fontSize: 25, lineHeight: '1.2' }}>
+          <Typography variant="h5" sx={{ lineHeight: '1.2' }}>
             As scientists turned artists, we bring a unique blend of experience
             and years of service in{' '}
-            <Typography type="span" sx={{ color: ' #DF367B', fontSize: 25 }}>
+            <Typography variant="h5" type="span" sx={{ color: ' #DF367B' }}>
               academia, biotechnology
             </Typography>{' '}
             and the{' '}
-            <Typography type="span" sx={{ color: ' #DF367B', fontSize: 25 }}>
+            <Typography variant="h5" type="span" sx={{ color: ' #DF367B' }}>
               health industry
             </Typography>
             Collaborating closely with you, we apply critical thinking and
@@ -142,14 +133,14 @@ export const Home = () => {
           alignItems="center"
           sx={{ mt: 20 }}
         >
-          <Grid item xs={4}>
-            <Typography variant="h3" sx={{ textAlign: 'center' }}>
+          <Grid item xs={3}>
+            <Typography variant="h2" sx={{ textAlign: 'center' }}>
               Your science, our art: a partnership for success
             </Typography>
           </Grid>
 
           <Grid item xs={12} sx={{ textAlign: 'center', mt: 5 }}>
-            {location.pathname === '/' && (
+            {location.pathname === '/home' && (
               <Link
                 target="_blank"
                 to={`https://us21.list-manage.com/contact-form?u=d18dcd67615ab44686e887477&form_id=614480122771aa21de77d4b637966f22`}
