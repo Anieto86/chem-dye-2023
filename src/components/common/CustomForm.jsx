@@ -127,7 +127,6 @@ export const CustomForm = () => {
           name="message"
           multiline
           rows={4}
-          required
         />
         <ContactBtn
           type="submit"

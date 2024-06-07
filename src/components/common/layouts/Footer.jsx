@@ -26,7 +26,7 @@ export const Footer = () => {
         </Grid>
       </Grid>
 
-      <Grid container s>
+      <Grid container>
         <Grid item xs={5} mb={3}>
           <Typography>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam at
@@ -44,25 +44,33 @@ export const Footer = () => {
         columns
       >
         <Grid item>
-          <Typography variant="h5">About ChemDye studio</Typography>
-          <Typography>Meet the team</Typography>
-          <Typography>Explore our work</Typography>
-          <Typography>What we do</Typography>
+          <Typography variant="h5" sx={{ my: 3 }}>
+            About ChemDye studio
+          </Typography>
+          <Typography sx={{ my: 3 }}>Meet the team</Typography>
+          <Typography sx={{ my: 3 }}>Explore our work</Typography>
+          <Typography sx={{ my: 3 }}>What we do</Typography>
         </Grid>
         <Grid item>
-          <Typography variant="h5">Site information & Policies</Typography>
-          <Typography>About this website</Typography>
-          <Typography>Privacy Policy</Typography>
+          <Typography variant="h5" sx={{ my: 3 }}>
+            Site information & Policies
+          </Typography>
+          <Typography sx={{ my: 3 }}>About this website</Typography>
+          <Typography sx={{ my: 3 }}>Privacy Policy</Typography>
           <Typography>Cookies</Typography>
         </Grid>
         <Grid item>
           <Typography variant="h5">Get in Touch</Typography>
-          <Typography>si.chemdye@gmail.com</Typography>
-          <Typography>xxxxxxxxxxxxx</Typography>
+          <Typography sx={{ mb: 3 }}>si.chemdye@gmail.com</Typography>
+          <Typography sx={{ fontWeight: 600 }}>Adelaide</Typography>
+          <Typography>47 Devon Street South</Typography>
+          <Typography>Goodwood, 5034</Typography>{' '}
+          <Typography>Australia</Typography>
+          <Typography>ABN 45 841 581 765</Typography>
         </Grid>
       </Grid>
       <Box
-        sx={{ width: '100%', height: 1.5, backgroundColor: '#000000', my: 2 }}
+        sx={{ width: '100%', height: 1.2, backgroundColor: '#000000', mt: 6 }}
       ></Box>
       <Grid container justifyContent="flex-end">
         <Grid item>

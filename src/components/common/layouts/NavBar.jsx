@@ -7,7 +7,15 @@ import { useLocation } from 'react-router-dom';
 export function NavBar() {
   let location = useLocation();
 
-  const links = ['Home', 'Service', 'Work', 'About', 'Crew', 'Blog', 'Contact'];
+  const links = [
+    'Home',
+    'Services',
+    'Work',
+    // 'About',
+    'Crew',
+    // 'Blog',
+    'Contact',
+  ];
 
   return (
     <>
@@ -63,8 +71,7 @@ export function NavBar() {
                       return {
                         border: isActive ? '1px solid #000000' : 'none',
                         backgroundColor: !isActive ? 'transparent' : '#000000',
-
-                        padding: 10,
+                        padding: 15,
                         margin: 20,
                         borderRadius: 25,
                         textDecoration: 'none',

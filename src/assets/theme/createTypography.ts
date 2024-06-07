@@ -21,22 +21,22 @@ export const createTypography = () => {
       fontWeight: 'bold',
       lineHeight: '30px',
     },
-    h4_1: {
+    h5: {
       fontSize: '20px',
       fontWeight: 'regular',
       lineHeight: '30px',
     },
-    h4_2: {
+    h6: {
       fontSize: '20px',
       fontWeight: 'light',
       lineHeight: '30px',
     },
-    h6: {
+    h7: {
       fontSize: '16px',
       fontWeight: 'light',
       lineHeight: '30px',
     },
-    h7: {
+    h8: {
       fontSize: '12px',
       fontWeight: 'regular',
       lineHeight: '30px',

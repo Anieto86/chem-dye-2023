@@ -14,6 +14,7 @@ import { motion, useAnimation } from 'framer-motion';
 // eslint-disable-next-line react/prop-types
 const AnimatedTimelineItem = ({ children }) => {
   const controls = useAnimation();
+  // const { scrollYProgress } = useScroll();
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -34,8 +35,11 @@ const AnimatedTimelineItem = ({ children }) => {
     };
   }, [controls]);
 
+  // console.log(scrollYProgress.get());
+
   return (
     <motion.div
+      // style={{ scaleX: scrollYProgress.get() }}
       initial={{ opacity: 0, y: 50 }}
       animate={controls}
       transition={{ duration: 0.8 }}
@@ -76,7 +80,7 @@ export const RoadMap = () => {
                     objectFit: 'contain',
                   }}
                 />
-                <Typography variant="h2" textAlign="center" g>
+                <Typography variant="h2" textAlign="center">
                   {item.title}
                 </Typography>
                 <Box display="flex" justifyContent="center">
