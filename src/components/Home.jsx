@@ -1,10 +1,10 @@
 import { Box, Grid, Typography } from '@mui/material';
-// import servicesIcon from '../assets/Icons/00.SERVICES.png';
-// import whyUs from '../assets/Icons/01.WHYUS.png';
 import { Companies } from './common/layouts/companies';
 import { ContactBtn } from './common/ContactBtn';
 import { Link, useLocation } from 'react-router-dom';
-import backgroundImg from '../../src/assets/img/background-home.png';
+
+const backgroundImg =
+  'https://res.cloudinary.com/dcvzsick7/image/upload/v1717638651/05.%20Home%20background%20images/5-cell_2_d8ajpz.jpg';
 
 export const Home = () => {
   let location = useLocation();
@@ -14,7 +14,6 @@ export const Home = () => {
         sx={{
           backgroundImage: `url(${backgroundImg})`,
           backgroundSize: 'contain',
-          // backgroundSize: '60%',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
         }}
@@ -28,9 +27,14 @@ export const Home = () => {
           <Grid item xs={6} sx={{ border: 'solid red' }} />
           <Grid item xs={3} sx={{ border: 'solid blue' }} />
           <Grid item xs={3} sx={{ textAlign: 'right', border: 'solid red' }}>
-            <Typography variant="h5" sx={{ lineHeight: '1.2' }}>
+            <Typography variant="h5">
               We are a multidisciplinary team of{' '}
-              <Box component="span" sx={{ color: '#DF367B' }}>
+              <Box
+                component="span"
+                sx={{
+                  color: '#DF367B',
+                }}
+              >
                 scientists, graphic designers and artists.
               </Box>{' '}
               Our main goal is to generate{' '}
@@ -97,7 +101,7 @@ export const Home = () => {
           </Typography>
         </Grid>
         <Grid item sx={{ textAlign: 'center' }} xs={4}>
-          <Typography variant="h5" sx={{ lineHeight: '1.2' }}>
+          <Typography variant="h5">
             As scientists turned artists, we bring a unique blend of experience
             and years of service in{' '}
             <Box component="span" sx={{ color: '#DF367B' }}>

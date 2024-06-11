@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Box, Typography } from '@mui/material';
 import { motion, useAnimation, useMotionValue } from 'framer-motion';
 
@@ -16,7 +16,7 @@ const companiesLogos = [
 // Duplicar los logos para crear el efecto de cadena infinita
 const extendedLogos = [...companiesLogos, ...companiesLogos, ...companiesLogos];
 
-const Companies = () => {
+export const Companies = () => {
   const x = useMotionValue(0);
   const containerWidth = 150; // Ajusta el ancho de los logos
   const totalWidth = containerWidth * extendedLogos.length; // Ancho total del carrusel

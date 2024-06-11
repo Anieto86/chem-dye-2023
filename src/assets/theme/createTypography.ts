@@ -1,10 +1,12 @@
 export const createTypography = () => {
   return {
-    fontFamily: 'Quicksand, sans-serif',
+    fontFamily: '"Poppins", sans-serif',
+    fontSize: 16,
     h1: {
-      fontSize: '40px',
-      fontWeight: 'bold',
-      lineHeight: '42px',
+      fontSize: '62.79px',
+      fontWeight: 700,
+      lineHeight: '56.511px',
+      letterSpacing: '-1.8837px',
     },
     h2: {
       fontSize: '36px',
@@ -24,7 +26,7 @@ export const createTypography = () => {
     h5: {
       fontSize: '20px',
       fontWeight: 'regular',
-      lineHeight: '30px',
+      lineHeight: '36px',
     },
     h6: {
       fontSize: '20px',

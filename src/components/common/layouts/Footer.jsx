@@ -1,22 +1,30 @@
 import { Box, Grid, Typography } from '@mui/material';
 import logo from '../../../assets/img/ColourLogo.png';
+import CopyrightIcon from '@mui/icons-material/Copyright';
 import { LinkIcons } from '../LinkIcons';
 
 export const Footer = () => {
   return (
     <Grid container padding={6}>
-      <Grid container direction="row" alignItems="center" xs={4}>
+      <Grid container direction="row" alignItems="center" spacing={2}>
         <Grid item>
           <img src={logo} alt="Logo footer" />
         </Grid>{' '}
         <Grid item>
-          <Typography>ChemDye</Typography>
+          <Typography
+            sx={{
+              fontSize: 24,
+              fontWeight: 600,
+              fontFamily: 'Alegreya, serif',
+            }}
+          >
+            ChemDye
+          </Typography>
         </Grid>
       </Grid>
 
       <Grid
         container
-        xs={8}
         direction="row"
         justifyContent="flex-end"
         alignItems="center"
@@ -27,22 +35,15 @@ export const Footer = () => {
       </Grid>
 
       <Grid container>
-        <Grid item xs={5} mb={3}>
+        <Grid item xs={3} mb={3}>
           <Typography>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam at
-            perspiciatis a mollitia excepturi qui iusto odio, maiores magnam,
-            quam quaerat accusantium, atque aspernatur perferendis. Optio, id!
-            Sit, modi quam!
+            We excel in crafting compelling scientific content to communicate
+            your research and discoveries effectively
           </Typography>
         </Grid>
       </Grid>
 
-      <Grid
-        container
-        justifyContent="space-between"
-        alignItems="center"
-        columns
-      >
+      <Grid container justifyContent="space-between" alignItems="center">
         <Grid item>
           <Typography variant="h5" sx={{ my: 3 }}>
             About ChemDye studio
@@ -72,9 +73,12 @@ export const Footer = () => {
       <Box
         sx={{ width: '100%', height: 1.2, backgroundColor: '#000000', mt: 6 }}
       ></Box>
-      <Grid container justifyContent="flex-end">
+      <Grid container justifyContent="flex-end" alignItem="center">
         <Grid item>
-          <Typography>c 2024, All Rights Reserved</Typography>
+          <CopyrightIcon />
+        </Grid>
+        <Grid item>
+          <Typography>2024, All Rights Reserved</Typography>
         </Grid>
       </Grid>
     </Grid>

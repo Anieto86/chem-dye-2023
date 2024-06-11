@@ -57,6 +57,18 @@ export const RoadMap = () => {
           How is it to work with us?
         </Typography>
       </Grid>
+      <Box
+        component="img"
+        src={
+          'https://res.cloudinary.com/dcvzsick7/image/upload/v1718065033/04.%20Services/Flecha_fjarj6.png'
+        }
+        alt="arrow Image"
+        sx={{
+          width: '100%',
+          height: 400,
+          objectFit: 'contain',
+        }}
+      />
       <Timeline position="alternate" id="timeline">
         {timelineItems.map((item, index) => (
           <AnimatedTimelineItem key={index}>
@@ -105,21 +117,21 @@ const timelineItems = [
   {
     number: '1',
     image:
-      'https://res.cloudinary.com/dcvzsick7/image/upload/v1717550742/04.%20Services/Service01_300x-100_bbluib.jpg',
+      'https://res.cloudinary.com/dcvzsick7/image/upload/v1717735668/04.%20Services/Service-roadmap01_zdd3b3.png',
     title: 'Initial contact',
     text: 'Send us an email and tell us about your project! You can start by telling us who you are or which company you work for. Also, include all the details you consider important about the project you would like to work on together.',
   },
   {
     number: '2',
     image:
-      'https://res.cloudinary.com/dcvzsick7/image/upload/v1717550743/04.%20Services/Services02_300x-100_enudvq.jpg',
+      'https://res.cloudinary.com/dcvzsick7/image/upload/v1717737216/04.%20Services/Services-roadmap02_lknns6.png',
     title: "Let's get into details",
     text: "At this stage, we will meet to get on the same page and assess the project's needs in depth. We will team up to create ideas that suit your needs. After our initial conversation, you will receive a project proposal.",
   },
   {
     number: '3',
     image:
-      'https://res.cloudinary.com/dcvzsick7/image/upload/v1717550743/04.%20Services/Services_03_300x-100_bzqjip.jpg',
+      'https://res.cloudinary.com/dcvzsick7/image/upload/v1717737637/04.%20Services/Services-Roadmap_03_yoftee.png',
     title: "Let's get to work",
     text: "After collecting all the information, we'll put together an initial draft for your review. Your input is crucial in refining it until it perfectly aligns with your research needs. We agree on the number of revisions upfront, ensuring you always have a clear expectation of what to anticipate from us.",
   },

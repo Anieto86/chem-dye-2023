@@ -108,7 +108,7 @@ export function NavBar() {
                 }}
               >
                 At ChemDye, we specialise in the art of transforming
-                <span style={{ color: '#FACD2D' }}> complex science </span>
+                <span style={{ color: '#facd2d' }}> complex science </span>
                 into compelling
                 <span style={{ color: '#FACD2D' }}> visual experiences </span>
               </Typography>
