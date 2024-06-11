@@ -99,12 +99,8 @@ export function NavBar() {
             <Grid item xs={6}>
               <Typography
                 variant="h1"
-                color="initial"
                 sx={{
                   textAlign: 'center',
-                  color: 'white',
-                  fontSize: 40,
-                  fontWeight: 'bold',
                 }}
               >
                 At ChemDye, we specialise in the art of transforming

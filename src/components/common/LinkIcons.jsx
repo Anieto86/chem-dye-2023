@@ -30,6 +30,10 @@ export const LinkIcons = () => {
                 color: '#DF367B',
                 background: 'rgb(226, 139, 174)',
                 mx: 1,
+                '&:hover': {
+                  background: '#facd2d ',
+                  color: '#000000',
+                },
               }}
             >
               {sl.IconComponent}

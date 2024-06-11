@@ -2,7 +2,6 @@ import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import {
   Container,
-  Typography,
   TextField,
   Button,
   Snackbar,
@@ -11,10 +10,26 @@ import {
 import CloseIcon from '@mui/icons-material/Close';
 import { useForm } from 'react-hook-form';
 import { ContactBtn } from './ContactBtn';
+import { styled } from '@mui/material/styles';
 
 const key = import.meta.env.VITE_API_KEY;
 const templateID = import.meta.env.VITE_TEMPLATE_ID;
 const serviceID = import.meta.env.VITE_SERVICE_ID;
+
+const CustomTextField = styled(TextField)({
+  '& .MuiOutlinedInput-root': {
+    '&:hover fieldset': {
+      borderColor: '#DF367B', // Color del borde al pasar el ratón
+    },
+    '&.Mui-focused fieldset': {
+      borderColor: '#DF367B', // Color del borde cuando está enfocado
+    },
+  },
+
+  '& .MuiInputLabel-root.Mui-focused': {
+    color: '#DF367B', // Color del label cuando está enfocado
+  },
+});
 
 export const CustomForm = () => {
   const [open, setOpen] = useState(false);
@@ -73,17 +88,14 @@ export const CustomForm = () => {
   );
 
   return (
-    <Container maxWidth="md">
-      <Typography variant="h4" gutterBottom>
-        Contact Us
-      </Typography>
+    <Container maxWidth="md" sx={{ mt: 10 }}>
       <form ref={form} onSubmit={(handleSubmit(onSubmit), sendEmail)}>
-        <TextField
+        <CustomTextField
           {...register('user_name', {
-            required: 'El campo no puede estar vacío',
+            required: 'Please add your name',
             minLength: {
-              value: 5,
-              message: 'El campo debe tener al menos 5 caracteres',
+              value: 2,
+              message: 'The field must have at least 2 characters',
             },
           })}
           type="text"
@@ -95,12 +107,12 @@ export const CustomForm = () => {
           error={!!errors.user_name}
           helperText={errors.user_name ? errors.user_name.message : ''}
         />
-        <TextField
+        <CustomTextField
           {...register('user_email', {
-            required: 'El campo es obligatorio',
+            required: 'Please add your email',
             pattern: {
               value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-              message: 'El formato del email no es válido',
+              message: 'The email is not valid',
             },
           })}
           fullWidth
@@ -112,14 +124,14 @@ export const CustomForm = () => {
           error={!!errors.user_email}
           helperText={errors.user_email ? errors.user_email.message : ''}
         />
-        <TextField
+        <CustomTextField
           type="text"
           fullWidth
           margin="normal"
           label="Subject"
           name="subject"
         />
-        <TextField
+        <CustomTextField
           type="text"
           fullWidth
           margin="normal"
@@ -129,6 +141,7 @@ export const CustomForm = () => {
           rows={4}
         />
         <ContactBtn
+          sx={{ mt: 5 }}
           type="submit"
           variant="contained"
           color="primary"

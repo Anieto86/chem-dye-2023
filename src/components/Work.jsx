@@ -95,14 +95,14 @@ export function Work() {
   return (
     <Grid container justifyContent="center" spacing={3}>
       <Grid item xs={10}>
-        <Typography variant="h1" sx={{ my: 2 }}>
+        <Typography variant="h1" sx={{ mt: 30 }}>
           Our journey into creativity
         </Typography>
-        <Typography variant="h4">
+        <Typography variant="h4" sx={{ mt: 3 }}>
           ChemDye collaborates with scientists across diverse disciplines,
           driving innovation through creative solutions.
         </Typography>
-        <Grid item sx={{ my: 8 }}>
+        <Grid item xs={9.5} sx={{ my: 10 }}>
           <Link
             target="_blank"
             to={`https://us21.list-manage.com/contact-form?u=d18dcd67615ab44686e887477&form_id=614480122771aa21de77d4b637966f22`}

@@ -6,8 +6,10 @@ const StyledButton = styled(Button)(({ theme }) => ({
   color: 'white',
   marginBottom: theme.spacing(2),
   borderRadius: '50px',
-  fontSize: '20px',
-  padding: theme.spacing(2),
+  fontSize: '12.558px',
+  fontWeight: 700,
+  lineHeight: '18.837px',
+  padding: '13px 25px',
   transition: 'all 0.3s ease',
   '&:hover': {
     backgroundColor: '#facd2d',

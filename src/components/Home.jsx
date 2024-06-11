@@ -24,9 +24,9 @@ export const Home = () => {
               Our Passion & Identity
             </Typography>
           </Grid>
-          <Grid item xs={6} sx={{ border: 'solid red' }} />
-          <Grid item xs={3} sx={{ border: 'solid blue' }} />
-          <Grid item xs={3} sx={{ textAlign: 'right', border: 'solid red' }}>
+          <Grid item xs={6} />
+          <Grid item xs={3} />
+          <Grid item xs={3} sx={{ textAlign: 'right' }}>
             <Typography variant="h5">
               We are a multidisciplinary team of{' '}
               <Box
@@ -51,21 +51,21 @@ export const Home = () => {
             </Grid>
           </Grid>
 
-          <Grid item xs={6} sx={{ border: 'solid green' }} />
+          <Grid item xs={6} />
         </Grid>
 
         <Grid container sx={{ height: '30vh' }}></Grid>
 
         <Grid container columns={12}>
-          <Grid item xs={6} sx={{ border: 'solid red' }} />
-          <Grid item xs={6} sx={{ border: 'solid purple' }}>
+          <Grid item xs={6} />
+          <Grid item xs={6}>
             <Typography variant="h1" sx={{ textAlign: 'left', mb: 10 }}>
               How can we help you?
             </Typography>
           </Grid>
 
-          <Grid item xs={6} sx={{ border: 'solid gold' }} />
-          <Grid item xs={3} sx={{ textAlign: 'left', border: 'solid pink' }}>
+          <Grid item xs={6} />
+          <Grid item xs={3} sx={{ textAlign: 'left' }}>
             <Typography variant="h5" sx={{ lineHeight: '1.8' }}>
               We are a multidisciplinary team of{' '}
               <Box component="span" sx={{ color: '#DF367B' }}>
@@ -84,7 +84,7 @@ export const Home = () => {
               </Link>
             </Grid>
           </Grid>
-          <Grid item xs={3} sx={{ border: 'solid green' }} />
+          <Grid item xs={3} />
         </Grid>
       </Box>
 

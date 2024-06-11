@@ -13,26 +13,19 @@ export const Contact = () => {
     <Grid container justifyContent="center">
       <Grid item xs={10}>
         <Grid item xs={12}>
-          <Typography variant="h1" sx={{ my: 2 }}>
+          <Typography variant="h1" sx={{ mt: 30 }}>
             Tell us about your upcoming project and get a personalised quote
           </Typography>
-          <Typography variant="h4">
+          <Typography variant="h4" sx={{ my: 3 }}>
             Your project, your story: let's begin the conversation
           </Typography>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} sx={{ my: 10 }}>
           <CustomForm />
         </Grid>
-        {/* <Grid item sx={{ my}>
-        <Link
-          target="_blank"
-          to={`https://us21.list-manage.com/contact-form?u=d18dcd67615ab44686e887477&form_id=614480122771aa21de77d4b637966f22`}
-        >
-          <ContactBtn title="Let's get started" fSize={25} />
-        </Link>
-      </Grid> */}
       </Grid>
-      <Grid item xs={4}>
+
+      <Grid item xs={5}>
         <Typography variant="h4" sx={{ textAlign: 'center', my: 10 }}>
           Keen on delving deeper into science communication, data visualisation,
           and science-related insights? We're currently crafting an exciting
@@ -49,7 +42,7 @@ export const Contact = () => {
             justifyContent="center"
             alignItems="center"
             key={contact}
-            sx={{ my: 3 }}
+            sx={{ my: 2 }}
           >
             <Grid item>
               <Typography variant="h2">{contact}</Typography>

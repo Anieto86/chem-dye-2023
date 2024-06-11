@@ -34,26 +34,34 @@ export const Service = () => {
   return (
     <Grid container justifyContent="center">
       <Grid item xs={10}>
-        <Typography variant="h1" sx={{ mt: 50 }}>
+        <Typography variant="h1" sx={{ mt: 30 }}>
           We are translators, storytellers and educators.
         </Typography>
         <Typography variant="h4" sx={{ mt: 3 }}>
           Transforming complexity into clear narratives.
         </Typography>
         <Grid item xs={9.5} sx={{ my: 10 }}>
-          <ContactBtn title="Connect with us" />
+          <Link
+            target="_blank"
+            to={`https://us21.list-manage.com/contact-form?u=d18dcd67615ab44686e887477&form_id=614480122771aa21de77d4b637966f22`}
+          >
+            <ContactBtn title="Connect with us" />
+          </Link>
         </Grid>
-        <Grid container spacing={4} sx={{ mt: 10 }}>
+        <Grid
+          container
+          direction="row"
+          justifyContent="space-evenly"
+          alignItems="stretch"
+          spacing={4}
+          sx={{ mt: 10 }}
+        >
           {services.map((service, i) => {
             const { title, img, text } = service;
             return (
               <Grid item xs={6} sm={12} md={6} key={i}>
                 <StyledCard sx={{ px: 9, p: 6 }}>
-                  <StyledImage
-                    src={img}
-                    alt={title}
-                    sx={{ m: -4, border: '' }}
-                  />
+                  <StyledImage src={img} alt={title} sx={{ m: -4 }} />
                   <Grid item xs={12}>
                     <Typography
                       variant="h4"

@@ -12,6 +12,7 @@ import {
 } from '@mui/material';
 import { ContactBtn } from './common/ContactBtn';
 import { useState } from 'react';
+import { styled } from '@mui/material/styles';
 
 const style = {
   position: 'absolute',
@@ -25,6 +26,15 @@ const style = {
   p: 6,
 };
 
+const StyledCard = styled(Card)({
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between',
+  height: '100%',
+  maxWidth: '300px',
+  margin: '0 auto',
+});
+
 export const Crew = () => {
   const [showModal, setModal] = useState(false);
   const [activeCrewMember, setActiveCrewMember] = useState(null);
@@ -37,10 +47,10 @@ export const Crew = () => {
   return (
     <Grid container justifyContent="center">
       <Grid item xs={10}>
-        <Typography variant="h1" sx={{ my: 2 }}>
+        <Typography variant="h1" sx={{ mt: 30 }}>
           ChemDye, a studio where the worlds of art and science come together
         </Typography>
-        <Typography variant="h4">
+        <Typography variant="h4" sx={{ mt: 3 }}>
           As your trusted partner, our top priority is to collaborate closely
           with you, ensuring we create visuals that illustrate the story of your
           science.{' '}
@@ -53,7 +63,7 @@ export const Crew = () => {
         container
         direction="row"
         justifyContent="space-evenly"
-        alignItems="center"
+        alignItems="stretch"
         spacing={5}
         sx={{ p: 4 }}
       >
@@ -61,35 +71,38 @@ export const Crew = () => {
           const { title, subTitle, photo } = c;
           return c ? (
             <Grid item key={c.title}>
-              <Card
+              <StyledCard
                 sx={{
-                  // width: 600,
-                  // height: '100%',
-                  border: 'none',
                   boxShadow: 'none',
+                  width: '100%',
+                  maxWidth: 400,
+                  margin: '0 auto',
                 }}
               >
                 <CardMedia
                   component="img"
-                  sx={{ height: 400, width: '100%', objectFit: 'cover' }}
                   image={`${photo}`}
                   title="green iguana"
                   loading="lazy"
                 />
-                <CardContent>
-                  <Typography gutterBottom variant="h3" component="div">
+                <CardContent sx={{ width: '100%' }}>
+                  <Typography gutterBottom variant="h3">
                     {title}
                   </Typography>
                   <Typography variant="h6" color="text.secondary">
                     {subTitle}
                   </Typography>
                 </CardContent>
-                <CardActions sx={{ justifyContent: 'center' }}>
-                  <Button size="small" onClick={() => handleModal(c)}>
+                <CardActions sx={{ justifyContent: 'center', width: '100%' }}>
+                  <Button
+                    size="small"
+                    onClick={() => handleModal(c)}
+                    sx={{ color: '#DF367B' }}
+                  >
                     Read More
                   </Button>
                 </CardActions>
-              </Card>
+              </StyledCard>
             </Grid>
           ) : (
             <Skeleton variant="rectangular" width={210} height={118} />
@@ -111,7 +124,7 @@ export const Crew = () => {
             </Typography>
             <Typography
               id="modal-modal-description"
-              variant="h4"
+              variant="h5"
               sx={{ mt: 2 }}
             >
               {activeCrewMember?.info}
@@ -127,7 +140,7 @@ const crew = [
   {
     photo:
       'https://res.cloudinary.com/dcvzsick7/image/upload/v1717550396/02.%20Team/00_Mari_foto_editada_290524_xts7li.jpg',
-    title: 'Dr Mariana Oksdath',
+    title: 'Dr. Mariana Oksdath',
     subTitle: 'CEO | Visual scientist and Science communicator',
     info: 'I’m Mariana, an Argentinian living in Australia. With over a decade of experience as a researcher in academia and the privilege of working as a designer with prestigious names like Greenpeace, I have found my passion in creating visuals that revolutionise how we perceive science.The power of visuals to convey complex scientific concepts guides my mission. I approach every project with the rigour of a scientist and the creativity and innovation of an artist. My desire is for visual science communication to be widely recognised and appreciated.,',
   },
@@ -149,7 +162,7 @@ const crew = [
     photo:
       'https://res.cloudinary.com/dcvzsick7/image/upload/v1717550424/02.%20Team/03_David_foto_editada_290424_n4scds.jpg',
     title: 'David Rojas Márquez',
-    subTitle: 'Natural Science Illustrator',
+    subTitle: 'Natural Science Illustrator   ',
     info: 'Born in Colombia and raised in Argentina, my academic journey started with a Bachelor’s degree in genetics and a PhD in immunology. My scientific curiosity and desire to keep learning led me to enrol in a scientific illustration master where I discovered my true passion.My mission is to simplify intricate scientific concepts, utilising my expertise to craft clear and captivating visual representation bringing science closer to a broader audience.',
   },
   {
