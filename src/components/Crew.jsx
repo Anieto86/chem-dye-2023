@@ -13,6 +13,7 @@ import {
 import { ContactBtn } from './common/ContactBtn';
 import { useState } from 'react';
 import { styled } from '@mui/material/styles';
+import { Link } from 'react-router-dom';
 
 const style = {
   position: 'absolute',
@@ -56,7 +57,9 @@ export const Crew = () => {
           science.{' '}
         </Typography>
         <Grid item xs={9.5} sx={{ my: 10 }}>
-          <ContactBtn title="Connect with us" />
+          <Link to={`/contact`}>
+            <ContactBtn title="Connect with us" />
+          </Link>
         </Grid>
       </Grid>
       <Grid
@@ -81,7 +84,9 @@ export const Crew = () => {
               >
                 <CardMedia
                   component="img"
-                  image={`${photo}`}
+                  image={`${photo}?w=162&auto=format`}
+                  srcSet={`${photo}?w=162&auto=format&dpr=1 1x, ${photo}?w=324&auto=format&dpr=2 2x`}
+                  sizes="(max-width: 600px) 100vw, 50vw"
                   title="green iguana"
                   loading="lazy"
                 />
@@ -116,7 +121,7 @@ export const Crew = () => {
           aria-describedby="modal-modal-description"
         >
           <Box sx={style}>
-            <Typography id="modal-modal-title" variant="h2" component="h2">
+            <Typography id="modal-modal-title" variant="h3" component="h2">
               {activeCrewMember?.title}
             </Typography>
             <Typography id="modal-modal-subtitle" variant="h6">
@@ -141,7 +146,7 @@ const crew = [
     photo:
       'https://res.cloudinary.com/dcvzsick7/image/upload/v1717550396/02.%20Team/00_Mari_foto_editada_290524_xts7li.jpg',
     title: 'Dr. Mariana Oksdath',
-    subTitle: 'CEO | Visual scientist and Science communicator',
+    subTitle: 'Founder | Visual scientist and Science communicator',
     info: 'I’m Mariana, an Argentinian living in Australia. With over a decade of experience as a researcher in academia and the privilege of working as a designer with prestigious names like Greenpeace, I have found my passion in creating visuals that revolutionise how we perceive science.The power of visuals to convey complex scientific concepts guides my mission. I approach every project with the rigour of a scientist and the creativity and innovation of an artist. My desire is for visual science communication to be widely recognised and appreciated.,',
   },
   {
@@ -169,7 +174,7 @@ const crew = [
     photo:
       'https://res.cloudinary.com/dcvzsick7/image/upload/v1717550401/02.%20Team/01_Gaby_foto_editada_290524_j76ruz.jpg',
     title: 'Gabriela M. Thiery',
-    subTitle: 'Sound and image designer',
+    subTitle: 'Senior sound and image designer',
     info: 'Hailing from Buenos Aires, Argentina, and boasting over two decades of professional experience across diverse fields in the Art industry, I have developed a high level of versatility in utilising tools such as motion graphics, stop motion, 2D and 3D animation, and illustration.I consider myself a self-taught individual who is passionate about creating from scratch, giving life, and materialising ideas by finding the unique narrative of each project. My goal is to apply my entire background to achieve pieces with their own personality and a visual power that makes a difference.',
   },
 ];

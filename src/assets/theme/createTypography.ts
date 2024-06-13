@@ -17,19 +17,19 @@ export const createTypography = () => {
     },
     h3: {
       fontSize: '31.395px',
-      fontWeight: 700,
-      lineHeight: '28.2555px',
+      fontWeight: 600,
+      lineHeight: '36.5462px',
       letterSpacing: '-0.94185px',
     },
     h4: {
       fontSize: '26.76px',
       fontWeight: 400,
-      lineHeight: '35.14px',
+      lineHeight: '40.14px',
       letterSpacing: 'normal',
     },
     h5: {
       fontSize: '15.0696px',
-      fontWeight: 400,
+      fontWeight: 300,
       lineHeight: '22.6044px',
       letterSpacing: 'normal',
     },

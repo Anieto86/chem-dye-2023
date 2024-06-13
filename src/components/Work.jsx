@@ -103,10 +103,7 @@ export function Work() {
           driving innovation through creative solutions.
         </Typography>
         <Grid item xs={9.5} sx={{ my: 10 }}>
-          <Link
-            target="_blank"
-            to={`https://us21.list-manage.com/contact-form?u=d18dcd67615ab44686e887477&form_id=614480122771aa21de77d4b637966f22`}
-          >
+          <Link to={`/contact`}>
             <ContactBtn title="Connect with us" />
           </Link>
         </Grid>

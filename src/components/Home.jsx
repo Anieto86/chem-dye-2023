@@ -66,9 +66,9 @@ export const Home = () => {
 
           <Grid item xs={6} />
           <Grid item xs={3} sx={{ textAlign: 'left' }}>
-            <Typography variant="h4" sx={{ lineHeight: '1.8' }}>
+            <Typography variant="h4">
               We will help you unlock the full potential of your research with
-              our comprehensive range of services tailored
+              our comprehensive range of services tailored{' '}
               <Box component="span" sx={{ color: '#DF367B' }}>
                 for the Healthcare, Pharmaceutical, and Biotechnology
                 industries.
@@ -145,7 +145,7 @@ export const Home = () => {
 
           <Grid item xs={12} sx={{ textAlign: 'center', mt: 5 }}>
             {location.pathname === '/home' && (
-              <Link target="_blank" to={`/contact`}>
+              <Link to={`/contact`}>
                 <ContactBtn title="Les's talk" />
               </Link>
             )}

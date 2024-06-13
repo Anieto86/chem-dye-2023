@@ -27,8 +27,8 @@ export const LinkIcons = () => {
           <Link key={index} to={sl.url}>
             <IconButton
               sx={{
-                color: '#DF367B',
-                background: 'rgb(226, 139, 174)',
+                color: '#ffffff',
+                background: '#DF367B',
                 mx: 1,
                 '&:hover': {
                   background: '#facd2d ',

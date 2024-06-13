@@ -41,10 +41,7 @@ export const Service = () => {
           Transforming complexity into clear narratives.
         </Typography>
         <Grid item xs={9.5} sx={{ my: 10 }}>
-          <Link
-            target="_blank"
-            to={`https://us21.list-manage.com/contact-form?u=d18dcd67615ab44686e887477&form_id=614480122771aa21de77d4b637966f22`}
-          >
+          <Link to={`/contact`}>
             <ContactBtn title="Connect with us" />
           </Link>
         </Grid>
@@ -74,7 +71,7 @@ export const Service = () => {
                   </Grid>
                   <Typography sx={{ minHeight: 200, whiteSpace: 'pre-line' }}>
                     {text.map((x) => (
-                      <Typography variant="h7" key={x}>
+                      <Typography variant="h5" key={x}>
                         {x}
                       </Typography>
                     ))}
@@ -98,10 +95,7 @@ export const Service = () => {
           />
         </Grid>
         <Grid item display="flex" justifyContent="center" sx={{ my: 20 }}>
-          <Link
-            target="_blank"
-            to={`https://us21.list-manage.com/contact-form?u=d18dcd67615ab44686e887477&form_id=614480122771aa21de77d4b637966f22`}
-          >
+          <Link to={`/contact`}>
             <ContactBtn title="Budget your work" />
           </Link>
         </Grid>
@@ -119,7 +113,8 @@ const services = [
     title: 'Graphic Design',
     img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717550769/04.%20Services/02_Guidance_vnsb3i.png',
     text: [
-      'Reports Logos\n',
+      'Reports\n',
+      'Logos\n',
       'Social media graphics\n',
       'Educational material\n',
       'Print designs\n',

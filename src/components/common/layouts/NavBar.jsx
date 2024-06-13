@@ -74,13 +74,13 @@ export function NavBar() {
                     style={({ isActive }) => {
                       return {
                         backgroundColor: !isActive ? 'transparent' : '#000000',
-                        padding: 10,
+                        color: isActive ? '#ffffff' : '#000000',
+                        /* top | right | bottom | left */
+                        padding: '10px 30px 10px 30px',
                         margin: 15,
-                        borderRadius: 40,
+                        borderRadius: 20,
                         textDecoration: 'none',
                         fontFamily: "'Poppins', sans-serif",
-                        fontSize: 25,
-                        color: isActive ? '#ffffff' : '#000000',
                       };
                     }}
                   >
