@@ -27,7 +27,7 @@ export const Home = () => {
           <Grid item xs={6} />
           <Grid item xs={3} />
           <Grid item xs={3} sx={{ textAlign: 'right' }}>
-            <Typography variant="h5">
+            <Typography variant="h4">
               We are a multidisciplinary team of{' '}
               <Box
                 component="span"
@@ -66,17 +66,13 @@ export const Home = () => {
 
           <Grid item xs={6} />
           <Grid item xs={3} sx={{ textAlign: 'left' }}>
-            <Typography variant="h5" sx={{ lineHeight: '1.8' }}>
-              We are a multidisciplinary team of{' '}
+            <Typography variant="h4" sx={{ lineHeight: '1.8' }}>
+              We will help you unlock the full potential of your research with
+              our comprehensive range of services tailored
               <Box component="span" sx={{ color: '#DF367B' }}>
-                scientists, graphic designers and artists.
+                for the Healthcare, Pharmaceutical, and Biotechnology
+                industries.
               </Box>{' '}
-              Our main goal is to generate{' '}
-              <Box component="span" sx={{ color: '#DF367B' }}>
-                captivating scientific content and, together, bring your vision
-                to life,
-              </Box>{' '}
-              leaving a lasting mark in the world of science.
             </Typography>
             <Grid item sx={{ my: 5 }}>
               <Link to={'/services'}>
@@ -100,8 +96,8 @@ export const Home = () => {
             Our process, expertise and reliability
           </Typography>
         </Grid>
-        <Grid item sx={{ textAlign: 'center' }} xs={4}>
-          <Typography variant="h5">
+        <Grid item sx={{ textAlign: 'center' }} xs={5}>
+          <Typography variant="h4">
             As scientists turned artists, we bring a unique blend of experience
             and years of service in{' '}
             <Box component="span" sx={{ color: '#DF367B' }}>
@@ -140,7 +136,10 @@ export const Home = () => {
         >
           <Grid item>
             <Typography variant="h2" sx={{ textAlign: 'center' }}>
-              Your science, our art: a partnership for success
+              Your science, our art:
+            </Typography>
+            <Typography variant="h2" sx={{ textAlign: 'center' }}>
+              a partnership for success
             </Typography>
           </Grid>
 

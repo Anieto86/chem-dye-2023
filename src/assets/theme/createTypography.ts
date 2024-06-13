@@ -24,7 +24,7 @@ export const createTypography = () => {
     h4: {
       fontSize: '26.76px',
       fontWeight: 400,
-      lineHeight: '25.14px',
+      lineHeight: '35.14px',
       letterSpacing: 'normal',
     },
     h5: {

@@ -45,7 +45,6 @@ export function NavBar() {
             justifyContent="space-between"
             alignItems="center"
             wrap="nowrap"
-            sx={{ mx: 15, p: 1 }}
           >
             <Grid item>
               <NavLink to={`/`}>
@@ -60,7 +59,12 @@ export function NavBar() {
             </Grid>
             <Grid
               item
-              sx={{ border: '1px solid black', p: 4, borderRadius: 10 }}
+              sx={{
+                p: 1,
+                borderRadius: 20,
+                backgroundColor: '#fff',
+                border: '1px solid #010101',
+              }}
             >
               {links.map((link, i) => {
                 return (
@@ -69,13 +73,12 @@ export function NavBar() {
                     to={`/${link.toLowerCase()}`}
                     style={({ isActive }) => {
                       return {
-                        border: isActive ? '1px solid #000000' : 'none',
                         backgroundColor: !isActive ? 'transparent' : '#000000',
-                        padding: 15,
-                        margin: 20,
-                        borderRadius: 25,
+                        padding: 10,
+                        margin: 15,
+                        borderRadius: 40,
                         textDecoration: 'none',
-                        fontFamily: "'Quicksand', sans-serif",
+                        fontFamily: "'Poppins', sans-serif",
                         fontSize: 25,
                         color: isActive ? '#ffffff' : '#000000',
                       };

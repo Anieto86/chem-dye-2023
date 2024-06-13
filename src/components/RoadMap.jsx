@@ -67,6 +67,7 @@ export const RoadMap = () => {
           width: '100%',
           height: 400,
           objectFit: 'contain',
+          mb: 20,
         }}
       />
       <Timeline position="alternate" id="timeline">
@@ -74,14 +75,33 @@ export const RoadMap = () => {
           <AnimatedTimelineItem key={index}>
             <TimelineItem position={index % 2 === 0 ? 'right' : 'left'}>
               <TimelineSeparator>
-                <TimelineDot sx={{ bgcolor: '#DF367B' }}>
-                  <Avatar sx={{ bgcolor: '#DF367B' }}>{item.number}</Avatar>
+                <TimelineDot
+                  sx={{
+                    bgcolor: '#DF367B',
+                    '&:hover': {
+                      backgroundColor: '#facd2d',
+                      border: '1px solid #facd2d',
+                    },
+                  }}
+                >
+                  <Avatar
+                    sx={{
+                      backgroundColor: 'inherit',
+                      '&:hover': {
+                        backgroundColor: 'inherit',
+                        color: '#010101',
+                        border: '1px solid #facd2d',
+                      },
+                    }}
+                  >
+                    {item.number}
+                  </Avatar>
                 </TimelineDot>
                 {index < timelineItems.length - 1 && (
-                  <TimelineConnector sx={{ width: 6 }} />
+                  <TimelineConnector sx={{ width: 3, background: '#000000' }} />
                 )}
               </TimelineSeparator>
-              <TimelineContent sx={{ py: '12px', px: 2 }}>
+              <TimelineContent sx={{ mt: '-200px' }}>
                 <Box
                   component="img"
                   src={item.image}
@@ -98,7 +118,7 @@ export const RoadMap = () => {
                 <Box display="flex" justifyContent="center">
                   <Typography
                     textAlign="center"
-                    variant="h4"
+                    variant="h5"
                     sx={{ width: '50%', mt: 5 }}
                   >
                     {item.text}

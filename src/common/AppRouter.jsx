@@ -4,17 +4,12 @@ import { Navigate, createBrowserRouter } from 'react-router-dom';
 import { Contact } from '../components/Contact';
 import { Home } from '../components/Home';
 import { Work } from '../components/Work';
-// import {
-//   Txtblog1,
-//   Txtblog2,
-//   Txtblog3,
-//   Txtblog4,
-// } from '../components/common/Blogs';
 import { Footer } from '../components/common/layouts/Footer';
 import { NavBar } from '../components/common/layouts/NavBar';
 import { ErrorPage } from './ErrorPage';
 import { Service } from '../components/Service';
 import { Crew } from '../components/Crew';
+import ScrollToTop from './Hook/scrollTop';
 
 export const AppRouter = () => {
   return createBrowserRouter([
@@ -38,15 +33,29 @@ export const AppRouter = () => {
         },
         {
           path: '/services',
-          element: <Service />,
+          element: (
+            <>
+              <ScrollToTop /> <Service />
+            </>
+          ),
         },
         {
           path: '/work',
-          element: <Work />,
+          element: (
+            <>
+              <ScrollToTop />
+              <Work />
+            </>
+          ),
         },
         {
           path: '/crew',
-          element: <Crew />,
+          element: (
+            <>
+              <ScrollToTop />
+              <Crew />
+            </>
+          ),
         },
         // {
         //   path: '/about',
@@ -58,7 +67,12 @@ export const AppRouter = () => {
         // },
         {
           path: '/contact',
-          element: <Contact />,
+          element: (
+            <>
+              <ScrollToTop />
+              <Contact />,
+            </>
+          ),
         },
         // {
         //   path: '/blog/txt1',

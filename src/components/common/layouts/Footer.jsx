@@ -73,7 +73,7 @@ export const Footer = () => {
       <Box
         sx={{ width: '100%', height: 1.2, backgroundColor: '#000000', mt: 6 }}
       ></Box>
-      <Grid container justifyContent="flex-end" alignItem="center">
+      <Grid container justifyContent="flex-end" alignItems="center">
         <Grid item>
           <CopyrightIcon />
         </Grid>

@@ -1,96 +1,96 @@
 import Masonry from '@mui/lab/Masonry';
-import { Grid, Typography } from '@mui/material';
-import { useEffect } from 'react';
+import { Box, Grid, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
-import image1 from '../assets/img/1.jpg';
-import image10 from '../assets/img/10.jpg';
-import image11 from '../assets/img/11.jpg';
-import image12 from '../assets/img/12.jpg';
-import image13 from '../assets/img/13.jpg';
-import image14 from '../assets/img/14.jpg';
-import image15 from '../assets/img/15.jpg';
-import image16 from '../assets/img/16.jpg';
-import image2 from '../assets/img/2.jpg';
-import image3 from '../assets/img/3.jpg';
-import image4 from '../assets/img/4.jpg';
-import image5 from '../assets/img/5.jpg';
-import image6 from '../assets/img/6.jpg';
-import image7 from '../assets/img/7.jpg';
-import image8 from '../assets/img/8.jpg';
-import image9 from '../assets/img/9.jpg';
 import { ContactBtn } from './common/ContactBtn';
+
+import { useState } from 'react';
 
 const itemData = [
   {
-    img: image1,
-    // title: 'Fern',
+    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717554639/01.%20Portfolio/18_Image_18_dctbjp.jpg',
   },
   {
-    img: image2,
-    // title: 'Snacks',
+    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717554389/01.%20Portfolio/SANGER_-_Infographic_wlugh4.jpg',
   },
   {
-    img: image3,
-    // title: 'Mushrooms',
+    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717554215/01.%20Portfolio/17_Image_17_ypunpe.jpg',
   },
   {
-    img: image4,
-    // title: 'Tower',
+    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717554177/01.%20Portfolio/MH_FIG_1_FINAL_Glycoform3_270224_doadul.png',
   },
   {
-    img: image5,
-    // title: 'Sea star',
+    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476859/01.%20Portfolio/16_Image_16_pqqxqu.jpg',
   },
   {
-    img: image6,
-    // title: 'Honey',
+    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476856/01.%20Portfolio/14_Image_14_eglgyl.jpg',
   },
   {
-    img: image7,
-    // title: 'Basketball',
+    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476856/01.%20Portfolio/11_Image_11_lsbviu.jpg',
   },
   {
-    img: image8,
-    // title: 'Breakfast',
+    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476856/01.%20Portfolio/13_Image_13_wn75kb.jpg',
   },
   {
-    img: image9,
-    // title: 'Tree',
+    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476856/01.%20Portfolio/12_Image_12_lwketg.jpg',
   },
   {
-    img: image10,
-    // title: 'Burger',
+    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476854/01.%20Portfolio/10_Image_10_wgyvyz.jpg',
   },
   {
-    img: image11,
-    // title: 'Camera',
+    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476853/01.%20Portfolio/07_Image_07_j7mi7g.jpg',
   },
   {
-    img: image12,
-    // title: 'Coffee',
+    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476852/01.%20Portfolio/08_Image_08_yn9pw7.jpg',
   },
   {
-    img: image13,
-    // title: 'Camping Car',
+    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476852/01.%20Portfolio/09_Image_09_l35783.jpg',
   },
   {
-    img: image14,
-    // title: 'Hats',
+    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476852/01.%20Portfolio/06_Image_06_jxo6st.jpg',
   },
   {
-    img: image15,
-    // title: 'Tomato basil',
+    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476852/01.%20Portfolio/03_Image_03_urwuss.jpg',
   },
   {
-    img: image16,
-    // title: 'Tomato basil',
+    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476851/01.%20Portfolio/15_Image_15_ckdylm.jpg',
+  },
+  {
+    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476851/01.%20Portfolio/05_Image_05_r0teyr.jpg',
+  },
+  {
+    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476851/01.%20Portfolio/02_Image_02_d7mxcm.jpg',
+  },
+  {
+    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476850/01.%20Portfolio/01_Image_01_uz94cn.jpg',
+  },
+  {
+    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476850/01.%20Portfolio/04_Image_04_haivrr.jpg',
   },
 ];
 
 export function Work() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  const [hoverIndex, setHoverIndex] = useState(null);
+  const [transform, setTransform] = useState('');
+
+  const handleMouseMove = (e, index) => {
+    if (hoverIndex !== index) return;
+
+    const card = e.currentTarget;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+
+    setTransform(`rotateY(${x / 10}deg) rotateX(${y / 30}deg)`);
+  };
+
+  const handleMouseEnter = (index) => {
+    setHoverIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoverIndex(null);
+    setTransform('rotateY(0deg) rotateX(0deg)');
+  };
 
   return (
     <Grid container justifyContent="center" spacing={3}>
@@ -112,31 +112,39 @@ export function Work() {
         </Grid>
       </Grid>
       <Grid item xs={10}>
-        <Masonry columns={4} spacing={3}>
+        <Masonry columns={3} spacing={5}>
           {itemData.map((item, index) => (
             <Grid
               key={index}
+              onMouseMove={(e) => handleMouseMove(e, index)}
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}
               sx={{
                 transition: 'transform 0.2s ease-in-out',
+                transform: hoverIndex === index ? transform : 'none',
                 '&:hover': {
-                  transform: 'scale(1.5)',
+                  transform: hoverIndex === index ? 'scale(1.40)' : 'none',
                 },
               }}
             >
-              <img
-                src={`${item.img}?w=162&auto=format`}
-                srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
-                alt={item.title}
-                loading="lazy"
-                style={{
-                  borderBottomLeftRadius: 4,
-                  borderBottomRightRadius: 4,
-                  display: 'block',
-                  width: '100%',
-                  height: 'auto',
-                  maxWidth: '100%',
-                }}
-              />
+              <Box style={{ overflow: 'hidden', borderRadius: '4px' }}>
+                <img
+                  src={`${item.img}?w=162&auto=format`}
+                  srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
+                  alt={item.title}
+                  loading="lazy"
+                  style={{
+                    borderRadius: 4,
+                    display: 'block',
+                    width: '100%',
+                    height: 'auto',
+                    maxWidth: '100%',
+                    transform: hoverIndex === index ? transform : 'none',
+                    transition:
+                      'transform 0.2s ease-in-out, scale 0.2s ease-in-out',
+                  }}
+                />
+              </Box>
             </Grid>
           ))}
         </Masonry>

@@ -76,5 +76,3 @@ export const Companies = () => {
     </Box>
   );
 };
-
-export default Companies;
