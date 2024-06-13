@@ -60,7 +60,7 @@ export function NavBar() {
             <Grid
               item
               sx={{
-                p: 1,
+                padding: '10px 0px 10px 0px',
                 borderRadius: 20,
                 backgroundColor: '#fff',
                 border: '1px solid #010101',

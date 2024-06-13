@@ -10,6 +10,12 @@ const links = [
   { to: '/services', text: 'What we do' },
 ];
 
+const linksPolicies = [
+  { to: '/policies/website', text: 'About this website' },
+  { to: '/policies/privacy', text: 'Privacy Policy' },
+  { to: '/policies/cookies', text: 'Cookies' },
+];
+
 export const Footer = () => {
   return (
     <Grid container padding={6} mt={60}>
@@ -72,13 +78,17 @@ export const Footer = () => {
           <Typography variant="h4" sx={{ my: 3 }}>
             Site information & Policies
           </Typography>
-          <Typography sx={{ my: 3 }} variant="h6">
-            About this website
-          </Typography>
-          <Typography sx={{ my: 3 }} variant="h6">
-            Privacy Policy
-          </Typography>
-          <Typography variant="h6">Cookies</Typography>
+          {linksPolicies.map((link, index) => (
+            <Link
+              key={index}
+              to={link.to}
+              style={{ textDecoration: 'none', color: '#000000' }}
+            >
+              <Typography sx={{ my: 3 }} variant="h6">
+                {link.text}
+              </Typography>
+            </Link>
+          ))}
         </Grid>
         <Grid item>
           <Typography variant="h4">Get in Touch</Typography>

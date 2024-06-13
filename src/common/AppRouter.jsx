@@ -10,6 +10,9 @@ import { ErrorPage } from './ErrorPage';
 import { Service } from '../components/Service';
 import { Crew } from '../components/Crew';
 import ScrollToTop from './Hook/scrollTop';
+import { Cookies } from '../components/common/Policies/Cookies';
+import { Website } from '../components/common/Policies/Website';
+import { Privacy } from '../components/common/Policies/Privacy';
 
 export const AppRouter = () => {
   return createBrowserRouter([
@@ -57,14 +60,6 @@ export const AppRouter = () => {
             </>
           ),
         },
-        // {
-        //   path: '/about',
-        //   element: <About />,
-        // },
-        // {
-        //   path: '/blog',
-        //   element: <Blog />,
-        // },
         {
           path: '/contact',
           element: (
@@ -74,9 +69,40 @@ export const AppRouter = () => {
             </>
           ),
         },
+        {
+          path: '/policies/cookies',
+          element: (
+            <>
+              <ScrollToTop />
+              <Cookies />
+            </>
+          ),
+        },
+        {
+          path: '/policies/website',
+          element: (
+            <>
+              <ScrollToTop />
+              <Website />
+            </>
+          ),
+        },
+        {
+          path: '/policies/privacy',
+          element: (
+            <>
+              <ScrollToTop />
+              <Privacy />
+            </>
+          ),
+        },
         // {
-        //   path: '/blog/txt1',
-        //   element: <Txtblog1 />,
+        //   path: '/about',
+        //   element: <About />,
+        // },
+        // {
+        //   path: '/blog',
+        //   element: <Blog />,
         // },
         // {
         //   path: '/blog/txt2',
