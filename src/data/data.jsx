@@ -147,66 +147,162 @@ export const linksPolicies = [
 ];
 
 //work img portfolio
-export const portfolios = [
+export const imageUrls = [
   {
-    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717554639/01.%20Portfolio/18_Image_18_dctbjp.jpg',
+    number: 0,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1718327390/01.%20Portfolio/CorticalLab_171022_rjw2pc.jpg',
+    description: 'Cortical Lab 171022',
   },
   {
-    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717554389/01.%20Portfolio/SANGER_-_Infographic_wlugh4.jpg',
+    number: 1,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1718327402/01.%20Portfolio/MichelleHill_270224_oi2x2u.png',
+    description: 'Michelle Hill',
   },
   {
-    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717554215/01.%20Portfolio/17_Image_17_ypunpe.jpg',
+    number: 2,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1718327394/01.%20Portfolio/Calabrese_et_al_GA_SP_191223_final-01_wjpjlm.png',
+    description: 'Calabrese et al GA SP 191223',
   },
   {
-    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717554177/01.%20Portfolio/MH_FIG_1_FINAL_Glycoform3_270224_doadul.png',
+    number: 3,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1718327398/01.%20Portfolio/MarinaCCB_231222_iluppr.jpg',
+    description: 'Marina CCB 231222',
   },
   {
-    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476859/01.%20Portfolio/16_Image_16_pqqxqu.jpg',
+    number: 4,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1718327400/01.%20Portfolio/Marina_Kochetkova_Illustration_US_letter_vpzibh.jpg',
+    description: 'Marina Kochetkova Illustration US Letter',
   },
   {
-    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476856/01.%20Portfolio/14_Image_14_eglgyl.jpg',
+    number: 5,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717554177/01.%20Portfolio/MH_FIG_1_FINAL_Glycoform3_270224_doadul.png',
+    description: 'MH FIG 1 Glycoform3',
   },
   {
-    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476856/01.%20Portfolio/11_Image_11_lsbviu.jpg',
+    number: 6,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1718327398/01.%20Portfolio/Biogenox_oqg5cn.jpg',
+    description: 'Biogenox',
   },
   {
-    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476856/01.%20Portfolio/13_Image_13_wn75kb.jpg',
+    number: 7,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1718327392/01.%20Portfolio/04_Vicryl_Tie_ra30ed.jpg',
+    description: 'Vicryl Tie',
   },
   {
-    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476856/01.%20Portfolio/12_Image_12_lwketg.jpg',
+    number: 8,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1718327392/01.%20Portfolio/03_Creating_a_pocket_z3kttz.jpg',
+    description: 'Creating a Pocket',
   },
   {
-    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476854/01.%20Portfolio/10_Image_10_wgyvyz.jpg',
+    number: 9,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717554389/01.%20Portfolio/SANGER_-_Infographic_wlugh4.jpg',
+    description: 'Sanger Infographic',
   },
   {
-    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476853/01.%20Portfolio/07_Image_07_j7mi7g.jpg',
+    number: 10,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1718327392/01.%20Portfolio/01_Psoriasis_kpkatr.jpg',
+    description: 'Psoriasis',
   },
   {
-    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476852/01.%20Portfolio/08_Image_08_yn9pw7.jpg',
+    number: 11,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1718327393/01.%20Portfolio/B_D-Injection_omnoic.jpg',
+    description: 'B D Injection',
   },
   {
-    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476852/01.%20Portfolio/09_Image_09_l35783.jpg',
+    number: 12,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1718327396/01.%20Portfolio/Inforgraphic_Global_warming_CO2_pollution_V4_mmuyw7.jpg',
+    description: 'Infographic Global Warming CO2 Pollution',
   },
   {
-    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476852/01.%20Portfolio/06_Image_06_jxo6st.jpg',
+    number: 13,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1718327395/01.%20Portfolio/01_CAR_T_cell_theraphy_infographic_zjn5al.jpg',
+    description: 'CAR T Cell Therapy Infographic',
   },
   {
-    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476852/01.%20Portfolio/03_Image_03_urwuss.jpg',
+    number: 14,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1718327401/01.%20Portfolio/NEW_Illustration_global_warming_v6_qshfwb.jpg',
+    description: 'New Illustration Global Warming',
   },
   {
-    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476851/01.%20Portfolio/15_Image_15_ckdylm.jpg',
+    number: 15,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1718327786/01.%20Portfolio/Escenario_2_Pulmon_Mariana_OksdathMansilla_jtozsv.jpg',
+    description: 'Scenario 2 Lung Mariana Oksdath Mansilla',
   },
   {
-    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476851/01.%20Portfolio/05_Image_05_r0teyr.jpg',
+    number: 16,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1718327416/01.%20Portfolio/Free_Material_Infographic_nfpecz.jpg',
+    description: 'Free Material Infographic',
   },
   {
-    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476851/01.%20Portfolio/02_Image_02_d7mxcm.jpg',
+    number: 17,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1718327570/01.%20Portfolio/Imagen_for_topic_Graphical_Abstract_n9lmrc.jpg',
+    description: 'Image for Topic Graphical Abstract',
   },
   {
-    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476850/01.%20Portfolio/01_Image_01_uz94cn.jpg',
+    number: 18,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1718327516/01.%20Portfolio/Imagen_for_topic_3_CC_cieajm.jpg',
+    description: 'Image for Topic 3 CC',
   },
   {
-    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476850/01.%20Portfolio/04_Image_04_haivrr.jpg',
+    number: 19,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1718327398/01.%20Portfolio/Option2_ImageScienceComm_Topic2_acedyt.png',
+    description: 'Option 2 Image Science Comm Topic 2',
+  },
+  {
+    number: 20,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1718327397/01.%20Portfolio/CorticalLab_web_011022_qjd011.jpg',
+    description: 'Cortical Lab Web 011022',
+  },
+
+  {
+    number: 21,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476852/01.%20Portfolio/06_Image_06_jxo6st.jpg',
+    description: 'Image 6',
+  },
+  {
+    number: 22,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476856/01.%20Portfolio/14_Image_14_eglgyl.jpg',
+    description: 'Image 14',
+  },
+  {
+    number: 23,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476851/01.%20Portfolio/15_Image_15_ckdylm.jpg',
+    description: 'Image 15',
+  },
+  {
+    number: 24,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476859/01.%20Portfolio/16_Image_16_pqqxqu.jpg',
+    description: 'Image 16',
+  },
+  {
+    number: 25,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476852/01.%20Portfolio/03_Image_03_urwuss.jpg',
+    description: 'Image 3',
+  },
+  {
+    number: 26,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717476851/01.%20Portfolio/02_Image_02_d7mxcm.jpg',
+    description: 'Image 2',
+  },
+  {
+    number: 27,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1718327391/01.%20Portfolio/3DIllustrations_1705203_watp97.jpg',
+    description: '3D Illustrations',
+  },
+  {
+    number: 28,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1718333341/01.%20Portfolio/3D_cover_Delivery_12062024_b7p9dw.jpg',
+    description: 'Image 2',
+  },
+  {
+    number: 29,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1718327394/01.%20Portfolio/Cell_Extrusion_kchhif.gif',
+    description: 'Cell Extrusion',
+  },
+  {
+    number: 30,
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1718338492/01.%20Portfolio/EyesAnimated_z8iatp.gif',
+    description: 'Image 2',
   },
 ];
 

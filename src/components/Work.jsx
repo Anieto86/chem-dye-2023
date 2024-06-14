@@ -2,33 +2,10 @@ import Masonry from '@mui/lab/Masonry';
 import { Box, Grid, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { ContactBtn } from './common/ContactBtn';
-import { portfolios } from '../data/data';
-
-import { useState } from 'react';
+import { imageUrls } from '../data/data';
 
 export function Work() {
-  const [hoverIndex, setHoverIndex] = useState(null);
-  const [transform, setTransform] = useState('');
-
-  const handleMouseMove = (e, index) => {
-    if (hoverIndex !== index) return;
-
-    const card = e.currentTarget;
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left - rect.width / 2;
-    const y = e.clientY - rect.top - rect.height / 2;
-
-    setTransform(`rotateY(${x / 10}deg) rotateX(${y / 30}deg)`);
-  };
-
-  const handleMouseEnter = (index) => {
-    setHoverIndex(index);
-  };
-
-  const handleMouseLeave = () => {
-    setHoverIndex(null);
-    setTransform('rotateY(0deg) rotateX(0deg)');
-  };
+  const urlImgOrganize = imageUrls.sort((a, b) => a.number - b.number);
 
   return (
     <Grid container justifyContent="center" spacing={3}>
@@ -47,36 +24,30 @@ export function Work() {
         </Grid>
       </Grid>
       <Grid item xs={10}>
-        <Masonry columns={3} spacing={5}>
-          {portfolios.map((portfolio, index) => (
+        <Masonry columns={3}>
+          {urlImgOrganize.map((portfolio, index) => (
             <Grid
               key={index}
-              onMouseMove={(e) => handleMouseMove(e, index)}
-              onMouseEnter={() => handleMouseEnter(index)}
-              onMouseLeave={handleMouseLeave}
               sx={{
                 transition: 'transform 0.2s ease-in-out',
-                transform: hoverIndex === index ? transform : 'none',
                 '&:hover': {
-                  transform: hoverIndex === index ? 'scale(1.40)' : 'none',
+                  transform: 'scale(1.4)',
                 },
               }}
             >
               <Box style={{ overflow: 'hidden', borderRadius: '4px' }}>
                 <img
-                  src={`${portfolio.img}?w=162&auto=format`}
-                  srcSet={`${portfolio.img}?w=162&auto=format&dpr=2 2x`}
-                  alt={portfolio.title}
+                  src={`${portfolio.url}?w=162&auto=format`}
+                  srcSet={`${portfolio.url}?w=162&auto=format&dpr=2 2x`}
+                  alt={portfolio.description}
                   loading="lazy"
                   style={{
-                    borderRadius: 4,
-                    display: 'block',
-                    width: '100%',
+                    border: '0.7px #616161 solid',
+                    borderRadius: 10,
+                    width: '99%',
                     height: 'auto',
-                    maxWidth: '100%',
-                    transform: hoverIndex === index ? transform : 'none',
-                    transition:
-                      'transform 0.2s ease-in-out, scale 0.2s ease-in-out',
+                    transition: 'transform 0.2s ease-in-out',
+                    backgroundColor: '#ffffff',
                   }}
                 />
               </Box>
