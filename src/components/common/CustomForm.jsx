@@ -19,15 +19,14 @@ const serviceID = import.meta.env.VITE_SERVICE_ID;
 const CustomTextField = styled(TextField)({
   '& .MuiOutlinedInput-root': {
     '&:hover fieldset': {
-      borderColor: '#DF367B', // Color del borde al pasar el ratón
+      borderColor: '#DF367B',
     },
     '&.Mui-focused fieldset': {
-      borderColor: '#DF367B', // Color del borde cuando está enfocado
+      borderColor: '#DF367B',
     },
   },
-
   '& .MuiInputLabel-root.Mui-focused': {
-    color: '#DF367B', // Color del label cuando está enfocado
+    color: '#DF367B',
   },
 });
 

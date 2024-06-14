@@ -3,12 +3,7 @@ import { Box, Grid, Typography } from '@mui/material';
 import { CustomForm } from './common/CustomForm';
 import { ContactBtn } from './common/ContactBtn';
 import { Link } from 'react-router-dom';
-
-const contactInfo = [
-  'ChemDye Scientific Illustration',
-  ' si.chemdye@gmail.com',
-  '+61 0466252387',
-];
+import { contactInfo } from '../data/data';
 
 export const Contact = () => {
   return (

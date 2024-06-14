@@ -1,17 +1,7 @@
 import { useEffect } from 'react';
 import { Box, Typography } from '@mui/material';
 import { motion, useAnimation, useMotionValue } from 'framer-motion';
-
-// Lista de logos de empresas
-const companiesLogos = [
-  'https://res.cloudinary.com/dcvzsick7/image/upload/v1717551349/03.%20Icons/0._AERO_cc6m3s.png',
-  'https://res.cloudinary.com/dcvzsick7/image/upload/v1717551347/03.%20Icons/6._Biogenox_j1ws6l.png',
-  'https://res.cloudinary.com/dcvzsick7/image/upload/v1717551346/03.%20Icons/5._CorticalLab_dkz7au.png',
-  'https://res.cloudinary.com/dcvzsick7/image/upload/v1717551343/03.%20Icons/4._GP_y2fc38.png',
-  'https://res.cloudinary.com/dcvzsick7/image/upload/v1717551343/03.%20Icons/3._BDLS_qf5dkl.png',
-  'https://res.cloudinary.com/dcvzsick7/image/upload/v1717551343/03.%20Icons/2._UniSA_oqlukz.png',
-  'https://res.cloudinary.com/dcvzsick7/image/upload/v1717551343/03.%20Icons/1._NovaEye_uouutm.png',
-];
+import { companiesLogos } from '../../../data/data';
 
 // Duplicar los logos para crear el efecto de cadena infinita
 const extendedLogos = [...companiesLogos, ...companiesLogos, ...companiesLogos];

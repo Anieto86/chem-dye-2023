@@ -14,6 +14,7 @@ import { ContactBtn } from './common/ContactBtn';
 import { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
+import { crew } from '../data/data';
 
 const style = {
   position: 'absolute',
@@ -87,7 +88,7 @@ export const Crew = () => {
                   image={`${photo}?w=162&auto=format`}
                   srcSet={`${photo}?w=162&auto=format&dpr=1 1x, ${photo}?w=324&auto=format&dpr=2 2x`}
                   sizes="(max-width: 600px) 100vw, 50vw"
-                  title="green iguana"
+                  title={title}
                   loading="lazy"
                 />
                 <CardContent sx={{ width: '100%' }}>
@@ -140,41 +141,3 @@ export const Crew = () => {
     </Grid>
   );
 };
-
-const crew = [
-  {
-    photo:
-      'https://res.cloudinary.com/dcvzsick7/image/upload/v1717550396/02.%20Team/00_Mari_foto_editada_290524_xts7li.jpg',
-    title: 'Dr. Mariana Oksdath',
-    subTitle: 'Founder | Visual scientist and Science communicator',
-    info: 'I’m Mariana, an Argentinian living in Australia. With over a decade of experience as a researcher in academia and the privilege of working as a designer with prestigious names like Greenpeace, I have found my passion in creating visuals that revolutionise how we perceive science.The power of visuals to convey complex scientific concepts guides my mission. I approach every project with the rigour of a scientist and the creativity and innovation of an artist. My desire is for visual science communication to be widely recognised and appreciated.,',
-  },
-  {
-    photo:
-      'https://res.cloudinary.com/dcvzsick7/image/upload/v1717550432/02.%20Team/04_Rebe_foto_editada_290524_pox47z.jpg',
-    title: 'Rebeca Fernández Deandrea ',
-    subTitle: 'Marketing Specialist and Project Manager',
-    info: 'I graduated with degrees in Social Communication and Strategic Digital Marketing from a public university in Argentina. Throughout my professional journey, I have worked for various companies and organisations, and am currently venturing into the field of scientific communication.My mission is to apply tools that showcase everything ChemDye has to contribute to the field of science and improve teamwork processes to achieve every goal we set.',
-  },
-  {
-    photo:
-      'https://res.cloudinary.com/dcvzsick7/image/upload/v1717550411/02.%20Team/02_Sofi_foto_editada_290524_ogpjpr.jpg',
-    title: 'Dra. Sofía Polcownuk',
-    subTitle: 'Scientific illustrator and communicator',
-    info: 'I hold a Ph.D. in Biology, with a background in neuroscience and a passion for wildlife ecology. I began my journey in scientific illustration and communication inspired by the landscapes, flora, and fauna of the Argentine Patagonia, my birthplace.I refine my artistic techniques daily by exploring and utilising various mediums, from watercolours to digital tools. Leveraging my skills in illustration and design, I aim to create creative works that celebrate the beauty and complexity of science.',
-  },
-  {
-    photo:
-      'https://res.cloudinary.com/dcvzsick7/image/upload/v1717550424/02.%20Team/03_David_foto_editada_290424_n4scds.jpg',
-    title: 'David Rojas Márquez',
-    subTitle: 'Natural Science Illustrator   ',
-    info: 'Born in Colombia and raised in Argentina, my academic journey started with a Bachelor’s degree in genetics and a PhD in immunology. My scientific curiosity and desire to keep learning led me to enrol in a scientific illustration master where I discovered my true passion.My mission is to simplify intricate scientific concepts, utilising my expertise to craft clear and captivating visual representation bringing science closer to a broader audience.',
-  },
-  {
-    photo:
-      'https://res.cloudinary.com/dcvzsick7/image/upload/v1717550401/02.%20Team/01_Gaby_foto_editada_290524_j76ruz.jpg',
-    title: 'Gabriela M. Thiery',
-    subTitle: 'Senior sound and image designer',
-    info: 'Hailing from Buenos Aires, Argentina, and boasting over two decades of professional experience across diverse fields in the Art industry, I have developed a high level of versatility in utilising tools such as motion graphics, stop motion, 2D and 3D animation, and illustration.I consider myself a self-taught individual who is passionate about creating from scratch, giving life, and materialising ideas by finding the unique narrative of each project. My goal is to apply my entire background to achieve pieces with their own personality and a visual power that makes a difference.',
-  },
-];

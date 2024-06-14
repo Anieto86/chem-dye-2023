@@ -4,6 +4,7 @@ import { ContactBtn } from './common/ContactBtn';
 import { styled } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import { RoadMap } from './RoadMap';
+import { services } from '../data/data';
 
 const StyledCardMedia = styled(CardMedia)({
   height: 'auto',
@@ -107,41 +108,3 @@ export const Service = () => {
     </Grid>
   );
 };
-
-const services = [
-  {
-    title: 'Graphic Design',
-    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717550769/04.%20Services/02_Guidance_vnsb3i.png',
-    text: [
-      'Reports\n',
-      'Logos\n',
-      'Social media graphics\n',
-      'Educational material\n',
-      'Print designs\n',
-    ],
-  },
-  {
-    title: 'Scientific Illustrations',
-    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717550770/04.%20Services/02_Illustrations_vn3jsx.png',
-    text: [
-      'Figures for journals\n',
-      'Graphical abstracts\n',
-      'Posters\n',
-      'Infographics\n',
-      'Presentations\n',
-      'Medical illustrations\n',
-    ],
-  },
-  {
-    title: 'Animation',
-    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717550770/04.%20Services/03_Animation_srscoo.png',
-    text: ['Video abstracts\n', '3D Animation\n', '3D Illustrations\n'],
-  },
-  {
-    title: 'Workshop',
-    img: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1717550771/04.%20Services/04_Workshop_gecv9n.png',
-    text: [
-      'Join our workshops to master the art of scientific illustration, whether you’re a student or a scientist. Learn to translate ideas from conception to reality in a collaborative and imaginative environment',
-    ],
-  },
-];

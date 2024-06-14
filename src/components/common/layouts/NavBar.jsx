@@ -60,7 +60,7 @@ export function NavBar() {
             <Grid
               item
               sx={{
-                padding: '10px 0px 10px 0px',
+                padding: '20px 0px 20px 0px',
                 borderRadius: 20,
                 backgroundColor: '#fff',
                 border: '1px solid #010101',
@@ -76,7 +76,7 @@ export function NavBar() {
                         backgroundColor: !isActive ? 'transparent' : '#000000',
                         color: isActive ? '#ffffff' : '#000000',
                         /* top | right | bottom | left */
-                        padding: '10px 30px 10px 30px',
+                        padding: '10px 20px 10px 20px',
                         margin: 15,
                         borderRadius: 20,
                         textDecoration: 'none',

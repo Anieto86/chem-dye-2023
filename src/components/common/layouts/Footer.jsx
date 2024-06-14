@@ -1,20 +1,9 @@
-import { Box, Grid, Typography } from '@mui/material';
-import logo from '../../../assets/img/ColourLogo.png';
 import CopyrightIcon from '@mui/icons-material/Copyright';
-import { LinkIcons } from '../LinkIcons';
+import { Box, Grid, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
-
-const links = [
-  { to: '/crew', text: 'Meet the team' },
-  { to: '/work', text: 'Explore our work' },
-  { to: '/services', text: 'What we do' },
-];
-
-const linksPolicies = [
-  { to: '/policies/website', text: 'About this website' },
-  { to: '/policies/privacy', text: 'Privacy Policy' },
-  { to: '/policies/cookies', text: 'Cookies' },
-];
+import logo from '../../../assets/img/ColourLogo.png';
+import { links, linksPolicies } from '../../../data/data';
+import { LinkIcons } from '../LinkIcons';
 
 export const Footer = () => {
   return (
