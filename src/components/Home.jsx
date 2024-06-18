@@ -1,5 +1,5 @@
 import { Box, Grid, Typography } from '@mui/material';
-import { Companies } from './common/layouts/companies';
+import { Companies } from './common/layouts/Companies';
 import { ContactBtn } from './common/ContactBtn';
 import { Link, useLocation } from 'react-router-dom';
 
