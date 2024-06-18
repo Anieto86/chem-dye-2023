@@ -70,16 +70,17 @@ export const Service = () => {
                       {title}
                     </Typography>
                   </Grid>
-                  <Typography sx={{ minHeight: 200, whiteSpace: 'pre-line' }}>
+                  <Grid sx={{ minHeight: 200, whiteSpace: 'pre-line' }}>
                     {text.map((x, idx) => (
                       <Typography key={idx}>{x}</Typography>
                     ))}
-                  </Typography>
+                  </Grid>
                 </StyledCard>
               </Grid>
             );
           })}
         </Grid>
+
         <Grid
           item
           xs={12}
