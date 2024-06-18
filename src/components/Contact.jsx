@@ -51,7 +51,7 @@ export const Contact = () => {
             }}
           />
           <Typography variant="h2">Dr. Mariana Oksdath</Typography>
-          <Typography variant="h4" mb={5}>
+          <Typography variant="h4" mb={5} textAlign="center">
             Founder | Visual scientist and Science communicator
           </Typography>
           {contactInfo.map((contact) => (

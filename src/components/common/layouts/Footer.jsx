@@ -7,8 +7,13 @@ import { LinkIcons } from '../LinkIcons';
 
 export const Footer = () => {
   return (
-    <Grid container padding={6} mt={60}>
-      <Grid container direction="row" alignItems="center" spacing={2}>
+    <Grid container padding={{ xs: 2, md: 6 }} mt={{ xs: 8, md: 60 }}>
+      <Grid
+        container
+        direction="row"
+        alignItems="center"
+        spacing={{ xs: 1, md: 2 }}
+      >
         <Grid item>
           <img src={logo} alt="Logo footer" />
         </Grid>{' '}
@@ -63,7 +68,7 @@ export const Footer = () => {
           ))}
         </Grid>
 
-        <Grid item>
+        <Grid item xs={12} md="auto">
           <Typography variant="h4" sx={{ my: 3 }}>
             Site information & Policies
           </Typography>

@@ -1,11 +1,23 @@
-import { Toolbar, Typography, Grid, AppBar } from '@mui/material';
-import { Outlet, NavLink } from 'react-router-dom';
+import { useState } from 'react';
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Grid,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
+} from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import { Outlet, NavLink, useLocation } from 'react-router-dom';
 import logo from '../../../assets/Icons/02.CDLOGO_COLOUR.png';
 import backgroundImg from '../../../assets/img/01.BG-IMAGE.jpg';
-import { useLocation } from 'react-router-dom';
 
 export function NavBar() {
-  let location = useLocation();
+  const location = useLocation();
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   const links = [
     'Home',
@@ -16,6 +28,10 @@ export function NavBar() {
     // 'Blog',
     'Contact',
   ];
+
+  const handleDrawerToggle = () => {
+    setDrawerOpen(!drawerOpen);
+  };
 
   return (
     <>
@@ -60,34 +76,67 @@ export function NavBar() {
             <Grid
               item
               sx={{
-                padding: '20px 0px 20px 0px',
+                display: { xs: 'none', md: 'flex' },
+
                 borderRadius: 20,
                 backgroundColor: '#fff',
                 border: '1px solid #010101',
               }}
             >
-              {links.map((link, i) => {
-                return (
-                  <NavLink
-                    key={i}
-                    to={`/${link.toLowerCase()}`}
-                    style={({ isActive }) => {
-                      return {
-                        backgroundColor: !isActive ? 'transparent' : '#000000',
-                        color: isActive ? '#ffffff' : '#000000',
-                        /* top | right | bottom | left */
-                        padding: '10px 20px 10px 20px',
-                        margin: 15,
-                        borderRadius: 20,
-                        textDecoration: 'none',
-                        fontFamily: "'Poppins', sans-serif",
-                      };
-                    }}
-                  >
-                    {link}
-                  </NavLink>
-                );
-              })}
+              {links.map((link, i) => (
+                <NavLink
+                  key={i}
+                  to={`/${link.toLowerCase()}`}
+                  style={({ isActive }) => ({
+                    backgroundColor: !isActive ? 'transparent' : '#000000',
+                    color: isActive ? '#ffffff' : '#000000',
+                    padding: '10px 20px 10px 20px',
+                    margin: 15,
+                    borderRadius: 20,
+                    textDecoration: 'none',
+                    fontFamily: "'Poppins', sans-serif",
+                  })}
+                >
+                  {link}
+                </NavLink>
+              ))}
+            </Grid>
+            <Grid
+              item
+              sx={{
+                display: { xs: 'flex', md: 'none' },
+              }}
+            >
+              <IconButton
+                edge="start"
+                color="black"
+                aria-label="menu"
+                onClick={handleDrawerToggle}
+              >
+                <MenuIcon />
+              </IconButton>
+              <Drawer
+                anchor="right"
+                open={drawerOpen}
+                onClose={handleDrawerToggle}
+              >
+                <List>
+                  {links.map((link, i) => (
+                    <ListItem button key={i} onClick={handleDrawerToggle}>
+                      <NavLink
+                        to={`/${link.toLowerCase()}`}
+                        style={{
+                          textDecoration: 'none',
+                          color: 'black',
+                          width: '100%',
+                        }}
+                      >
+                        <ListItemText primary={link} />
+                      </NavLink>
+                    </ListItem>
+                  ))}
+                </List>
+              </Drawer>
             </Grid>
           </Grid>
         </Toolbar>
@@ -99,11 +148,12 @@ export function NavBar() {
             alignItems="center"
             sx={{ mt: 30 }}
           >
-            <Grid item xs={6}>
+            <Grid item xs={11} sm={8} md={6}>
               <Typography
                 variant="h1"
                 sx={{
                   textAlign: 'center',
+                  fontSize: { xs: '1.5rem', sm: '2.5rem', md: '3.5rem' },
                 }}
               >
                 At ChemDye, we specialise in the art of transforming
@@ -115,7 +165,7 @@ export function NavBar() {
           </Grid>
         )}
       </AppBar>
-      <Grid sx={{ pt: '150px' }}>
+      <Grid sx={{ pt: { xs: '70px', md: '150px' } }}>
         <Outlet />
       </Grid>
     </>

@@ -28,11 +28,20 @@ export const AppRouter = () => {
       children: [
         {
           path: '/',
-          element: <Navigate to="/home" />,
+          element: (
+            <>
+              <ScrollToTop />
+              <Navigate to="/home" />
+            </>
+          ),
         },
         {
           path: '/home',
-          element: <Home />,
+          element: (
+            <>
+              <ScrollToTop /> <Home />
+            </>
+          ),
         },
         {
           path: '/services',

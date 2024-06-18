@@ -71,10 +71,8 @@ export const Service = () => {
                     </Typography>
                   </Grid>
                   <Typography sx={{ minHeight: 200, whiteSpace: 'pre-line' }}>
-                    {text.map((x) => (
-                      <Typography variant="h5" key={x}>
-                        {x}
-                      </Typography>
+                    {text.map((x, idx) => (
+                      <Typography key={idx}>{x}</Typography>
                     ))}
                   </Typography>
                 </StyledCard>
@@ -89,7 +87,7 @@ export const Service = () => {
         >
           <StyledCardMedia
             component="video"
-            src="https://res.cloudinary.com/dcvzsick7/video/upload/v1717712846/01.%20Portfolio/Nirmal_video_mjbcbw.mp4"
+            src="https://res.cloudinary.com/dcvzsick7/video/upload/v1717712846/01.%20Portfolio/Videos/Nirmal_video_mjbcbw.mp4"
             autoPlay
             muted
             controls
