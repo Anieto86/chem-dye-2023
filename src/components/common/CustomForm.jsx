@@ -6,6 +6,7 @@ import {
   Button,
   Snackbar,
   IconButton,
+  Alert,
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import { useForm } from 'react-hook-form';
@@ -36,6 +37,7 @@ export const CustomForm = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors, isValid },
   } = useForm({
     defaultValue: { user_name: '', user_email: '' },
@@ -58,6 +60,7 @@ export const CustomForm = () => {
 
   const onSubmit = (data) => {
     console.log(data);
+    console.log(!isValid);
   };
 
   const sendEmail = (e) => {
@@ -65,6 +68,8 @@ export const CustomForm = () => {
     emailjs.sendForm(serviceID, templateID, form.current, key).then(
       () => {
         console.log('SUCCESS!');
+
+        reset();
       },
       (error) => {
         console.log('FAILED...', error.text);
@@ -153,9 +158,17 @@ export const CustomForm = () => {
           open={open}
           autoHideDuration={4000}
           onClose={handleClose}
-          message="SUCCESS!"
           action={action}
-        />
+          anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+        >
+          <Alert
+            sx={{ color: '#ffffff', background: '#DF367B' }}
+            severity="success"
+            variant="filled"
+          >
+            Thanks for reaching out to ChemDye! We’ll respond shortly.
+          </Alert>
+        </Snackbar>
       </form>
     </Container>
   );
