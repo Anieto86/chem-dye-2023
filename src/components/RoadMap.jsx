@@ -9,7 +9,7 @@ import {
 import { Avatar, Box, Grid, Typography } from '@mui/material';
 import { motion, useAnimation } from 'framer-motion';
 import * as React from 'react';
-import { timelineItems } from '../data/data';
+import { timelineItems } from '../../data/data';
 
 // eslint-disable-next-line react/prop-types
 const AnimatedTimelineItem = ({ children }) => {

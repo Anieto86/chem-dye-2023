@@ -2,7 +2,7 @@ import CopyrightIcon from '@mui/icons-material/Copyright';
 import { Box, Grid, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/img/ColourLogo.png';
-import { links, linksPolicies } from '../../../data/data';
+import { links, linksPolicies } from '../../../../data/data';
 import { LinkIcons } from '../LinkIcons';
 
 export const Footer = () => {

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Box, Typography } from '@mui/material';
 import { motion, useAnimation, useMotionValue } from 'framer-motion';
-import { companiesLogos } from '../../../data/data';
+import { companiesLogos } from '../../../../data/data';
 
 // Duplicar los logos para crear el efecto de cadena infinita
 const extendedLogos = [...companiesLogos, ...companiesLogos, ...companiesLogos];

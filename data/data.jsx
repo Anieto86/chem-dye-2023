@@ -305,7 +305,7 @@ export const imageUrls = [
   },
   {
     number: 31,
-    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1718338492/01.%20Portfolio/EyesAnimated_z8iatp.gif',
+    url: 'https://res.cloudinary.com/dcvzsick7/image/upload/v1718773043/01.%20Portfolio/Your_science_our_imagination_1_j3of6n.gif',
     description: 'Image 2',
   },
 ];

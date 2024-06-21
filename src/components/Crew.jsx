@@ -14,7 +14,7 @@ import { ContactBtn } from './common/ContactBtn';
 import { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
-import { crew } from '../data/data';
+import { crew } from '../../data/data';
 
 const style = {
   position: 'absolute',

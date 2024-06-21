@@ -3,7 +3,7 @@ import { Box, Grid, Typography } from '@mui/material';
 import { CustomForm } from './common/CustomForm';
 import { ContactBtn } from './common/ContactBtn';
 import { Link } from 'react-router-dom';
-import { contactInfo } from '../data/data';
+import { contactInfo } from '../../data/data';
 
 export const Contact = () => {
   return (
@@ -60,7 +60,10 @@ export const Contact = () => {
             </Grid>
           ))}
           <Grid item>
-            <Link to={'https://calendly.com/si-chemdye/30min?month=2024-06'}>
+            <Link
+              target="_blank"
+              to={'https://calendly.com/si-chemdye/30min?month=2024-06'}
+            >
               <ContactBtn
                 sx={{ mt: 5 }}
                 type="submit"

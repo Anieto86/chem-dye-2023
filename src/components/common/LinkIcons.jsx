@@ -1,6 +1,6 @@
 import { IconButton } from '@mui/material';
 import { Link } from 'react-router-dom';
-import { socialLinks } from '../../data/data.jsx';
+import { socialLinks } from '../../../data/data.jsx';
 
 export const LinkIcons = () => {
   return (

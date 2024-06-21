@@ -2,7 +2,7 @@ import Masonry from '@mui/lab/Masonry';
 import { Box, Grid, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { ContactBtn } from './common/ContactBtn';
-import { imageUrls } from '../data/data';
+import { imageUrls } from '../../data/data';
 
 export function Work() {
   const urlImgOrganize = imageUrls.sort((a, b) => a.number - b.number);

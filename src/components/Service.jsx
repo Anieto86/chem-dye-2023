@@ -4,7 +4,7 @@ import { ContactBtn } from './common/ContactBtn';
 import { styled } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import { RoadMap } from './RoadMap';
-import { services } from '../data/data';
+import { services } from '../../data/data';
 
 const StyledCardMedia = styled(CardMedia)({
   height: 'auto',
