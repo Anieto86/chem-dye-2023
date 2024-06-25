@@ -1,4 +1,4 @@
-import { Navigate, createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 // import { About } from '../components/About';
 // import { Blog } from '../components/Blog';
 import { Contact } from '../components/Contact';
@@ -28,15 +28,6 @@ export const AppRouter = () => {
       children: [
         {
           path: '/',
-          element: (
-            <>
-              <ScrollToTop />
-              <Navigate to="/home" />
-            </>
-          ),
-        },
-        {
-          path: '/home',
           element: (
             <>
               <ScrollToTop />

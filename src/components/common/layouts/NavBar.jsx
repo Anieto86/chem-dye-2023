@@ -38,7 +38,7 @@ export function NavBar() {
       <AppBar
         position="static"
         sx={
-          location.pathname === '/home'
+          location.pathname === '/'
             ? {
                 backgroundImage: `url(${backgroundImg})`,
                 backgroundSize: 'cover',
@@ -86,7 +86,7 @@ export function NavBar() {
               {links.map((link, i) => (
                 <NavLink
                   key={i}
-                  to={`/${link.toLowerCase()}`}
+                  to={link === 'Home' ? '/' : `/${link.toLowerCase()}`}
                   style={({ isActive }) => ({
                     backgroundColor: !isActive ? 'transparent' : '#000000',
                     color: isActive ? '#ffffff' : '#000000',
@@ -122,7 +122,7 @@ export function NavBar() {
               >
                 <List>
                   {links.map((link, i) => (
-                    <ListItem button key={i} onClick={handleDrawerToggle}>
+                    <ListItem key={i} onClick={handleDrawerToggle}>
                       <NavLink
                         to={`/${link.toLowerCase()}`}
                         style={{
@@ -140,7 +140,7 @@ export function NavBar() {
             </Grid>
           </Grid>
         </Toolbar>
-        {location.pathname === '/home' && (
+        {location.pathname === '/' && (
           <Grid
             container
             direction="row"
