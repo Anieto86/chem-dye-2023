@@ -39,7 +39,8 @@ export const AppRouter = () => {
           path: '/home',
           element: (
             <>
-              <ScrollToTop /> <Home />
+              <ScrollToTop />
+              <Home />
             </>
           ),
         },
@@ -47,7 +48,8 @@ export const AppRouter = () => {
           path: '/services',
           element: (
             <>
-              <ScrollToTop /> <Service />
+              <ScrollToTop />
+              <Service />
             </>
           ),
         },

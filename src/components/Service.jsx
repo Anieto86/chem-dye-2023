@@ -57,7 +57,7 @@ export const Service = () => {
           {services.map((service, i) => {
             const { title, img, text } = service;
             return (
-              <Grid item xs={6} sm={12} md={6} key={i}>
+              <Grid item xs={12} sm={12} md={6} key={i}>
                 <StyledCard sx={{ px: 9, p: 6 }}>
                   <StyledImage src={img} alt={title} sx={{ m: -4 }} />
                   <Grid item xs={12}>
