@@ -11,9 +11,9 @@ import {
   ListItemText,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Outlet, NavLink, useLocation } from 'react-router-dom';
-import logo from '../../../assets/Icons/02.CDLOGO_COLOUR.png';
-import backgroundImg from '../../../assets/img/01.BG-IMAGE.jpg';
+import { NavLink, useLocation } from 'react-router-dom';
+import logo from '../../../src/assets/Icons/02.CDLOGO_COLOUR.png';
+import backgroundImg from '../../../src/assets/img/01.BG-IMAGE.jpg';
 
 export function NavBar() {
   const location = useLocation();
@@ -147,12 +147,12 @@ export function NavBar() {
             alignItems="center"
             sx={{ mt: 30 }}
           >
-            <Grid item xs={11} sm={8} md={6}>
+            <Grid item xs={12} sm={8} md={6}>
               <Typography
                 variant="h1"
                 sx={{
                   textAlign: 'center',
-                  fontSize: { xs: '1.5rem', sm: '2.5rem', md: '3.5rem' },
+                  fontSize: { xs: '2.7rem', sm: '2.7rem', md: '3.5rem' },
                 }}
               >
                 At ChemDye, we specialise in the art of transforming
@@ -164,9 +164,6 @@ export function NavBar() {
           </Grid>
         )}
       </AppBar>
-      <Grid sx={{ pt: { xs: '70px', md: '150px' } }}>
-        <Outlet />
-      </Grid>
     </>
   );
 }

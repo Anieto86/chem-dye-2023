@@ -1,9 +1,9 @@
 import CopyrightIcon from '@mui/icons-material/Copyright';
 import { Box, Grid, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
-import logo from '../../../assets/img/ColourLogo.png';
-import { links, linksPolicies } from '../../../../data/data';
-import { LinkIcons } from '../LinkIcons';
+import logo from '../../../src/assets/img/ColourLogo.png';
+import { links, linksPolicies } from '../../../data/data';
+import { LinkIcons } from '../common/LinkIcons';
 
 export const Footer = () => {
   return (
@@ -39,14 +39,14 @@ export const Footer = () => {
         </Grid>
       </Grid>
 
-      <Grid container>
-        <Grid item xs={3} mb={3}>
-          <Typography variant="h6">
-            We excel in crafting compelling scientific content to communicate
-            your research and discoveries effectively
-          </Typography>
-        </Grid>
+      {/* <Grid container sx={{ border: 'solid green' }}> */}
+      <Grid item xs={12} sm={8} md={2}>
+        <Typography variant="h6">
+          We excel in crafting compelling scientific content to communicate your
+          research and discoveries effectively
+        </Typography>
       </Grid>
+      {/* </Grid> */}
 
       <Grid container justifyContent="space-between" alignItems="center">
         <Grid item>

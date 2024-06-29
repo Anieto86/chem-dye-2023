@@ -9,24 +9,25 @@ import {
   Modal,
   Typography,
   Skeleton,
+  useMediaQuery,
+  useTheme,
 } from '@mui/material';
-import { ContactBtn } from './common/ContactBtn';
 import { useState } from 'react';
 import { styled } from '@mui/material/styles';
-import { Link } from 'react-router-dom';
 import { crew } from '../../data/data';
+import { TitleHeader } from '../components/common/TitleHeader';
 
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
-  borderRadius: 10,
-  boxShadow: 24,
-  p: 6,
-};
+// const style = {
+//   position: 'absolute',
+//   top: '50%',
+//   left: '50%',
+//   transform: 'translate(-50%, -50%)',
+//   width: 400,
+//   bgcolor: 'background.paper',
+//   borderRadius: 10,
+//   boxShadow: 24,
+//   p: 6,
+// };
 
 const StyledCard = styled(Card)({
   display: 'flex',
@@ -38,6 +39,8 @@ const StyledCard = styled(Card)({
 });
 
 export const Crew = () => {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
   const [showModal, setModal] = useState(false);
   const [activeCrewMember, setActiveCrewMember] = useState(null);
 
@@ -46,23 +49,27 @@ export const Crew = () => {
     setModal((prev) => !prev);
   };
 
+  const modalStyle = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: '70%', // Adjust width for small screens vs. medium/large screens
+    maxWidth: isSmallScreen ? 'none' : 600, // Limit max width on medium/large screens  width: isSmallScreen ? '70%' : '70%', // Adjust width based on screen size
+    bgcolor: 'background.paper',
+    boxShadow: 24,
+    borderRadius: 5,
+    p: 4,
+  };
+
   return (
-    <Grid container justifyContent="center">
-      <Grid item xs={10}>
-        <Typography variant="h1" sx={{ mt: 30 }}>
-          ChemDye, a studio where the worlds of art and science come together
-        </Typography>
-        <Typography variant="h4" sx={{ mt: 3 }}>
-          As your trusted partner, our top priority is to collaborate closely
+    <>
+      <TitleHeader
+        title="ChemDye, a studio where the worlds of art and science come together"
+        subTitle="  As your trusted partner, our top priority is to collaborate closely
           with you, ensuring we create visuals that illustrate the story of your
-          science.{' '}
-        </Typography>
-        <Grid item xs={9.5} sx={{ my: 10 }}>
-          <Link to={`/contact`}>
-            <ContactBtn title="Connect with us" />
-          </Link>
-        </Grid>
-      </Grid>
+          science."
+      />
       <Grid
         container
         direction="row"
@@ -120,8 +127,9 @@ export const Crew = () => {
           onClose={() => handleModal(null)}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
+          keepMounted
         >
-          <Box sx={style}>
+          <Box sx={modalStyle}>
             <Typography id="modal-modal-title" variant="h3" component="h2">
               {activeCrewMember?.title}
             </Typography>
@@ -138,6 +146,6 @@ export const Crew = () => {
           </Box>
         </Modal>
       </Grid>
-    </Grid>
+    </>
   );
 };

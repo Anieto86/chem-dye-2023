@@ -1,7 +1,7 @@
 import { Box, Grid, Typography } from '@mui/material';
-import { Companies } from './common/layouts/Companies';
-import { ContactBtn } from './common/ContactBtn';
 import { Link, useLocation } from 'react-router-dom';
+import { Companies } from '../components/common/Companies';
+import { ContactBtn } from '../components/common/ContactBtn';
 
 const backgroundImg =
   'https://res.cloudinary.com/dcvzsick7/image/upload/v1717638651/05.%20Home%20background%20images/5-cell_2_d8ajpz.jpg';
@@ -24,7 +24,6 @@ export const Home = () => {
             xs={12}
             md={6}
             sx={{
-              border: 'solid blue',
               display: 'flex',
               justifyContent: {
                 xs: 'center', // Center text on small screens
@@ -36,21 +35,19 @@ export const Home = () => {
               },
             }}
           >
-            <Box sx={{ width: '100%' }}>
+            <Box sx={{ width: '100%', mt: 10 }}>
               <Typography variant="h1" sx={{ mb: 10 }}>
                 Our Passion & Identity
               </Typography>
             </Box>
           </Grid>
-          <Grid item xs={0} md={6} sx={{ border: 'solid red' }} />
-          <Grid item xs={12} md={3} sx={{ border: 'solid red' }} />
+          <Grid item xs={0} md={6} />
+          <Grid item xs={12} md={1} />
           <Grid
             item
             xs={12}
-            md={3}
+            md={5}
             sx={{
-              border: 'solid green',
-              display: 'flex',
               flexDirection: 'column',
               alignItems: {
                 xs: 'center', // Center text on small screens
@@ -62,7 +59,7 @@ export const Home = () => {
               },
             }}
           >
-            <Typography variant="h4">
+            <Typography variant="h4" sx={{ px: { xs: 4, md: 0 } }}>
               We are a multidisciplinary team of{' '}
               <Box
                 component="span"
@@ -73,7 +70,7 @@ export const Home = () => {
                 scientists, graphic designers and artists.
               </Box>{' '}
               Our main goal is to generate{' '}
-              <Box component="span" sx={{ color: '#DF367B' }}>
+              <Box component="span" sx={{ color: '#DF367B', p: 2 }}>
                 captivating scientific content and, together, bring your vision
                 to life,
               </Box>{' '}
@@ -85,7 +82,7 @@ export const Home = () => {
               </Link>
             </Grid>
           </Grid>
-          <Grid item xs={12} md={6} sx={{ border: 'solid purple' }} />
+          <Grid item xs={12} md={6} />
         </Grid>
 
         <Grid container sx={{ height: '30vh' }}></Grid>
@@ -118,7 +115,7 @@ export const Home = () => {
           <Grid
             item
             xs={12}
-            md={3}
+            md={5}
             sx={{
               display: 'flex',
               flexDirection: 'column',
@@ -132,7 +129,7 @@ export const Home = () => {
               },
             }}
           >
-            <Typography variant="h4">
+            <Typography variant="h4" sx={{ px: { xs: 4, md: 0 } }}>
               We will help you unlock the full potential of your research with
               our comprehensive range of services tailored{' '}
               <Box component="span" sx={{ color: '#DF367B' }}>
@@ -146,7 +143,7 @@ export const Home = () => {
               </Link>
             </Grid>
           </Grid>
-          <Grid item xs={12} md={3} />
+          <Grid item xs={12} md={1} />
         </Grid>
       </Box>
 
@@ -162,7 +159,7 @@ export const Home = () => {
             Our process, expertise and reliability
           </Typography>
         </Grid>
-        <Grid item sx={{ textAlign: 'center' }} xs={5}>
+        <Grid item sx={{ textAlign: 'center' }} xs={10}>
           <Typography variant="h4">
             As scientists turned artists, we bring a unique blend of experience
             and years of service in{' '}
@@ -179,7 +176,7 @@ export const Home = () => {
 
           <Grid item sx={{ my: 6 }}>
             <Link to={'/work'}>
-              <ContactBtn title="Check out our work" />
+              <ContactBtn title="See our work" />
             </Link>
           </Grid>
         </Grid>

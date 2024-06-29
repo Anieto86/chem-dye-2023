@@ -1,102 +1,56 @@
 import { createBrowserRouter } from 'react-router-dom';
 // import { About } from '../components/About';
 // import { Blog } from '../components/Blog';
-import { Contact } from '../components/Contact';
-import { Home } from '../components/Home';
-import { Work } from '../components/Work';
-import { Footer } from '../components/common/layouts/Footer';
-import { NavBar } from '../components/common/layouts/NavBar';
-import { ErrorPage } from './ErrorPage';
-import { Service } from '../components/Service';
-import { Crew } from '../components/Crew';
-import ScrollToTop from './Hook/scrollTop';
+import { Contact } from '../Pages/Contact';
+import { Crew } from '../Pages/Crew';
+import { Home } from '../Pages/Home';
+import { Service } from '../Pages/Service';
+import { Work } from '../Pages/Work';
 import { Cookies } from '../components/common/Policies/Cookies';
-import { Website } from '../components/common/Policies/Website';
 import { Privacy } from '../components/common/Policies/Privacy';
+import { Website } from '../components/common/Policies/Website';
+import { CenteredLayout } from '../components/layouts/CenteredLayout';
+import { ErrorPage } from './ErrorPage';
 
 export const AppRouter = () => {
   return createBrowserRouter([
     {
       path: '/',
-      element: (
-        <>
-          <NavBar />
-          <Footer />
-        </>
-      ),
+      element: <CenteredLayout />,
       errorElement: <ErrorPage />,
+
       children: [
         {
           path: '/',
-          element: (
-            <>
-              <ScrollToTop />
-              <Home />
-            </>
-          ),
+          element: <Home />,
         },
         {
           path: '/services',
-          element: (
-            <>
-              <ScrollToTop />
-              <Service />
-            </>
-          ),
+          element: <Service />,
         },
         {
           path: '/work',
-          element: (
-            <>
-              <ScrollToTop />
-              <Work />
-            </>
-          ),
+          element: <Work />,
         },
         {
           path: '/crew',
-          element: (
-            <>
-              <ScrollToTop />
-              <Crew />
-            </>
-          ),
+          element: <Crew />,
         },
         {
           path: '/contact',
-          element: (
-            <>
-              <ScrollToTop />
-              <Contact />,
-            </>
-          ),
+          element: <Contact />,
         },
         {
           path: '/policies/cookies',
-          element: (
-            <>
-              <ScrollToTop />
-              <Cookies />
-            </>
-          ),
+          element: <Cookies />,
         },
         {
           path: '/policies/website',
-          element: (
-            <>
-              <ScrollToTop />
-              <Website />
-            </>
-          ),
+          element: <Website />,
         },
         {
           path: '/policies/privacy',
-          element: (
-            <>
-              <ScrollToTop />
-              <Privacy />
-            </>
-          ),
+          element: <Privacy />,
         },
         // {
         //   path: '/about',

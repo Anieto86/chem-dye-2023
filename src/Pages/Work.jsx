@@ -1,28 +1,17 @@
 import Masonry from '@mui/lab/Masonry';
-import { Box, Grid, Typography } from '@mui/material';
-import { Link } from 'react-router-dom';
-import { ContactBtn } from './common/ContactBtn';
+import { Box, Grid } from '@mui/material';
 import { imageUrls } from '../../data/data';
+import { TitleHeader } from '../components/common/TitleHeader';
 
 export function Work() {
   const urlImgOrganize = imageUrls.sort((a, b) => a.number - b.number);
 
   return (
-    <Grid container justifyContent="center" spacing={3}>
-      <Grid item xs={10}>
-        <Typography variant="h1" sx={{ mt: 30 }}>
-          Our journey into creativity
-        </Typography>
-        <Typography variant="h4" sx={{ mt: 3 }}>
-          ChemDye collaborates with scientists across diverse disciplines,
-          driving innovation through creative solutions.
-        </Typography>
-        <Grid item xs={9.5} sx={{ my: 10 }}>
-          <Link to={`/contact`}>
-            <ContactBtn title="Connect with us" />
-          </Link>
-        </Grid>
-      </Grid>
+    <>
+      <TitleHeader
+        title="Our journey into creativity"
+        subTitle="ChemDye collaborates with scientists across diverse disciplines, driving innovation through creative solutions."
+      />
       <Grid item xs={10}>
         <Masonry columns={{ xs: 1, md: 3, sm: 2 }}>
           {urlImgOrganize.map((portfolio, index) => (
@@ -55,6 +44,6 @@ export function Work() {
           ))}
         </Masonry>
       </Grid>
-    </Grid>
+    </>
   );
 }
