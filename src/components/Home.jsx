@@ -19,14 +19,49 @@ export const Home = () => {
         }}
       >
         <Grid container columns={12}>
-          <Grid item xs={6}>
-            <Typography variant="h1" sx={{ textAlign: 'right', mb: 10 }}>
-              Our Passion & Identity
-            </Typography>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{
+              border: 'solid blue',
+              display: 'flex',
+              justifyContent: {
+                xs: 'center', // Center text on small screens
+                md: 'flex-end', // Align text to the right on medium and larger screens
+              },
+              textAlign: {
+                xs: 'center', // Center text on small screens
+                md: 'right', // Align text to the right on medium and larger screens
+              },
+            }}
+          >
+            <Box sx={{ width: '100%' }}>
+              <Typography variant="h1" sx={{ mb: 10 }}>
+                Our Passion & Identity
+              </Typography>
+            </Box>
           </Grid>
-          <Grid item xs={6} />
-          <Grid item xs={3} />
-          <Grid item xs={3} sx={{ textAlign: 'right' }}>
+          <Grid item xs={0} md={6} sx={{ border: 'solid red' }} />
+          <Grid item xs={12} md={3} sx={{ border: 'solid red' }} />
+          <Grid
+            item
+            xs={12}
+            md={3}
+            sx={{
+              border: 'solid green',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: {
+                xs: 'center', // Center text on small screens
+                md: 'flex-end', // Align text to the right on medium and larger screens
+              },
+              textAlign: {
+                xs: 'center', // Center text on small screens
+                md: 'right', // Align text to the right on medium and larger screens
+              },
+            }}
+          >
             <Typography variant="h4">
               We are a multidisciplinary team of{' '}
               <Box
@@ -50,22 +85,53 @@ export const Home = () => {
               </Link>
             </Grid>
           </Grid>
-
-          <Grid item xs={6} />
+          <Grid item xs={12} md={6} sx={{ border: 'solid purple' }} />
         </Grid>
 
         <Grid container sx={{ height: '30vh' }}></Grid>
-
         <Grid container columns={12}>
-          <Grid item xs={6} />
-          <Grid item xs={6}>
-            <Typography variant="h1" sx={{ textAlign: 'left', mb: 10 }}>
-              How can we help you?
-            </Typography>
+          <Grid item xs={12} md={6} />
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{
+              display: 'flex',
+              justifyContent: {
+                xs: 'center', // Center text on small screens
+                md: 'flex-start', // Align text to the left on medium and larger screens
+              },
+              textAlign: {
+                xs: 'center', // Center text on small screens
+                md: 'left', // Align text to the left on medium and larger screens
+              },
+            }}
+          >
+            <Box sx={{ width: '100%' }}>
+              <Typography variant="h1" sx={{ mb: 10 }}>
+                How can we help you?
+              </Typography>
+            </Box>
           </Grid>
 
-          <Grid item xs={6} />
-          <Grid item xs={3} sx={{ textAlign: 'left' }}>
+          <Grid item xs={12} md={6} />
+          <Grid
+            item
+            xs={12}
+            md={3}
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: {
+                xs: 'center', // Center text on small screens
+                md: 'flex-start', // Align text to the left on medium and larger screens
+              },
+              textAlign: {
+                xs: 'center', // Center text on small screens
+                md: 'left', // Align text to the left on medium and larger screens
+              },
+            }}
+          >
             <Typography variant="h4">
               We will help you unlock the full potential of your research with
               our comprehensive range of services tailored{' '}
@@ -80,7 +146,7 @@ export const Home = () => {
               </Link>
             </Grid>
           </Grid>
-          <Grid item xs={3} />
+          <Grid item xs={12} md={3} />
         </Grid>
       </Box>
 

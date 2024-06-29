@@ -1,10 +1,19 @@
-import { Card, CardMedia, Grid, Typography } from '@mui/material';
+import {
+  Box,
+  Card,
+  CardMedia,
+  Grid,
+  Typography,
+  useMediaQuery,
+} from '@mui/material';
 
 import { ContactBtn } from './common/ContactBtn';
 import { styled } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import { RoadMap } from './RoadMap';
 import { services } from '../../data/data';
+import { timelineItems } from '../../data/data';
+import { useTheme } from '@emotion/react';
 
 const StyledCardMedia = styled(CardMedia)({
   height: 'auto',
@@ -13,7 +22,7 @@ const StyledCardMedia = styled(CardMedia)({
 });
 
 const StyledImage = styled('img')({
-  width: '150px',
+  width: '200px',
   height: '150px',
   objectFit: 'cover',
 });
@@ -32,6 +41,10 @@ const StyledCard = styled(Card)({
 });
 
 export const Service = () => {
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up('md'));
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   return (
     <Grid container justifyContent="center">
       <Grid item xs={10}>
@@ -101,7 +114,41 @@ export const Service = () => {
         </Grid>
 
         <Grid item>
-          <RoadMap />
+          {!isDesktop ? (
+            <>
+              {timelineItems.map((item, i) => {
+                return (
+                  <Grid item xs={12} sm={12} md={6} key={i} my={20}>
+                    <Box
+                      display="flex"
+                      justifyContent="center"
+                      alignItems="center"
+                    >
+                      <StyledImage src={item.image} alt={item.title} />
+                    </Box>{' '}
+                    <Grid item xs={12}>
+                      <Typography variant="h2" textAlign="center">
+                        {item.title}
+                      </Typography>
+                    </Grid>
+                    {!isMobile && (
+                      <Box display="flex" justifyContent="center">
+                        <Typography
+                          textAlign="center"
+                          variant="h5"
+                          sx={{ width: '50%', mt: 5 }}
+                        >
+                          {item.text}
+                        </Typography>
+                      </Box>
+                    )}
+                  </Grid>
+                );
+              })}
+            </>
+          ) : (
+            <RoadMap />
+          )}
         </Grid>
       </Grid>
     </Grid>

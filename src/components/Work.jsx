@@ -24,7 +24,7 @@ export function Work() {
         </Grid>
       </Grid>
       <Grid item xs={10}>
-        <Masonry columns={3}>
+        <Masonry columns={{ xs: 1, md: 3, sm: 2 }}>
           {urlImgOrganize.map((portfolio, index) => (
             <Grid
               key={index}

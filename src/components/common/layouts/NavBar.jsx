@@ -77,7 +77,6 @@ export function NavBar() {
               item
               sx={{
                 display: { xs: 'none', md: 'flex' },
-
                 borderRadius: 20,
                 backgroundColor: '#fff',
                 border: '1px solid #010101',

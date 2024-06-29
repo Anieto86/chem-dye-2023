@@ -12,31 +12,29 @@ export const Footer = () => {
         container
         direction="row"
         alignItems="center"
+        justifyContent="space-between"
         spacing={{ xs: 1, md: 2 }}
       >
-        <Grid item>
+        <Grid
+          item
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+          }}
+        >
           <img src={logo} alt="Logo footer" />
-        </Grid>{' '}
-        <Grid item>
           <Typography
             sx={{
               fontSize: 24,
               fontWeight: 600,
               fontFamily: 'Alegreya, serif',
+              mx: 2,
             }}
           >
             ChemDye
           </Typography>
         </Grid>
-      </Grid>
-
-      <Grid
-        container
-        direction="row"
-        justifyContent="flex-end"
-        alignItems="center"
-      >
-        <Grid item>
+        <Grid item my={3}>
           <LinkIcons />
         </Grid>
       </Grid>

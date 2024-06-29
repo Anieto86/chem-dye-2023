@@ -7,7 +7,7 @@ export const LinkIcons = () => {
     <>
       {socialLinks.map((sl, index) => {
         return (
-          <Link key={index} to={sl.url}>
+          <Link key={index} to={sl.url} target="_blank">
             <IconButton
               sx={{
                 color: '#ffffff',
