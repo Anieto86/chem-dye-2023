@@ -9,14 +9,19 @@ import {
   List,
   ListItem,
   ListItemText,
+  Box,
+  useMediaQuery,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { NavLink, useLocation } from 'react-router-dom';
 import logo from '../../../src/assets/Icons/02.CDLOGO_COLOUR.png';
 import backgroundImg from '../../../src/assets/img/01.BG-IMAGE.jpg';
+import { useTheme } from '@emotion/react';
 
 export function NavBar() {
   const location = useLocation();
+  const theme = useTheme();
+  const isMdDown = useMediaQuery(theme.breakpoints.down('md'));
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const links = [
@@ -68,7 +73,8 @@ export function NavBar() {
                   src={logo}
                   alt="Image 1"
                   style={{
-                    height: 'auto',
+                    height: isMdDown ? '80px' : 'auto',
+                    width: 'auto',
                   }}
                 />
               </NavLink>
@@ -123,7 +129,7 @@ export function NavBar() {
                   {links.map((link, i) => (
                     <ListItem key={i} onClick={handleDrawerToggle}>
                       <NavLink
-                        to={`/${link.toLowerCase()}`}
+                        to={link === 'Home' ? '/' : `/${link.toLowerCase()}`}
                         style={{
                           textDecoration: 'none',
                           color: 'black',
@@ -145,20 +151,24 @@ export function NavBar() {
             direction="row"
             justifyContent="center"
             alignItems="center"
-            sx={{ mt: 30 }}
+            sx={{ mt: 20, p: 2 }}
           >
             <Grid item xs={12} sm={8} md={6}>
               <Typography
-                variant="h1"
+                variant={isMdDown ? 'h2' : 'h1'}
                 sx={{
                   textAlign: 'center',
-                  fontSize: { xs: '2.7rem', sm: '2.7rem', md: '3.5rem' },
                 }}
               >
-                At ChemDye, we specialise in the art of transforming
-                <span style={{ color: '#facd2d' }}> complex science </span>
-                into compelling
-                <span style={{ color: '#FACD2D' }}> visual experiences </span>
+                At ChemDye, we specialise in the art of transforming{' '}
+                <Box component="span" sx={{ color: 'secondary.main' }}>
+                  complex science{' '}
+                </Box>
+                into compelling{' '}
+                <Box component="span" sx={{ color: 'secondary.main' }}>
+                  {' '}
+                  visual experiences{' '}
+                </Box>
               </Typography>
             </Grid>
           </Grid>

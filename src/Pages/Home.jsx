@@ -1,19 +1,22 @@
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Grid, Typography, useMediaQuery } from '@mui/material';
 import { Link, useLocation } from 'react-router-dom';
 import { Companies } from '../components/common/Companies';
 import { ContactBtn } from '../components/common/ContactBtn';
+import { useTheme } from '@emotion/react';
 
 const backgroundImg =
   'https://res.cloudinary.com/dcvzsick7/image/upload/v1717638651/05.%20Home%20background%20images/5-cell_2_d8ajpz.jpg';
 
 export const Home = () => {
   let location = useLocation();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   return (
     <>
       <Box
         sx={{
           backgroundImage: `url(${backgroundImg})`,
-          backgroundSize: 'contain',
+          backgroundSize: isMobile ? 'cover' : 'contain',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
         }}
@@ -63,6 +66,7 @@ export const Home = () => {
               We are a multidisciplinary team of{' '}
               <Box
                 component="span"
+                color="primary"
                 sx={{
                   color: '#DF367B',
                 }}

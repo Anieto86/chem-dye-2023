@@ -110,7 +110,7 @@ export const Crew = () => {
                   <Button
                     size="small"
                     onClick={() => handleModal(c)}
-                    sx={{ color: '#DF367B' }}
+                    color="primary"
                   >
                     Read More
                   </Button>
