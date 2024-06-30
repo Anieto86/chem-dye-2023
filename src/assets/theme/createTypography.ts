@@ -9,9 +9,9 @@ export const createTypography = () => {
       letterSpacing: '-1.8837px',
     },
     h2: {
-      fontSize: '36px',
+      fontSize: '50px',
       fontWeight: 600,
-      lineHeight: '49.4471px',
+      lineHeight: '53.4471px',
       letterSpacing: '-1.64824px',
       fontVariant: 'normal',
     },

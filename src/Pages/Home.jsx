@@ -82,7 +82,7 @@ export const Home = () => {
           <Grid item xs={12} md={6} />
           <Grid item xs={12} md={6} sx={responsiveAliment.flexColumnAlignment}>
             <Box sx={{ width: '100%' }}>
-              <Typography variant="h1" sx={{ mb: 10 }}>
+              <Typography variant="h1" sx={{ mb: 10, textAlign: 'left' }}>
                 How can we help you?
               </Typography>
             </Box>
@@ -92,7 +92,7 @@ export const Home = () => {
           <Grid item xs={12} md={5} sx={responsiveAliment.flexColumnAlignment}>
             <Typography
               variant={isMobile ? 'h5' : 'h4'}
-              sx={{ px: { xs: 4, md: 0 } }}
+              sx={{ px: { xs: 4, md: 0 }, textAlign: 'left' }}
             >
               We will help you unlock the full potential of your research with
               our comprehensive range of services tailored{' '}
