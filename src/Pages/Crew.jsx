@@ -17,18 +17,6 @@ import { styled } from '@mui/material/styles';
 import { crew } from '../../data/data';
 import { TitleHeader } from '../components/common/TitleHeader';
 
-// const style = {
-//   position: 'absolute',
-//   top: '50%',
-//   left: '50%',
-//   transform: 'translate(-50%, -50%)',
-//   width: 400,
-//   bgcolor: 'background.paper',
-//   borderRadius: 10,
-//   boxShadow: 24,
-//   p: 6,
-// };
-
 const StyledCard = styled(Card)({
   display: 'flex',
   flexDirection: 'column',

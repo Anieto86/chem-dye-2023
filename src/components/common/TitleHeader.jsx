@@ -5,7 +5,6 @@ import { ContactBtn } from './ContactBtn';
 // eslint-disable-next-line react/prop-types
 export const TitleHeader = ({ title, subTitle }) => {
   let location = useLocation();
-  console.log(location.pathname);
   return (
     <>
       <Typography variant="h1" sx={{ mt: 30 }}>

@@ -7,10 +7,25 @@ import { useTheme } from '@emotion/react';
 const backgroundImg =
   'https://res.cloudinary.com/dcvzsick7/image/upload/v1717638651/05.%20Home%20background%20images/5-cell_2_d8ajpz.jpg';
 
+const responsiveAliment = {
+  flexColumnAlignment: {
+    flexDirection: 'column',
+    alignItems: {
+      xs: 'center',
+      md: 'flex-end',
+    },
+    textAlign: {
+      xs: 'center',
+      md: 'right',
+    },
+  },
+};
+
 export const Home = () => {
   let location = useLocation();
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   return (
     <>
       <Box
@@ -22,22 +37,7 @@ export const Home = () => {
         }}
       >
         <Grid container columns={12}>
-          <Grid
-            item
-            xs={12}
-            md={6}
-            sx={{
-              display: 'flex',
-              justifyContent: {
-                xs: 'center', // Center text on small screens
-                md: 'flex-end', // Align text to the right on medium and larger screens
-              },
-              textAlign: {
-                xs: 'center', // Center text on small screens
-                md: 'right', // Align text to the right on medium and larger screens
-              },
-            }}
-          >
+          <Grid item xs={12} md={6} sx={responsiveAliment.flexColumnAlignment}>
             <Box sx={{ width: '100%', mt: 10 }}>
               <Typography variant="h1" sx={{ mb: 10 }}>
                 Our Passion & Identity
@@ -46,35 +46,23 @@ export const Home = () => {
           </Grid>
           <Grid item xs={0} md={6} />
           <Grid item xs={12} md={1} />
-          <Grid
-            item
-            xs={12}
-            md={5}
-            sx={{
-              flexDirection: 'column',
-              alignItems: {
-                xs: 'center', // Center text on small screens
-                md: 'flex-end', // Align text to the right on medium and larger screens
-              },
-              textAlign: {
-                xs: 'center', // Center text on small screens
-                md: 'right', // Align text to the right on medium and larger screens
-              },
-            }}
-          >
-            <Typography variant="h4" sx={{ px: { xs: 4, md: 0 } }}>
+          <Grid item xs={12} md={5} sx={responsiveAliment.flexColumnAlignment}>
+            <Typography
+              variant={isMobile ? 'h5' : 'h4'}
+              sx={{ px: { xs: 4, md: 0 } }}
+            >
               We are a multidisciplinary team of{' '}
               <Box
                 component="span"
                 color="primary"
                 sx={{
-                  color: '#DF367B',
+                  color: 'primary.main',
                 }}
               >
                 scientists, graphic designers and artists.
               </Box>{' '}
               Our main goal is to generate{' '}
-              <Box component="span" sx={{ color: '#DF367B', p: 2 }}>
+              <Box component="span" sx={{ color: 'primary.main', p: 2 }}>
                 captivating scientific content and, together, bring your vision
                 to life,
               </Box>{' '}
@@ -92,22 +80,7 @@ export const Home = () => {
         <Grid container sx={{ height: '30vh' }}></Grid>
         <Grid container columns={12}>
           <Grid item xs={12} md={6} />
-          <Grid
-            item
-            xs={12}
-            md={6}
-            sx={{
-              display: 'flex',
-              justifyContent: {
-                xs: 'center', // Center text on small screens
-                md: 'flex-start', // Align text to the left on medium and larger screens
-              },
-              textAlign: {
-                xs: 'center', // Center text on small screens
-                md: 'left', // Align text to the left on medium and larger screens
-              },
-            }}
-          >
+          <Grid item xs={12} md={6} sx={responsiveAliment.flexColumnAlignment}>
             <Box sx={{ width: '100%' }}>
               <Typography variant="h1" sx={{ mb: 10 }}>
                 How can we help you?
@@ -116,27 +89,14 @@ export const Home = () => {
           </Grid>
 
           <Grid item xs={12} md={6} />
-          <Grid
-            item
-            xs={12}
-            md={5}
-            sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: {
-                xs: 'center', // Center text on small screens
-                md: 'flex-start', // Align text to the left on medium and larger screens
-              },
-              textAlign: {
-                xs: 'center', // Center text on small screens
-                md: 'left', // Align text to the left on medium and larger screens
-              },
-            }}
-          >
-            <Typography variant="h4" sx={{ px: { xs: 4, md: 0 } }}>
+          <Grid item xs={12} md={5} sx={responsiveAliment.flexColumnAlignment}>
+            <Typography
+              variant={isMobile ? 'h5' : 'h4'}
+              sx={{ px: { xs: 4, md: 0 } }}
+            >
               We will help you unlock the full potential of your research with
               our comprehensive range of services tailored{' '}
-              <Box component="span" sx={{ color: '#DF367B' }}>
+              <Box component="span" sx={{ color: 'primary.main' }}>
                 for the Healthcare, Pharmaceutical, and Biotechnology
                 industries.
               </Box>{' '}
@@ -164,14 +124,14 @@ export const Home = () => {
           </Typography>
         </Grid>
         <Grid item sx={{ textAlign: 'center' }} xs={10}>
-          <Typography variant="h4">
+          <Typography variant={isMobile ? 'h5' : 'h4'}>
             As scientists turned artists, we bring a unique blend of experience
             and years of service in{' '}
-            <Box component="span" sx={{ color: '#DF367B' }}>
+            <Box component="span" sx={{ color: 'primary.main' }}>
               academia, biotechnology
             </Box>{' '}
             and the{' '}
-            <Box component="span" sx={{ color: '#DF367B' }}>
+            <Box component="span" sx={{ color: 'primary.main' }}>
               health industry
             </Box>
             . Collaborating closely with you, we apply critical thinking and
