@@ -313,6 +313,6 @@ export const imageUrls = [
 //contact info
 export const contactInfo = [
   'ChemDye Scientific Illustration',
-  'si.chemdye@gmail.com',
+  'mariana.oksdath@chemdyestudio.com',
   '+61 0466252387',
 ];

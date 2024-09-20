@@ -65,7 +65,7 @@ export const Contact = () => (
       <Grid item>
         <Link
           target="_blank"
-          to={'https://calendly.com/si-chemdye/30min?month=2024-06'}
+          to={'https://calendly.com/hello-chemdyestudio/30min'}
         >
           <ContactBtn sx={{ mt: 5 }} type="submit" title="Book a free chat" />
         </Link>

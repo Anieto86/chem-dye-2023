@@ -85,7 +85,7 @@ export const Footer = () => {
         <Grid item>
           <Typography variant="h4">Get in Touch</Typography>
           <Typography sx={{ mb: 3 }} variant="h6">
-            si.chemdye@gmail.com
+            hello@chemdyestudio.com
           </Typography>
           <Typography sx={{ fontWeight: 600 }}>Adelaide</Typography>
           <Typography variant="h6">Goodwood, 5034</Typography>{' '}
